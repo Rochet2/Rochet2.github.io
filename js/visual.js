@@ -18,15 +18,15 @@ $( document ).ready(function() {
     
     // var content = window.location.hash.replace(/#/g,"").replace(/_/g," ").replace(/%20/," ") + ".html";
     var content = document.URL;
-    alert( content );
-    content = content.substr(content.indexOf(".html")+5).replace(/_/g," ").replace(/%20/," ") + ".html";
-    alert( content );
-    $.get( content, function( data ) {
-        $( "#content" ).empty().html( data );
-    }, "html")
-    .fail(function() {
-        alert( "error" );
-    })
-    .done(function( data ) {
-    });
+    var index = content.indexOf("?")+1;
+    if (index > 0)
+    {
+        content = content.substr(index).replace(/_/g," ").replace(/%20/," ") + ".html";
+        $.get( content, function( data ) {
+            $( "#content" ).empty().html( data );
+        }, "html")
+        .fail(function( data ) {
+            alert( "error" );
+        })
+    }
 });
