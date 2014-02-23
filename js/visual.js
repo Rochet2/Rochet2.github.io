@@ -7,7 +7,6 @@ $( document ).ready(function() {
     //
     // Will load <content.html> into <section>
  
- /*
     $(document).ready(function() {
         // Load external contents
         $("[data-html]").each(function() {
@@ -16,15 +15,18 @@ $( document ).ready(function() {
             el.load(src);
         });
     });
-*/
     
-    var content = window.location.hash.replace(/#/g,"").replace(/_/g," ").replace(/%20/," ") + ".html";
+    // var content = window.location.hash.replace(/#/g,"").replace(/_/g," ").replace(/%20/," ") + ".html";
+    var content = document.URL;
+    alert( content );
+    content = content.substr(content.indexOf(".html")+5).replace(/_/g," ").replace(/%20/," ") + ".html";
+    alert( content );
     $.get( content, function( data ) {
+        $( "#content" ).empty().html( data );
     }, "html")
     .fail(function() {
         alert( "error" );
     })
     .done(function( data ) {
-        $( "#content" ).empty().html( data );
     });
 });
