@@ -7,6 +7,7 @@ $( document ).ready(function() {
     //
     // Will load <content.html> into <section>
  
+ /*
     $(document).ready(function() {
         // Load external contents
         $("[data-html]").each(function() {
@@ -14,5 +15,16 @@ $( document ).ready(function() {
             var src = $(this).attr("data-html") + ".html";
             el.load(src);
         });
+    });
+*/
+    
+    var content = window.location.hash.replace(/#/g,"").replace(/_/g," ").replace(/%20/," ") + ".html";
+    $.get( content, function( data ) {
+    }, "html")
+    .fail(function() {
+        alert( "error" );
+    })
+    .done(function( data ) {
+        $( "#content" ).empty().html( data );
     });
 });

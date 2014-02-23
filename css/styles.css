@@ -6,10 +6,73 @@
     margin: 0px;
     padding: 0px;
     border: none;
-    /* color: rgb(226, 226, 226); */
+    color: rgb(226, 226, 226);
     text-decoration: none;
 }
 body {
     transition: background 500ms;
     -webkit-transition: background 500ms;
+    background: rgb(0, 63, 71);
+}
+#TopNav {
+    height: 100px;
+    width: 100%;
+    background: #222222;
+}
+#TopNav * {
+    float: left;
+}
+#TopNav ul {
+    list-style-type: none;
+}
+#TopNav a
+{
+    padding: 0 10px;
+    color: gray;
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: x-large;
+    transition: color 500ms;
+    -webkit-transition: color 500ms;
+}
+#TopNav a:hover {
+    color: whitesmoke;
+}
+#Logo:hover #Glow {
+    box-shadow: 0px 0px 37px 20px rgb(0, 150, 190);
+}
+#Glow {
+    height: 2px;
+    width: 2px;
+    margin: 49px;
+    border-radius: 1px;
+    transition: box-shadow 150ms;
+    -webkit-transition: box-shadow 150ms;
+}
+#Image {
+    background: url(../images/Rochet2_100.png) transparent;
+    background-size: contain;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: -40px;
+}
+.IconBox {
+    width: 118px;
+    height: 118px;
+    margin: 20px;
+    float: left;
+    border: 1px solid rgb(0, 130, 155);
+    background: rgb(0, 42, 46);
+    /* box-shadow: 0px 0px 19px 0px black; */
+}
+.IconBox > p {
+    position: absolute;
+    width: 118px;
+    /* height: 118px; */
+    padding-top: 80px;
+    /* line-height: 100px; */
+    font-size: smaller;
+    text-align: center;
 }
