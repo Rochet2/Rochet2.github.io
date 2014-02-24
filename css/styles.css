@@ -141,12 +141,13 @@ html {
     border: 2px solid black;
 }
 #youtube {
-    margin-top: -36px;
-    background: url(/images/Play.png);
-    width: 100px;
-    height: 73px;
-    margin: auto;
-    top: 35%;
+    /* margin-top: -3px; */
+    background-image: url(/images/Play.png);
+    background-size: cover;
+    width: 51px;
+    height: 36px;
+    margin: -24px auto auto auto;
+    top: 50%;
     position: relative;
 }
 .download {
@@ -162,6 +163,7 @@ html {
     font-size: x-large;
     /* text-transform: none; */
     /* display: table-cell; */
+    box-shadow: 0 0 10px 0px black;
 }
 .download:hover {
     background-image: linear-gradient(rgb(0, 168, 248), rgb(1, 81, 119));
@@ -195,4 +197,9 @@ html {
 #projects::-webkit-scrollbar-thumb:active{
     background-color:#A6393D;
     border:1px solid #333333;
+}
+#content iframe {
+    box-shadow: 0 0 10px 0px black;
+    margin: auto;
+    display: block;
 }
