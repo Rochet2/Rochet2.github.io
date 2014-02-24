@@ -209,8 +209,8 @@ html {
     margin: auto;
     display: block;
     width: 100%;
-    min-height: 70%;
-    max-height: 1080px;
+    min-height: 300px;
+    max-height: 800px;
     max-width: 1920px;
 }
 #Social {
