@@ -126,6 +126,7 @@ html {
     /* transition: width, height 500ms; */
     /* -webkit-transition: width, height 500ms; */
     max-width: 70%;
+    min-width: 40%;
     background-color: rgba(3, 62, 69, 0.8);
     box-shadow: 0 0 30px 20px rgba(3, 63, 69, 0.8);
     /* border-radius: 40px; */
@@ -134,6 +135,7 @@ html {
     /* min-width: 300px; */
     /* min-height: 300px; */
     margin-bottom: 20px;
+    /* width: 100%; */
 }
 .play {
     width: 730px;
@@ -206,6 +208,8 @@ html {
     box-shadow: 0 0 10px 0px black;
     margin: auto;
     display: block;
+    width: 100%;
+    min-height: 70%;
 }
 #Social {
     position: absolute;
