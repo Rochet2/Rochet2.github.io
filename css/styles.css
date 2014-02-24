@@ -13,7 +13,7 @@ body {
     /* transition: background 500ms; */
     /* -webkit-transition: background 500ms; */
     background: rgb(0, 63, 71);
-    background-position: right 100px;
+    background-position: 530px 100px;
     background-repeat: no-repeat;
     height: 100%;
 }
