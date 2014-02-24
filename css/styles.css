@@ -203,3 +203,26 @@ html {
     margin: auto;
     display: block;
 }
+#Social {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #965050;
+    border-radius: 0 0 0 20px;
+    padding: 3px;
+}
+#Social > a {
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: none;
+    opacity: .65;
+}
+#Social > a:hover {
+    opacity: 1;
+}
