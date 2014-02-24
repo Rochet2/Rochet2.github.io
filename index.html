@@ -15,18 +15,23 @@
         <meta name="description" content="Code for World of Warcraft emulators" />
         <meta name="author" content="Rochet2" />
 
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+
         <title>Home | Rochet2.github.io</title>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-17459395-5', 'rochet2.github.io');
+            ga('send', 'pageview');
+        </script>
 
         <script src="js/jquery.js"></script>
         <script src="js/visual.js"></script>
         <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-
-        <!-- Fix these
-        <link rel="stylesheet" type="text/css" href="navigation.css" media="screen">
-        <link type="image/x-icon" href="Image/Other/Icon.ico" rel="icon" />
-        <link type="image/x-icon" href="Image/Other/Icon.ico" rel="shortcut icon" />
-        -->
-
     </head>
     <body>
         <div id="TopNav">
@@ -41,14 +46,30 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="?Portal%20Master">Projects</a>
-                </li>
-                <li>
                     <a href="#">Contact</a>
                 </li>
             </ul>
         </div>
+        <div id="projects">
+        </div>
         <div id="content">
         </div>
+        <script>
+
+
+            var Names = [ "Portal Master", "Portal Master Option", "Jukebox", "Eluna", "Player & Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Scale objects & NPCs" ];
+
+
+            var projects = $("#projects");
+            var str = '<a class="IconBox" href="?PROJECT">
+                \
+                <div class="Icon" style="background-image: url(\'/images/PROJECT_icon.png\');"></div> \
+                <p class="Label">PROJECT2</p> \
+            </a>';
+            for ( var i = 0; i < Names.length; i = i + 1 )
+        {
+            projects.append(str.replace(/PROJECT2/g, Names[i]).replace(/PROJECT/g, Names[i].replace(/ /g, "_")));
+        }
+        </script>
     </body>
 </html>

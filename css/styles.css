@@ -10,14 +10,20 @@
     text-decoration: none;
 }
 body {
-    transition: background 500ms;
-    -webkit-transition: background 500ms;
+    /* transition: background 500ms; */
+    /* -webkit-transition: background 500ms; */
     background: rgb(0, 63, 71);
+    background-position-y: 100px;
+    background-position-x: right;
+    background-repeat: no-repeat;
 }
 #TopNav {
     height: 100px;
     width: 100%;
     background: #222222;
+    /* position: absolute; */
+    /* top: 0; */
+    /* left: 0; */
 }
 #TopNav * {
     float: left;
@@ -66,13 +72,93 @@ body {
     border: 1px solid rgb(0, 130, 155);
     background: rgb(0, 42, 46);
     /* box-shadow: 0px 0px 19px 0px black; */
+    opacity: 0.8;
+    transition: opacity 300ms;
 }
-.IconBox > p {
-    position: absolute;
-    width: 118px;
+.IconBox .Label {
+    /* position: absolute; */
+    /* width: 118px; */
     /* height: 118px; */
-    padding-top: 80px;
+    margin-top: 5px;
     /* line-height: 100px; */
     font-size: smaller;
     text-align: center;
+}
+.IconBox:hover {
+    opacity: 1;
+}
+.IconBox .Icon {
+    width: 60px;
+    height: 60px;
+    /* position: absolute; */
+    background-size: contain;
+    margin: 15px auto 0 auto;
+    /* margin-top: 12px; */
+}
+#projects {
+    width: 480px;
+    /* height: 100%; */
+    border-right: 5px rgb(34, 34, 34) dashed;
+    /* margin-top: 100px; */
+    /* position: absolute; */
+    float: left;
+}
+#content {
+    float: left;
+    margin: 40px;
+    /* border: 1px solid rgb(0, 133, 158); */
+    padding: 20px;
+    /* transition: width, height 500ms; */
+    /* -webkit-transition: width, height 500ms; */
+    /* width: 70%; */
+    background-color: rgba(3, 62, 69, 0.8);
+    box-shadow: 0 0 30px 20px rgba(3, 63, 69, 0.8);
+    /* border-radius: 40px; */
+}
+.box {
+    /* float: left; */
+    /* min-width: 300px; */
+    /* min-height: 300px; */
+}
+.play {
+    width: 730px;
+    height: 300px;
+    display: block;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    margin: 20px auto;
+    border: 2px solid black;
+}
+#youtube {
+    margin-top: -36px;
+    background: url(/images/Play.png);
+    width: 100px;
+    height: 73px;
+    margin: auto;
+    top: 35%;
+    position: relative;
+}
+.download {
+    /* width: 50%; */
+    background-image: linear-gradient(rgb(8, 136, 197), rgb(2, 77, 112));
+    padding: 20px;
+    display: block;
+    /* float: left; */
+    margin: auto;
+    text-align: center;
+    border: rgb(0, 143, 223) solid 1px;
+    border-radius: 5px;
+    font-size: x-large;
+    /* text-transform: none; */
+    /* display: table-cell; */
+}
+.download:hover {
+    background-image: linear-gradient(rgb(0, 168, 248), rgb(1, 81, 119));
+}
+#content > table {
+    width: 100%;
+    /* text-align: center; */
+}
+#content > table td {
+    width: 50%;
 }

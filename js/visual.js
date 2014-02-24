@@ -14,12 +14,11 @@ $( document ).ready(function() {
         el.load(src);
     });
     
-    // var content = window.location.hash.replace(/#/g,"").replace(/_/g," ").replace(/%20/," ") + ".html";
     var content = document.URL;
     var index = content.indexOf("?")+1;
     if (index > 0)
     {
-        content = content.substr(index).replace(/_/g," ").replace(/%20/," ") + ".html";
+        content = "/pages/" + content.substr(index).replace(/_/g," ").replace(/%20/g," ") + ".html";
         $.get( content, function( data ) {
             $( "#content" ).empty().html( data );
         }, "html")
