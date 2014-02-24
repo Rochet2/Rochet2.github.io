@@ -13,8 +13,7 @@ body {
     /* transition: background 500ms; */
     /* -webkit-transition: background 500ms; */
     background: rgb(0, 63, 71);
-    background-position-y: 100px;
-    background-position-x: right;
+    background-position: right 100px;
     background-repeat: no-repeat;
 }
 #TopNav {
@@ -41,7 +40,7 @@ body {
     transition: color 500ms;
     -webkit-transition: color 500ms;
 }
-#TopNav a:hover {
+#TopNav a:hover, #TopNav a.active {
     color: whitesmoke;
 }
 #Logo:hover #Glow {
@@ -65,15 +64,16 @@ body {
     left: -40px;
 }
 .IconBox {
-    width: 118px;
-    height: 118px;
-    margin: 20px;
+    width: 100px;
+    height: 110px;
+    margin: 5px;
     float: left;
     border: 1px solid rgb(0, 130, 155);
     background: rgb(0, 42, 46);
     /* box-shadow: 0px 0px 19px 0px black; */
-    opacity: 0.8;
-    transition: opacity 300ms;
+    opacity: 0.7;
+    transition: opacity, background 300ms;
+    -webkit-transition: opacity, background 300ms;
 }
 .IconBox .Label {
     /* position: absolute; */
@@ -83,25 +83,29 @@ body {
     /* line-height: 100px; */
     font-size: smaller;
     text-align: center;
+    padding: 0 5px;
 }
-.IconBox:hover {
+.IconBox:hover, .IconBox.active {
     opacity: 1;
+    background: rgb(0, 30, 39);
 }
 .IconBox .Icon {
     width: 60px;
     height: 60px;
     /* position: absolute; */
     background-size: contain;
-    margin: 15px auto 0 auto;
+    margin: 5px auto 0 auto;
     /* margin-top: 12px; */
 }
 #projects {
-    width: 480px;
+    width: 490px;
     /* height: 100%; */
     border-right: 5px rgb(34, 34, 34) dashed;
     /* margin-top: 100px; */
     /* position: absolute; */
     float: left;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 #content {
     float: left;
@@ -116,7 +120,6 @@ body {
     /* border-radius: 40px; */
 }
 .box {
-    /* float: left; */
     /* min-width: 300px; */
     /* min-height: 300px; */
 }
@@ -161,4 +164,9 @@ body {
 }
 #content > table td {
     width: 50%;
+}
+#Copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

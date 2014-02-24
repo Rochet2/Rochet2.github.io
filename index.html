@@ -43,25 +43,35 @@
             </a>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/" class="Home_active">Home</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="?Contact" class="Contact_active">Contact</a>
                 </li>
             </ul>
         </div>
         <div id="projects">
         </div>
-        <div id="content">
+<div id="content">
+            <div class="box">
+                <h1>Welcome..</h1>
+                <p>.. to Project Code.</p>
+                <p>Select a project on the left to view it</p>
+              <br>
+</div><div class="box">
+              <h1>We have moved!</h1>
+                <p>We moved to github from zymic</p>
+            </div>
+            <script>$( "body" ).css({backgroundImage: "url(images/VC_screenshot.png)"});</script>
         </div>
         <script>
 
 
-            var Names = [ "Portal Master", "Portal Master Option", "Jukebox", "Eluna", "Player & Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Scale objects & NPCs" ];
+            var Names = [ "Portal Master", "Portal Master Option", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Scale objects and NPCs" ];
 
 
             var projects = $("#projects");
-            var str = '<a class="IconBox" href="?PROJECT">  \
+            var str = '<a class="IconBox PROJECT_active" href="?PROJECT">  \
                 <div class="Icon" style="background-image: url(\'/images/PROJECT_icon.png\');"></div> \
                 <p class="Label">PROJECT2</p> \
             </a>';
@@ -70,5 +80,6 @@
             projects.append(str.replace(/PROJECT2/g, Names[i]).replace(/PROJECT/g, Names[i].replace(/ /g, "_")));
         }
         </script>
+        <div id="Copyright">Copyright Rochet2 2014</div>
     </body>
 </html>
