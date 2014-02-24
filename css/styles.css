@@ -13,7 +13,7 @@ body {
     /* transition: background 500ms; */
     /* -webkit-transition: background 500ms; */
     background: rgb(0, 63, 71);
-    background-position: 530px 100px;
+    background-position: center 100px;
     background-repeat: no-repeat;
     height: 100%;
 }
@@ -23,7 +23,7 @@ html {
 #TopNav {
     height: 100px;
     width: 100%;
-    background: #222222;
+    background: #111111;
     /* position: absolute; */
     /* top: 0; */
     /* left: 0; */
@@ -46,6 +46,7 @@ html {
 }
 #TopNav a:hover, #TopNav a.active {
     color: whitesmoke;
+    text-shadow: 0 0 20px white;
 }
 #Logo:hover #Glow {
     box-shadow: 0px 0px 37px 20px rgb(0, 150, 190);
@@ -71,13 +72,13 @@ html {
     width: 100px;
     height: 110px;
     margin: 5px;
-    /* float: left; */
-    border: 1px solid rgb(0, 130, 155);
-    background: rgb(0, 42, 46);
+    float: left;
+    border: rgba(0, 0, 0, 1) solid 1px;
+    background: rgba(0, 0, 0, 0.5);
     /* box-shadow: 0px 0px 19px 0px black; */
     opacity: 0.7;
-    transition: opacity, background 300ms;
-    -webkit-transition: opacity, background 300ms;
+    transition: opacity, background, background-color, border 300ms;
+    -webkit-transition: opacity, background, background-color, border 300ms;
     display: inline-block;
     vertical-align: top;
 }
@@ -93,7 +94,8 @@ html {
 }
 .IconBox:hover, .IconBox.active {
     opacity: 1;
-    background: rgb(0, 30, 39);
+    /* background: rgb(0, 30, 39); */
+    /* border: 1px solid #00A4E4; */
 }
 .IconBox .Icon {
     width: 60px;
@@ -106,7 +108,7 @@ html {
 #projects {
     /* width: 100%; */
     /* height: 100%; */
-    border-right: 5px rgb(34, 34, 34) dashed;
+    border-right: 5px #111111 dashed;
     /* margin-bottom: -115px; */
     /* position: absolute; */
     /* float: left; */
@@ -116,7 +118,12 @@ html {
     overflow-y: auto;
     height: 100%;
     text-align: center;
-    margin-right: 30px;
+    /* margin-right: 50px; */
+    /* margin: auto; */
+    margin-right: 50px;
+    /* text-align: center; */
+    text-align: justify;
+    padding: 15px 0 0 15px;
 }
 #content {
     float: left;
@@ -127,8 +134,8 @@ html {
     /* -webkit-transition: width, height 500ms; */
     max-width: 70%;
     min-width: 40%;
-    background-color: rgba(3, 62, 69, 0.8);
-    box-shadow: 0 0 30px 20px rgba(3, 63, 69, 0.8);
+    background-color: rgba(0, 63, 71, 0.8);
+    box-shadow: 0 0 30px 20px rgba(0, 63, 71, 0.8);
     /* border-radius: 40px; */
 }
 .box {
@@ -218,7 +225,7 @@ html {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #965050;
+    background-color: #862A2A;
     border-radius: 0 0 0 20px;
     padding: 3px;
 }
@@ -236,4 +243,17 @@ html {
 }
 #Social > a:hover {
     opacity: 1;
+}
+.IconBox:hover {
+    opacity: 1;
+    border: 1px solid rgba(155, 155, 155, 0.6);
+    background: rgba(70, 70, 70, 0.51);
+}
+.IconBox.active {
+    background: rgb(0, 30, 39);
+    border: 1px solid #00A4E4;
+}
+#projects {
+    background-color: rgba(0, 63, 71, 0.9);
+    box-shadow: 0px 13px 10px 0px rgba(0, 63, 71, 0.9);
 }
