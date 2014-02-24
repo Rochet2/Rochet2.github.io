@@ -26,11 +26,11 @@ $( document ).ready(function() {
     {
         content = content.substr(0, index);
     }
-    
     $(".active").removeClass( "active" );
     $("." + content + "_active").addClass( "active" );
-    
-    $.get( "/pages/" + content.replace(/_/g," ") + ".html", function( data ) {
+    content = content.replace(/_/g," ");
+    document.title = content + " | RochetCode";
+    $.get( "/pages/" + content + ".html", function( data ) {
         $( "#content" ).empty().html( data );
     }, "html")
     .fail(function( data ) {

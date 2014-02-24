@@ -17,7 +17,7 @@
 
         <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 
-        <title>Home | Rochet2.github.io</title>
+        <title>ProjectCode | Rochet2.github.io</title>
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,14 +50,22 @@
                 </li>
             </ul>
         </div>
-        <div id="projects">
+        <div style="
+            width: 490px;
+            height: 90%;
+            float: left;
+            /* margin-bottom: -115px; */
+        ">
+            <div id="projects">
+                <div style="width: 100%; /* height: 115px; *//* background: red; *//* float: left; */"></div>
+            </div>
         </div>
         <div id="content">
         </div>
         <script>
 
 
-            var Names = [ "Portal Master", "Portal Master Option", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Scale objects and NPCs" ];
+            var Names = [ "Portal Master", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging" ];
 
 
             var projects = $("#projects");
@@ -70,6 +78,6 @@
             projects.append(str.replace(/PROJECT2/g, Names[i]).replace(/PROJECT/g, Names[i].replace(/ /g, "_")));
         }
         </script>
-        <div id="Copyright">Copyright Rochet2 2014</div>
+        <div id="Copyright" style="display: none;">Copyright Rochet2 2014</div>
     </body>
 </html>
