@@ -178,6 +178,7 @@ html {
     /* display: table-cell; */
     box-shadow: 0 0 10px 0px black;
     margin: 10px;
+    color: rgb(226, 226, 226) !important;
 }
 .download:hover {
     background-image: linear-gradient(rgb(0, 168, 248), rgb(1, 81, 119));
