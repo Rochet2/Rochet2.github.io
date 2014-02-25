@@ -1,19 +1,4 @@
 $( document ).ready(function() {
-    // SRC: https://gist.github.com/tsi/5137145
-    // My micro jQuery templating engine
-    // Usage:
-    //
-    //    <section data-html="content"></section>
-    //
-    // Will load <content.html> into <section>
- 
-    // Load external contents
-    $("[data-html]").each(function() {
-        el = $(this);
-        var src = $(this).attr("data-html") + ".html";
-        el.load(src);
-    });
-    
     var content = document.URL;
     var index = content.indexOf("?")+1;
     if (index <= 0)
@@ -32,6 +17,13 @@ $( document ).ready(function() {
     document.title = content + " | RochetCode";
     $.get( "/pages/" + content + ".html", function( data ) {
         $( "#content" ).empty().html( data );
+        $(".video").click(function() {
+            $("#video>iframe").prop("src", $(this).attr("src"));
+            $("#video").fadeIn();
+        });
+        $("#video").click(function() {
+            $( this ).fadeOut();
+        });
     }, "html")
     .fail(function( data ) {
         $( "#content" ).empty().html( "<h1>Error loading content</h1>" );
