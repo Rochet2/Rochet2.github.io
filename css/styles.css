@@ -277,6 +277,8 @@ p {
 #video > div > div > img {
     width: auto;
     height: auto;
+    max-width: 75%;
+    max-height: 75%;
 }
 .split2 {
     height: 50% !important;
