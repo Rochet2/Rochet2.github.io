@@ -181,41 +181,21 @@ html, body {
 #content {
     height: 100%;
     width: 100%;
-    /* position: relative; */
-    /* float: left; */
-    /* z-index: 1; */
-    overflow: hidden;
-    /* top: 0; */
-    /* bottom: 0; */
-    /* left: 0; */
-}
-#content .box {
-    display: block;
-    vertical-align: top;
     overflow: auto;
+}
+#content > div {
+    display: block;
+    margin: 0px 15%;
+    overflow: visible;
     height: 100%;
-    float: left;
 }
 #description {
     /* margin-left: 80px; */
     width: 50%;
-}
-#media {
-    width: 50%;
-    overflow: hidden !important;
+    width: 100%;
 }
 a, a * {
     color: rgb(0, 173, 255);
-}
-#media > * {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /* margin-bottom: -100%; */
-    /* position: relative; */
-    /* top: 0; */
-    display: inline-block;
-    float: left;
 }
 #content h1 {
     margin: 20px 0px 10px;
@@ -226,20 +206,7 @@ a, a * {
 #description > div {
     right: 0px;
     position: relative;
-    margin: 0px 50px 0px 60px;
-}
-#video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: none;
-    text-align: center;
+    margin: 0px 138px;
 }
 #Image {
     background: url(../images/Rochet2_100.png) transparent;
@@ -264,8 +231,9 @@ a, a * {
     background-repeat: no-repeat;
     background-size: auto 20px;
     background-position: 5px center;
+    cursor: pointer;
 }
-#downloads {
+h1 {
     color: rgb(60, 60, 60);
     padding: 10px 0px;
 }
@@ -278,20 +246,42 @@ a, a * {
 p {
     font-size: 20px;
 }
-#video > iframe {
+#video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: none;
+    text-align: center;
+}
+#video > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+#video > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+#video > div > div > * {
     width: 75%;
     height: 75%;
-    display: inline-block;
-    position: relative;
-    top: 15%;
 }
-.video {
-    cursor: pointer;
+#video > div > div > img {
+    width: auto;
+    height: auto;
 }
 .split2 {
     height: 50% !important;
     /* width: 50% !important; */
 }
-#media > img {
-    height: initial;
+a:hover {
+    color: rgb(179, 0, 0);
 }

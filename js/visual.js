@@ -16,16 +16,21 @@ $( document ).ready(function() {
     content = content.replace(/_/g," ");
     document.title = content + " | RochetCode";
     $.get( "/pages/" + content + ".html", function( data ) {
-        $( "#content" ).empty().html( data );
-        $(".video").click(function() {
-            $("#video>iframe").prop("src", $(this).attr("src"));
+        $( "#content>div" ).empty().html( data );
+        $(".download.video").click(function() {
             $("#video").fadeIn();
+            $("#video>div>div").html("<iframe src='" + $(this).attr("src") + "?autoplay=1' frameborder='0' allowfullscreen></iframe>");
+        });
+        $(".download.img").click(function() {
+            $("#video").fadeIn();
+            $("#video>div>div").html("<img src='" + $(this).attr("src") + "' />");
         });
         $("#video").click(function() {
+            $("#video>div>div").empty();
             $( this ).fadeOut();
         });
     }, "html")
     .fail(function( data ) {
-        $( "#content" ).empty().html( "<h1>Error loading content</h1>" );
+        $( "#content>div" ).empty().html( "<h1>Error loading content</h1>" );
     })
 });
