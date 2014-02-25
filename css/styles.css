@@ -181,12 +181,12 @@ html, body {
 #content {
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 #content > div {
     display: block;
-    margin: 0px 15%;
-    overflow: visible;
+    padding: 0px 15%;
+    overflow: auto;
     height: 100%;
 }
 #description {
@@ -277,8 +277,6 @@ p {
 #video > div > div > img {
     width: auto;
     height: auto;
-    max-width: 75%;
-    max-height: 75%;
 }
 .split2 {
     height: 50% !important;
@@ -288,5 +286,5 @@ a:hover {
     color: rgb(179, 0, 0);
 }
 #content > div > *:nth-child(1) {
-    margin-top: 0 !important;
+    /* margin-top: 0 !important; */
 }
