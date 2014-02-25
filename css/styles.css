@@ -285,3 +285,6 @@ p {
 a:hover {
     color: rgb(179, 0, 0);
 }
+#content > div > *:nth-child(1) {
+    margin-top: 0 !important;
+}
