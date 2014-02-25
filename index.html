@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="cache-control" content="max-age=1800" />
-        <meta name="Robots" content="ALL" />
-        <meta name="Language" content="en" />
-        <meta name="Description" content="Opensource Coding" />
-        <meta name="Author" content="Rochet2" />
-        <meta name="Copyright" CONTENT="Copyright 2014- Rochet2">
-        <meta name="Keywords" content="portal master, teleport npc, stormwind, WMO, mangos, trinity, core, arcemu, download, jukebox, project, code,
+  <head>
+    <meta http-equiv="cache-control" content="max-age=1800" />
+    <meta name="Robots" content="ALL" />
+    <meta name="Language" content="en" />
+    <meta name="Description" content="Opensource Coding" />
+    <meta name="Author" content="Rochet2" />
+    <meta name="Copyright" CONTENT="Copyright 2014- Rochet2">
+      <meta name="Keywords" content="portal master, teleport npc, stormwind, WMO, mangos, trinity, core, arcemu, download, jukebox, project, code,
                               projectcode, wiki, forum, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
                               npc, code, world, warcraft, private, download, change, teleportation, trinitydb, smartai, mangadmin, project-code, emuproject,
                               emu, emulator, gossip, telenpc, project, zzl, org" />
 
-        <title>ProjectCode | Rochet2.github.io</title>
-        <link rel="icon" type="image/png" href="/images/favicon.png"/>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <title>ProjectCode | Rochet2.github.io</title>
+      <link rel="icon" type="image/png" href="/images/favicon.png"/>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-17459395-5', 'rochet2.github.io');
-            ga('send', 'pageview');
-        </script>
-        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+        ga('create', 'UA-17459395-5', 'rochet2.github.io');
+        ga('send', 'pageview');
+      </script>
+      <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
 
-        <script src="js/jquery.js"></script>
-        <script src="js/visual.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/visual.js"></script>
     </head>
-    <body>
-<div id="wrapper">
-            <div id="header">
-            <div id="Image"></div>
-                <ul id="topnav">
-                    <li>
-                        <a href="/" class="Home_active active">Home</a>
-                    </li>
-                    <li>
-                        <a href="?Contact" class="Contact_active">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="projects">
-  <div id="label"><span>Projects</span></div>
-  <div id="catcher"></div>
-<div id="boxes">
-  </div>
-  <script>
-    
-    var Names = [ "Portal Master", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Item Enchant Visuals", "GOMove" ];
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div id="Image"></div>
+        <ul id="topnav">
+          <li>
+            <a href="/" class="Home_active active">Home</a>
+          </li>
+          <li>
+            <a href="?Contact" class="Contact_active">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="projects">
+        <div id="label">
+          <span>Projects</span>
+        </div>
+        <div id="catcher"></div>
+        <div id="boxes">
+        </div>
+        <script>
 
-    var projects = $("#boxes");
-    var str = '<a class="IconBox PROJECT_active" href="?PROJECT">  \
-        <div class="Icon" style="background-image: url(\'/images/PROJECT_icon.png\');"></div> \
-        <p class="Label">PROJECT2</p> \
-    </a>';
-    for ( var i = 0; i < Names.length; i = i + 1 )
+          var Names = [ "Portal Master", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Item Enchant Visuals", "GOMove" ];
+
+          var projects = $("#boxes");
+          var str = '<a class="IconBox PROJECT_active" href="?PROJECT"> \
+            <div class="Icon" style="background-image: url(\'/images/PROJECT_icon.png\');"></div> \
+            <p class="Label">PROJECT2</p> \
+          </a>';
+          for ( var i = 0; i < Names.length; i = i + 1 )
     {
         projects.append(str.replace(/PROJECT2/g, Names[i]).replace(/PROJECT/g, Names[i].replace(/ /g, "_")));
     }
-    </script>
-</div>
-            <div id="content"></div>
-            <div id="video"><iframe src="//www.youtube.com/embed/SOKq1EAmV-k" frameborder="0" allowfullscreen></iframe></div>
-            <div id="footer">Copyright 2014- Rochet2</div>
-        </div>
-    </body>
+        </script>
+      </div>
+      <div id="content"></div>
+      <div id="video">
+        <iframe src="//www.youtube.com/embed/SOKq1EAmV-k" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+      <div id="footer">Copyright 2014- Rochet2</div>
+    </div>
+  </body>
 </html>
