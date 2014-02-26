@@ -49,7 +49,6 @@ html, body {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    display: none;
 }
 #header {
     height: 100px;
