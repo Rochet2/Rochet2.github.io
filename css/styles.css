@@ -55,6 +55,7 @@ html, body {
     height: 100px;
     margin-top: -100px;
     background-color: rgb(22, 22, 22);
+    overflow: hidden;
 }
 #topnav {
     height: 100%;
@@ -287,4 +288,19 @@ a:hover {
 }
 #content > div > *:nth-child(1) {
     /* margin-top: 0 !important; */
+}
+#like {
+    position: absolute;
+    display: table;
+    top: 0px;
+    right: 0px;
+    height: 100px;
+    overflow: hidden;
+}
+#like > div {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px 20px 0px 0px;
+    height: 100px;
+    position: relative;
 }
