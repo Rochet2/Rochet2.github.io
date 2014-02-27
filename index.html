@@ -23,14 +23,14 @@
         ga('create', 'UA-17459395-5', 'rochet2.github.io');
         ga('send', 'pageview');
     </script>
-      <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
 
-      <script src="js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script type="text/javascript">
         /**
         * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
         * Common usage: wipe images (left and right to show the previous or next image)
-        * 
+        *
         * @author Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
         * @version 1.1.1 (9th December 2010) - fix bug (older IE's had problems)
         * @version 1.1 (1st September 2010) - support wipe up and wipe down
@@ -38,94 +38,138 @@
         */
         (function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft()}else{config.wipeRight()}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown()}else{config.wipeUp()}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
     </script>
-    </head>
+  </head>
   <body>
-    <div id="wrapper">
-      <div id="header">
-        <div id="Image"></div>
-        <ul id="topnav">
-          <li>
-            <a href="/" class="Home_active active">Home</a>
-          </li>
-          <li>
-            <a href="?Contact" class="Contact_active">Contact & Links</a>
-          </li>
-        </ul>
+    <div id="header">
+      <div id="Image"></div>
+      <div id="topnav">
+        <a href="/" class="Home_active active">Home</a>
+        <a href="?page=Social" class="Social_active">Social</a>
       </div>
-      <div id="projects">
-        <div id="label">
-          <span>Projects</span>
+    </div>
+    <div id="projects">
+      <div id="label">
+        <div>
+          <div>
+            <p>Projects</p>
+          </div>
         </div>
-        <div id="catcher"></div>
-        <div id="boxes">
-        </div>
-        <script>
-
-          var Names = [ "Portal Master", "Jukebox", "Eluna", "Player and Item Gossip", "Dress NPCs", "Transmogrification", "Reforging", "Item Enchant Visuals", "GOMove" ];
-
-          var projects = $("#boxes");
-          var str = '<a class="IconBox PROJECT_active" href="?PROJECT"> \
-            <div class="Icon" style="background-image: url(\'/images/PROJECT_icon.png\');"></div> \
-            <p class="Label">PROJECT2</p> \
-          </a>';
-          for ( var i = 0; i < Names.length; i = i + 1 )
-    {
-        projects.append(str.replace(/PROJECT2/g, Names[i]).replace(/PROJECT/g, Names[i].replace(/ /g, "_")));
-    }
-        </script>
       </div>
-      <div id="content">
-        <div><p><A HREF="javascript:history.go(0)">Refresh page</A> or enable JavaScript</p></div>
+      <div id="catcher"></div>
+      <div id="boxes">
+        <a class="Portal_Master_active" href="?page=Portal_Master">
+          <div>
+            <div style="background-image: url('/images/Portal_Master_icon.png');"></div>
+            <p>Portal Master</p>
+          </div>
+        </a>
+        <a class="Jukebox_active" href="?page=Jukebox">
+          <div>
+            <div style="background-image: url('/images/Jukebox_icon.png');"></div>
+            <p>Jukebox</p>
+          </div>
+        </a>
+        <a class="Eluna_active" href="?page=Eluna">
+          <div>
+            <div style="background-image: url('/images/Eluna_icon.png');"></div>
+            <p>Eluna</p>
+          </div>
+        </a>
+        <a class="Player_and_Item_Gossip_active" href="?page=Player_and_Item_Gossip">
+          <div>
+            <div style="background-image: url('/images/Player_and_Item_Gossip_icon.png');"></div>
+            <p>Player and Item Gossip</p>
+          </div>
+        </a>
+        <a class="Dress_NPCs_active" href="?page=Dress_NPCs">
+          <div>
+            <div style="background-image: url('/images/Dress_NPCs_icon.png');"></div>
+            <p>Dress NPCs</p>
+          </div>
+        </a>
+        <a class="Transmogrification_active" href="?page=Transmogrification">
+          <div>
+            <div style="background-image: url('/images/Transmogrification_icon.png');"></div>
+            <p>Transmogrification</p>
+          </div>
+        </a>
+        <a class="Reforging_active" href="?page=Reforging">
+          <div>
+            <div style="background-image: url('/images/Reforging_icon.png');"></div>
+            <p>Reforging</p>
+          </div>
+        </a>
+        <a class="Item_Enchant_Visuals_active" href="?page=Item_Enchant_Visuals">
+          <div>
+            <div style="background-image: url('/images/Item_Enchant_Visuals_icon.png');"></div>
+            <p>Item Enchant Visuals</p>
+          </div>
+        </a>
+        <a class="GOMove_active" href="?page=GOMove">
+          <div>
+            <div style="background-image: url('/images/GOMove_icon.png');"></div>
+            <p>GOMove</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="content">
+      <div>
+        <h1>Error loading content</h1>
+        <p>Enable JavaScript</p>
       </div>
       <script>
-          var content = document.URL;
-          var index = content.indexOf("?")+1;
-          if (index <= 0)
-          {
-              content = "Home";
-          }
-          content = content.substr(index).replace(/%20/g,"_");
-          index = content.indexOf("#");
-          if (index > 0)
-          {
-              content = content.substr(0, index);
-          }
-          $(".active").removeClass( "active" );
-          $("." + content + "_active").addClass( "active" );
-          content = content.replace(/_/g," ");
-          document.title = content + " | RochetCode";
-          $.get( "/pages/" + content + ".html", function( data ) {
-              $( "#content>div" ).empty().html( data );
-              $(".download.video").click(function() {
-                  $("#video").fadeIn();
-                  $("#video>div>div").html("<iframe src='" + $(this).attr("src") + "?autoplay=1' frameborder='0' allowfullscreen></iframe>");
-              });
-              $(".download.img").click(function() {
-                  $("#video").fadeIn();
-                  $("#video>div>div").html("<img src='" + $(this).attr("src") + "' />");
-              });
-              $("#video").click(function() {
-                  $("#video>div>div").empty();
-                  $( this ).fadeOut();
-              });
-          }, "html")
-          .fail(function( data ) {
-              $( "#content>div" ).empty().html( "<h1>Error loading content</h1>" );
-          })
+        var page = document.URL.match(/page=(\w+)/);
+        
+        /*Backwards compatibility*/
+        if (!page) {
+            page = document.URL.match(/\?(\w+)/);
+        }
+        
+        if (!page) {
+            page = "Home";
+        } else {
+            page = page[1].replace(/%20/g,"_");
+        }
+        $(".active").removeClass("active");
+        $("." + page + "_active").addClass("active");
+        document.title = page + " | RochetCode";
+        page = page.replace(/_/g," ");
+        $.get("/pages/" + page + ".html", function(data) {
+            $("#content>div").empty().html(data);
+            $(".media").click(function() {
+                $("#media").fadeIn();
+                $("#media>div>div").html($(this).attr("src"));
+            });
+            $("#media").click(function() {
+                $("#media>div>div").empty();
+                $(this).fadeOut();
+            });
+        }, "html")
+        .fail(function(data) {
+            document.title = "404 | RochetCode";
+            $("#content>div").empty().html("<h1>Error loading content</h1><p>Page does not exist or content could not be loaded</p><p>Try <A HREF='javascript:history.go(0)'>refreshing</A> the page or go to <a href='/'>site index</a></p>");
+        })
       </script>
-      <div id="video">
-        <div><div></div></div>
-      </div>
-      <div id="footer">Copyright 2014- Rochet2</div>
+      <footer id="footer">Copyright 2014- Rochet2</footer>
     </div>
     <script>
         $("#content, #projects").touchwipe({
-            wipeLeft: function() { $("#projects").attr("style", "margin-left: -30%;"); },
-            wipeRight: function() { $("#projects").attr("style", "margin-left: 0px;"); },
+            wipeLeft: function() {
+                $("#projects").removeClass("active");
+            },
+            wipeRight: function() {
+                $("#projects").addClass("active");
+            },
             min_move_x: 20,
             min_move_y: 20,
             preventDefaultEvents: false
         });
     </script>
+    <div id="media">
+      <div>
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>
