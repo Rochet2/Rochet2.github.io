@@ -6,113 +6,34 @@
     margin: 0px;
     padding: 0px;
     border: none;
-    color: rgb(221, 221, 221);
     text-decoration: none;
-    /* font-size: 10px; */
+    color: gray;
+    font-size: 20px;
 }
 body {
     background: rgb(36, 36, 36);
-    background-position: center 100px;
-    background-repeat: no-repeat;
     /* transition: background 500ms; */
     /* -webkit-transition: background 500ms; */
 }
 html, body {
-    min-height: 100%;
-}
-#wrapper {
-    padding: 100px 0px 0px 0px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-#projects {
     height: 100%;
-    width: 30%;
-    background-color: rgb(32, 32, 32);
-    position: relative;
-    transition: margin-left 500ms;
-    -webkit-transition: margin-left 500ms;
-    margin-left: -30%;
-    float: left;
-    z-index: 9999999999;
-    margin-right: -30%;
-}
-#footer {
-    height: 20px;
-    /* margin-bottom: -20px; */
-    text-align: right;
-    line-height: 20px;
-    font-size: smaller;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-#header {
-    height: 100px;
-    margin-top: -100px;
-    background-color: rgb(22, 22, 22);
-    overflow: hidden;
-}
-#topnav {
-    height: 100%;
-    display: inline-block;
-}
-#topnav > li {
-    height: 100%;
-    list-style: none;
-    display: block;
-    float: left;
-}
-#topnav > li > a {
-    display: inline-block;
-    height: 100%;
-    line-height: 100px;
-    padding: 0px 20px;
-    font-size: x-large;
-    transition: background-color 500ms;
-    -webkit-transition: background-color 500ms;
-}
-#topnav > li > a:hover {
-    /* color: rgb(55, 215, 255); */
-    /* text-shadow: 0px 0px 10px white; */
-    background-color: rgba(255, 255, 255, 0.08);
-}
-#projects:hover {
-    margin-left: 0px;
-}
-#label {
-    right: -81px;
-    top: 45px;
-    position: absolute;
-    display: inline-block;
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    transform: rotate(90deg);
-    /* border-bottom: 5px solid rgb(88, 88, 88); */
-    /* background-color: rgb(36, 36, 36); */
-    /* height: 20px; */
-    /* width: 75px; */
-    /* z-index: 2; */
-}
-#label > p {
-    display: inline-block;
     width: 100%;
 }
-#label > span {
-    /* border-bottom: solid 6px rgb(151, 6, 0); */
-    line-height: 25px;
-    font-size: 25px;
-    /* height: 39px; */
-    padding: 5px 10px;
-    text-align: center;
-    background-color: rgb(29, 29, 29);
-    color: rgb(177, 0, 0);
+a, a * {
+    color: rgb(0, 173, 255);
+}
+a:hover {
+    color: rgb(179, 0, 0);
+}
+h1 {
+    color: rgb(60, 60, 60);
+    padding: 10px 0px;
+}
+p {
+    font-size: 20px;
 }
 ::-webkit-scrollbar {
-    width:16px;
+    width: 16px;
     background-color: rgba(56, 56, 56, 1);
 }
 ::-webkit-scrollbar-thumb {
@@ -130,72 +51,165 @@ html, body {
 ::-webkit-scrollbar-corner {
     background-color: rgba(56, 56, 56, 1);
 }
+#projects {
+    transition: left 500ms;
+    -webkit-transition: left 500ms;
+    background-color: rgb(32, 32, 32);
+    height: 90%;
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: -30%;
+    z-index: 9999999999;
+}
+#footer {
+    background-color: #242424;
+    border-radius: 3px 3px 0px 0px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 3px;
+}
+#header {
+    width: 100%;
+    height: 10%;
+    min-height: 25px;
+    background-color: rgb(22, 22, 22);
+    overflow: hidden;
+}
+#Image {
+    background: url(../images/Rochet2_100.png) transparent;
+    background-size: auto 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 100%;
+    display: block;
+    float: left;
+    /* margin: 0 20px; */
+}
+#topnav {
+    height: 100%;
+    max-width: 90%;
+    min-width: 20%;
+    display: table;
+    float: left;
+    text-align: center;
+    /* overflow: hidden; */
+}
+#topnav > a {
+    transition: background-color 500ms;
+    -webkit-transition: background-color 500ms;
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+    width: 50%;
+    font-size: 25px;
+    line-height: 25px;
+    padding: 0px 10%;
+    margin: 0px -10%;
+}
+#topnav > a:hover {
+    /* color: rgb(55, 215, 255); */
+    /* text-shadow: 0px 0px 10px white; */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+#projects:hover, #projects.active {
+    left: 0px;
+}
+#label {
+    position: absolute;
+    top: 0px;
+    /* right: -35px; */
+    right: 0px;
+    /* overflow: hidden; */
+}
+#label > div {
+    transform-origin: 0px 0px;
+    -ms-transform-origin:20% 40%; /* IE 9 */
+    -webkit-transform-origin: 17px 17px; /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    width: 0px;
+    height: 0px;
+    position: relative;
+    padding-top: 100%;
+}
+#label > div > div {
+    width: 100px;
+    height: 30px;
+    display: table;
+    text-align: center;
+    background-color: #202020;
+}
+#label > div > div > p {
+    display: table-cell;
+    vertical-align: middle;
+    color: rgb(151, 6, 0);
+    font-size: 20px;
+    line-height: 20px;
+}
 #boxes {
     overflow: auto;
-    padding: 0px 0px 0px 15px;
     height: 100%;
+    text-align: left;
+    margin: auto;
+    display: block;
 }
-#boxes .Icon {
+#boxes > a {
+    transition: border 500ms, background-color 500ms;
+    -webkit-transition: border 500ms, background-color 500ms;
+    display: inline-table;
+    width: 15%;
+    height: 15%;
+    min-width: 100px;
+    margin: 5px;
+    padding: 10px;
+    vertical-align: middle;
+    list-style: none;
+    border: 1px solid transparent;
+    text-align: center;
+}
+#boxes > a:hover {
+    background-color: rgba(48, 48, 48, 0.78);
+    border: 1px solid rgb(83, 83, 83);
+}
+#boxes > a.active {
+    background-color: rgba(15, 15, 15, 0.78);
+    border: 1px solid rgb(0, 124, 182);
+}
+#boxes > a > div {
+    margin: 0px auto;
+    vertical-align: middle;
+    display: table-cell;
+}
+#boxes > a > div > div {
     width: 50px;
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0px auto;
 }
-#boxes .Label {
-    text-align: center;
-    /* position: relative; */
-    margin-top: 5px;
-}
-#boxes > a.IconBox {
-    display: inline-block;
-    width: 105px;
-    height: 98px;
-    margin: 8px;
-    vertical-align: middle;
-    /* background-color: rgb(32, 32, 32); */
-    padding: 2px;
-    border: 1px solid transparent;
-    transition: border 500ms, background-color 500ms;
-    -webkit-transition: border 500ms, background-color 500ms;
-    /* float: left; */
-}
-#boxes > a.IconBox:hover {
-    background-color: rgba(48, 48, 48, 0.78);
-    border: 1px solid rgb(83, 83, 83);
-}
-#boxes > a.IconBox.active {
-    background-color: rgba(15, 15, 15, 0.78);
-    border: 1px solid rgb(0, 124, 182);
-    display: inline-block;
-}
 #catcher {
+    background-color: rgb(151, 6, 0);
+    width: 6px;
+    height: 100%;
     position: absolute;
     right: -5px;
     top: 0;
-    width: 6px;
-    height: 100%;
-    background-color: rgb(151, 6, 0);
-    /* z-index: 2; */
-}
-#content {
-    height: 100%;
-    width: 100%;
     overflow: hidden;
 }
-#content > div {
-    display: block;
-    padding: 0px 15%;
+#content {
+    height: 90%;
     overflow: auto;
-    height: 100%;
 }
-#description {
-    /* margin-left: 80px; */
-    width: 50%;
-    width: 100%;
-}
-a, a * {
-    color: rgb(0, 173, 255);
+#content > div {
+    padding: 0px 15% 20px;
 }
 #content h1 {
     margin: 20px 0px 10px;
@@ -203,103 +217,53 @@ a, a * {
 #content p {
     margin: 10px 0px;
 }
-#description > div {
-    right: 0px;
-    position: relative;
-    margin: 0px 138px;
-}
-#Image {
-    background: url(../images/Rochet2_100.png) transparent;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 100%;
-    display: inline-block;
-    margin: 0 20px;
-}
 .download {
+    background-color: rgb(46, 46, 46);
+    cursor: pointer;
     display: block;
     margin: 5px 0px;
     padding: 7px 0px;
     font-size: 20px;
-    background-color: rgb(46, 46, 46);
-    /* color: rgb(0, 173, 255); */
     font-weight: bold;
     text-indent: 15px;
-    /* background-image: url(/images/Download.png); */
-    background-repeat: no-repeat;
-    background-size: auto 20px;
-    background-position: 5px center;
-    cursor: pointer;
-}
-h1 {
-    color: rgb(60, 60, 60);
-    padding: 10px 0px;
 }
 .download:hover {
     background-color: rgb(51, 51, 51);
 }
-#projects * {
-    font-size: 16px;
-}
-p {
-    font-size: 20px;
-}
-#video {
+#media {
+    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
+    z-index: 99999999999;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
 }
-#video > div {
+#media > div {
     display: table;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
-#video > div > div {
+#media > div > div {
     display: table-cell;
     vertical-align: middle;
-    width: 100%;
-    height: 100%;
 }
-#video > div > div > * {
+#media > div > div > * {
+    max-width: 75%;
+    max-height: 75%;
+}
+#media > div > div > iframe {
     width: 75%;
     height: 75%;
 }
-#video > div > div > img {
-    width: auto;
-    height: auto;
-}
-.split2 {
-    height: 50% !important;
-    /* width: 50% !important; */
-}
-a:hover {
-    color: rgb(179, 0, 0);
-}
-#content > div > *:nth-child(1) {
-    /* margin-top: 0 !important; */
-}
-#like {
-    position: absolute;
-    display: table;
-    top: 0px;
-    right: 0px;
-    height: 100px;
-    overflow: hidden;
-}
-#like > div {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0px 20px 0px 0px;
-    height: 100px;
-    position: relative;
+.social {
+    display: inline-block;
+    vertical-align: bottom;
+    min-height: 66px;
 }
