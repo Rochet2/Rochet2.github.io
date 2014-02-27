@@ -110,8 +110,13 @@ p {
     width: 50%;
     font-size: 25px;
     line-height: 25px;
-    padding: 0px 10%;
-    margin: 0px -10%;
+    /* padding: 0px 10%; */
+    /* margin: 0px -10%; */
+}
+#topnav > a > span {
+    line-height: 25px;
+    font-size: 25px;
+    margin: 0px 30px;
 }
 #topnav > a:hover {
     /* color: rgb(55, 215, 255); */
