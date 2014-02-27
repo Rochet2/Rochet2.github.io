@@ -133,8 +133,8 @@
         }
         $(".active").removeClass("active");
         $("." + page + "_active").addClass("active");
-        document.title = page + " | RochetCode";
         page = page.replace(/_/g," ");
+        document.title = page + " | RochetCode";
         $.get("/pages/" + page + ".html", function(data) {
             $("#content>div").empty().html(data);
             $(".media").click(function() {
