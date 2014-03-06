@@ -23,10 +23,10 @@ a, a * {
     color: rgb(0, 173, 255);
 }
 a:hover {
-    color: rgb(179, 0, 0);
+    color: rgb(0, 204, 255);
 }
 h1 {
-    color: rgb(60, 60, 60);
+    color: #970600;
     padding: 10px 0px;
 }
 p {
