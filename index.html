@@ -136,6 +136,7 @@
         page = page.replace(/_/g," ");
         document.title = page + " | RochetCode";
         $.get("/pages/" + page + ".html", function(data) {
+            alert("Success Triggered");
             $("#content>div").empty().html(data);
             var sliderTime;
             $(".media").click(function() {
@@ -164,6 +165,7 @@
             });
         }, "html")
         .fail(function(data) {
+            alert("Fail Triggered");
             document.title = "404 | RochetCode";
             $("#content>div").empty().html("<h1>Error loading content</h1><p>Page does not exist or content could not be loaded</p><p>Try <A HREF='javascript:history.go(0)'>refreshing</A> the page or go to <a href='/'>site index</a></p>");
         });
