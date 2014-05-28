@@ -22,8 +22,8 @@ DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+6;
 DELETE FROM dbscripts_on_gossip WHERE id BETWEEN @GOSSIP_SCRIPT AND @GOSSIP_SCRIPT+627;
 DELETE FROM gossip_menu_option WHERE menu_id BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
 
-INSERT INTO creature_template (entry, modelid_1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, minhealth, maxhealth, minmana, maxmana, armor, faction_A, faction_H, npcflag, speed_walk, speed_run, scale, rank, dmg_multiplier, unit_flags, type, type_flags, InhabitType, unk16, unk17, RegenHealth, flags_extra) VALUES
-(@ENTRY, @MODEL, @NAME, @SUBNAME, "", @GOSSIP_MENU, 71, 71, 13700, 13700, 6540, 6540, 5700, 35, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 3, 1, 1, 1, 2);
+INSERT INTO creature_template (entry, modelid_1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, minhealth, maxhealth, minmana, maxmana, armor, faction, npcflag, speed_walk, speed_run, scale, rank, dmg_multiplier, unit_flags, type, type_flags, InhabitType, unk16, unk17, RegenHealth, flags_extra) VALUES
+(@ENTRY, @MODEL, @NAME, @SUBNAME, "", @GOSSIP_MENU, 71, 71, 13700, 13700, 6540, 6540, 5700, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 3, 1, 1, 1, 2);
 
 INSERT INTO gossip_menu (entry, text_id) VALUES 
 (@GOSSIP_MENU, @TEXT_ID),
