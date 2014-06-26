@@ -3,15 +3,19 @@
     font-family: 'Varela Round', sans-serif;
     word-wrap: break-word;
     word-break: break-word;
+    /*
     margin: 0px;
     padding: 0px;
+    */
     border: none;
     text-decoration: none;
-    color: gray;
-    font-size: 20px;
+    color: black;
+    /*font-size: 20px;*/
 }
 body {
-    background: rgb(36, 36, 36);
+    background: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
     /* transition: background 500ms; */
     /* -webkit-transition: background 500ms; */
 }
@@ -20,32 +24,33 @@ html, body {
     width: 100%;
 }
 a, a * {
-    color: rgb(0, 173, 255);
+  color: #4183c4;
+  text-decoration: none;
 }
-a:hover {
-    color: rgb(0, 204, 255);
+a:hover, a:focus, a:active {
+  text-decoration: none;
 }
 h1 {
-    color: #970600;
+    color: #0093FF;
     padding: 10px 0px;
 }
 p {
-    font-size: 20px;
+    /*font-size: 20px;*/
 }
 ::-webkit-scrollbar {
     width: 16px;
     background-color: rgba(56, 56, 56, 1);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #494949;
-    border-radius:10px;
+    background-color: #006EC0;
+    /*border-radius:10px;*/
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color:#BF4649;
+    background-color: #0093FF;
     border:1px solid #333333;
 }
 ::-webkit-scrollbar-thumb:active {
-    background-color:#A6393D;
+    background-color: #006EC0;
     border: 1px solid #333333;
 }
 ::-webkit-scrollbar-corner {
@@ -54,13 +59,13 @@ p {
 #projects {
     transition: left 500ms;
     -webkit-transition: left 500ms;
-    background-color: rgb(32, 32, 32);
+    background-color: #FFFFFF;
     height: 90%;
-    width: 30%;
+    width: 40%;
     text-align: center;
     position: absolute;
     bottom: 0px;
-    left: -30%;
+    left: -40%;
     z-index: 9999999999;
 }
 #footer {
@@ -73,12 +78,13 @@ p {
     display: inline-block;
     margin-right: 20px;
     padding: 3px;
+    color: white;
 }
 #header {
     width: 100%;
     height: 10%;
     min-height: 25px;
-    background-color: rgb(22, 22, 22);
+    background-color: #111111;
     overflow: hidden;
 }
 #Image {
@@ -110,6 +116,7 @@ p {
     width: 50%;
     font-size: 25px;
     line-height: 25px;
+    color: white;
     /* padding: 0px 10%; */
     /* margin: 0px -10%; */
 }
@@ -117,11 +124,13 @@ p {
     line-height: 25px;
     font-size: 25px;
     margin: 0px 30px;
+    color: white;
 }
 #topnav > a:hover {
     /* color: rgb(55, 215, 255); */
     /* text-shadow: 0px 0px 10px white; */
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: #0069BB;
+    text-decoration: none;
 }
 #projects:hover, #projects.active {
     left: 0px;
@@ -150,12 +159,12 @@ p {
     height: 30px;
     display: table;
     text-align: center;
-    background-color: #202020;
+    background-color: #0093FF;
 }
 #label > div > div > p {
     display: table-cell;
     vertical-align: middle;
-    color: rgb(151, 6, 0);
+    color: #FFFFFF;
     font-size: 20px;
     line-height: 20px;
 }
@@ -181,12 +190,15 @@ p {
     text-align: center;
 }
 #boxes > a:hover {
-    background-color: rgba(48, 48, 48, 0.78);
-    border: 1px solid rgb(83, 83, 83);
+    /* background-color: rgba(255, 255, 255, 0.78); */
+    border: 1px solid #0088BD;
+    box-shadow: 0px 0px 30px 0px inset;
 }
 #boxes > a.active {
-    background-color: rgba(15, 15, 15, 0.78);
-    border: 1px solid rgb(0, 124, 182);
+    /* background-color: rgba(15, 15, 15, 0.78); */
+    border: 1px solid #0088BD;
+    box-shadow: 0px 0px 30px 1px inset;
+    /* border-radius: 5px; */
 }
 #boxes > a > div {
     margin: 0px auto;
@@ -201,7 +213,7 @@ p {
     margin: 0px auto;
 }
 #catcher {
-    background-color: rgb(151, 6, 0);
+    background-color: #0093FF;
     width: 6px;
     height: 100%;
     position: absolute;
@@ -214,7 +226,14 @@ p {
     overflow: auto;
 }
 #content > div {
-    padding: 0px 15% 20px;
+    padding: 0px 15% 15%;
+}
+#content a {
+  color: #4183c4;
+  text-decoration: none;
+}
+#content a:hover, #content a:focus, #content a:active {
+  text-decoration: underline;
 }
 #content h1 {
     margin: 20px 0px 10px;
@@ -223,7 +242,8 @@ p {
     margin: 10px 0px;
 }
 .download {
-    background-color: rgb(46, 46, 46);
+    background-color: #0072C6;
+    color: #FFFFFF !important;
     cursor: pointer;
     display: block;
     margin: 5px 0px;
@@ -233,7 +253,8 @@ p {
     text-indent: 15px;
 }
 .download:hover {
-    background-color: rgb(51, 51, 51);
+    background-color: #0093FF;
+    color: #FFFFFF !important;
 }
 #media {
     display: none;
@@ -316,4 +337,7 @@ p {
 }
 .gist-meta {
     display: none;
+}
+#twitter-widget-0 {
+    width: 100% !important;
 }
