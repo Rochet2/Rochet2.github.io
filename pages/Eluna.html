@@ -13,8 +13,10 @@
     <p>Loading content from github...</p>
 </div>
 <script>
-    $.getGithubFileByFilePath("ElunaLuaEngine", "Eluna", "README.md", function(contents) {
-        $("#githubContent").html(marked(contents));
+    $( document ).ready(function() {
+        $.getGithubFileByFilePath("ElunaLuaEngine", "Eluna", "README.md", function(contents) {
+            $("#githubContent").html(marked(contents));
+        });
     });
 </script>
 <h1 id="downloads">Downloads</h1>
