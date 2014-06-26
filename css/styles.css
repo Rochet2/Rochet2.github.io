@@ -314,3 +314,6 @@ p {
     /* height: inherit; */
     /* position: relative; */
 }
+.gist-meta {
+    display: none;
+}
