@@ -25,7 +25,11 @@
     </script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
 
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/gist-embed.js"></script>
+    <script type="text/javascript" src="/js/github-files.js"></script>
+    <script type="text/javascript" src="/js/marked.js"></script>
+    
     <script type="text/javascript">
         /**
         * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
@@ -137,6 +141,7 @@
         document.title = page + " | RochetCode";
         $.get("/pages/" + page + ".html", function(data) {
             $("#content>div").empty().html(data);
+            EmbedGists();
             var sliderTime;
             $(".media").click(function() {
                 $("#media").fadeIn();
