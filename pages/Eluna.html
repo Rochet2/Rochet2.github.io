@@ -8,7 +8,10 @@
 <p>Please do note that the engine is being worked on.</p>
 <p>The engine is not quite finished yet and has major updates and some functions may not work yet.</p>
 -->
-<div id="githubContent"><p>Loading content from github...</p></div>
+<div id="githubContent">
+    <h1>Dress NPCs</h1>
+    <p>Loading content from github...</p>
+</div>
 <script>
     $.getGithubFileByFilePath("ElunaLuaEngine", "Eluna", "README.md", function(contents) {
         $("#githubContent").html(marked(contents));
