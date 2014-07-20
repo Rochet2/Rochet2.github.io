@@ -102,7 +102,7 @@ p {
 #topnav {
     height: 100%;
     max-width: 90%;
-    min-width: 20%;
+    min-width: 35%;
     display: table;
     float: left;
     text-align: center;
@@ -114,7 +114,7 @@ p {
     display: table-cell;
     vertical-align: middle;
     height: auto;
-    width: 50%;
+    width: 33%;
     font-size: 25px;
     line-height: 25px;
     color: white;
