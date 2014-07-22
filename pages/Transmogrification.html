@@ -1,4 +1,3 @@
-<h1>Transmogrification</h1>
 <!--
 <p>Transmogrification allows you to change the display of an item to something else.</p>
 <p>You can use any item in your bags as source of display, as long as it fits the requirements.</p>
@@ -14,7 +13,7 @@
 </div>
 <script>
     $( document ).ready(function() {
-        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "/src/server/scripts/Custom/Transmog/README.md", function(contents) {
+        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "src/server/scripts/Custom/Transmog/README.md", function(contents) {
             $("#githubContent").html(marked(contents));
         });
     });
