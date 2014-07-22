@@ -13,7 +13,7 @@
 </div>
 <script>
     $( document ).ready(function() {
-        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "src/server/scripts/Custom/Transmog/README.md", function(contents) {
+        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "README.md", function(contents) {
             $("#githubContent").html(marked(contents));
         });
     });
