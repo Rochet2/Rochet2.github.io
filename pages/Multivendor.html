@@ -1,6 +1,24 @@
+<!--
 <h1>Multivendor</h1>
 <code id="gist-8792703" data-file="!MultiVendor.md"></code>
 <h1 id="downloads">Media</h1>
 <a src="/media/MV_slide.html" class="download media html">Screenshots</a>
 <h1 id="downloads">Downloads</h1>
 <a target="_blank" href="https://gist.github.com/Rochet2/8792703" class="download button">TrinityCore</a>
+-->
+<div id="githubContent">
+    <h1>Multivendor</h1>
+    <p>Loading content from github...</p>
+</div>
+<script>
+    $( document ).ready(function() {
+        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "src/server/scripts/Custom/Multivendor/README.md?ref=multivendor", function(contents) {
+            $("#githubContent").html(marked(contents));
+        });
+    });
+</script>
+<h1 id="downloads">Media</h1>
+<a src="<iframe src='//www.youtube.com/embed/wuNWPqiIm64?autoplay=1' frameborder='0' allowfullscreen></iframe>" class="download media">Initial release</a>
+<a src="<iframe src='//www.youtube.com/embed/xtH4ogz12iM?autoplay=1' frameborder='0' allowfullscreen></iframe>" class="download media">Update 5.0</a>
+<h1 id="downloads">Downloads</h1>
+<a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/multivendor/src/server/scripts/Custom/Multivendor/README.md" class="download button">TrinityCore</a>
