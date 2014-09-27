@@ -2,10 +2,10 @@ CACHE MANIFEST
 # 0.0.3
 /index.html
 /LICENCE.md
-/images
-/js
-/css
-/pages
+/images/
+/js/
+/css/
+/pages/
 /downloads/Sounds.html
 
 NETWORK:
