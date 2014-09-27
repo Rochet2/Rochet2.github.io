@@ -1,12 +1,11 @@
 CACHE MANIFEST
-# 0.0.2
+# 0.0.3
 /index.html
-/404.html
 /LICENCE.md
-/images/*
-/js/*
-/css/*
-/pages/*
+/images
+/js
+/css
+/pages
 /downloads/Sounds.html
 
 NETWORK:
