@@ -1,3 +1,4 @@
+<!--
 <h1>GOMove</h1>
 <p>
 Original idea: <a href="http://www.youtube.com/watch?v=a0JVXJ07KUU">Mordred</a>
@@ -14,7 +15,19 @@ Snap facing to a compass direction (N,E,W,S)<br />
 Spawn an object again<br />
 move to ground level
 </p>
+-->
+<div id="githubContent">
+    <h1>GOMove</h1>
+    <p>Loading content from github...</p>
+</div>
+<script>
+    $( document ).ready(function() {
+        $.getGithubFileByFilePath("Rochet2", "TrinityCore", "src/server/scripts/Custom/GOMove/README.md?ref=gomove", function(contents) {
+            $("#githubContent").html(marked(contents));
+        });
+    });
+</script>
 <h1 id="downloads">Media</h1>
 <a src="<iframe src='//www.youtube.com/embed/dqbUQrvIlcA?autoplay=1' frameborder='0' allowfullscreen></iframe>" class="download media">First test ingame</a>
 <h1 id="downloads">Downloads</h1>
-<a target="_blank" href="https://drive.google.com/folderview?id=0Bx5knS2IsjatMEFsS0NKM3l6ZUE&usp=sharing" class="download button">TrinityCore</a>
+<a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/gomove/src/server/scripts/Custom/GOMove/" class="download button">TrinityCore</a>
