@@ -1,0 +1,3184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>command</title>
+    <meta name="GENERATOR" content="HeidiSQL 9.1.0.4913">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      thead tr {background-color: ActiveCaption; color: CaptionText;}
+      th, td {vertical-align: top; font-family: "Tahoma", Arial, Helvetica, sans-serif; font-size: 8pt; padding: 3px; }
+      table, td {border: 1px solid silver;}
+      table {border-collapse: collapse;}
+      /* thead .col0 {width: 50px;} */
+      /* thead .col1 {width: 45%;} */
+    </style>
+  </head>
+
+  <body>
+
+<p style="font-family: monospace; white-space: pre;">SELECT SUBSTRING(rbac_permissions.name, LENGTH('Command: '), LENGTH(rbac_permissions.name)) AS command,
+tc_335_w.command.`help` AS `help`
+FROM rbac_permissions
+LEFT JOIN tc_335_w.command on rbac_permissions.id = tc_335_w.command.permission
+WHERE rbac_permissions.name LIKE 'Command: %'</p>
+
+    <table caption="command (583 rows)">
+      <thead>
+        <tr>
+          <th class="col0">command</th>
+          <th class="col1">help</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col0"> .guild info</td>
+          <td class="col1">Shows information about target's guild or a given guild identifier or name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> .instance setbossstate</td>
+          <td class="col1">Syntax: .instance setbossstate $bossId $encounterState [$Name]
+Sets the EncounterState for the given boss id to a new value. EncounterStates range from 0 to 5.
+If no character name is provided, the current map will be used as target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> .mod xp</td>
+          <td class="col1">Syntax: .modify xp #xp
+
+Gives experience points to the targeted player or self.</td>
+        </tr>
+        <tr>
+          <td class="col0"> .mutehistory</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> account</td>
+          <td class="col1">Syntax: .account
+
+Display the access level of your account and the email adress if you possess the necessary permissions.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account addon</td>
+          <td class="col1">Syntax: .account addon #addon
+Set expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account create</td>
+          <td class="col1">Syntax: .account create $account $password
+
+Create account and set password to it.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account delete</td>
+          <td class="col1">Syntax: .account delete $account
+
+Delete account with all characters.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account email</td>
+          <td class="col1">Syntax: .account email $oldemail $currentpassword $newemail $newemailconfirmation
+
+ Change your account email. You may need to check the actual security mode to see if email input is necessary for password change</td>
+        </tr>
+        <tr>
+          <td class="col0"> account lock</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> account lock country</td>
+          <td class="col1">Syntax: .account lock country [on|off]
+Allow login from account only from current used Country or remove this requirement.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account lock ip</td>
+          <td class="col1">Syntax: .account lock ip [on|off]
+Allow login from account only from current used IP or remove this requirement.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account onlinelist</td>
+          <td class="col1">Syntax: .account onlinelist
+
+Show list of online accounts.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account password</td>
+          <td class="col1">Syntax: .account password $old_password $new_password $new_password [$email]
+
+Change your account password. You may need to check the actual security mode to see if email input is necessary.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set</td>
+          <td class="col1">Syntax: .account set $subcommand
+Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set addon</td>
+          <td class="col1">Syntax: .account set addon [$account] #addon
+
+Set user (possible targeted) expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set gmlevel</td>
+          <td class="col1">Syntax: .account set gmlevel [$account] #level [#realmid]
+
+Set the security level for targeted player (can't be used at self) or for account $name to a level of #level on the realm #realmID.
+
+#level may range from 0 to 3.
+
+#reamID may be -1 for all realms.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set password</td>
+          <td class="col1">Syntax: .account set password $account $password $password
+
+Set password for account.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set sec</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> account set sec email</td>
+          <td class="col1">Syntax: .account set sec email $accountname $email $emailconfirmation
+
+Set the email for entered player account.</td>
+        </tr>
+        <tr>
+          <td class="col0"> account set sec regmail</td>
+          <td class="col1">Syntax: .account set sec regmail $account $regmail $regmailconfirmation
+
+Sets the regmail for entered player account.</td>
+        </tr>
+        <tr>
+          <td class="col0"> achievement</td>
+          <td class="col1">Syntax: .achievement $subcommand
+Type .achievement to see the list of possible subcommands or .help achievement $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> achievement add</td>
+          <td class="col1">Syntax: .achievement add $achievement
+Add an achievement to the targeted player.
+$achievement: can be either achievement id or achievement link</td>
+        </tr>
+        <tr>
+          <td class="col0"> additem</td>
+          <td class="col1">Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount
+
+Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added.
+.</td>
+        </tr>
+        <tr>
+          <td class="col0"> additemset</td>
+          <td class="col1">Syntax: .additemset #itemsetid
+
+Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items</td>
+          <td class="col1">Syntax: .ahbot items $GrayItems $WhiteItems $GreenItems $BlueItems $PurpleItems $OrangeItems $YellowItems
+
+Set amount of each items color be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items blue</td>
+          <td class="col1">Syntax: .ahbot items blue $BlueItems
+
+Set amount of Blue color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items gray</td>
+          <td class="col1">Syntax: .ahbot items gray $GrayItems
+
+Set amount of Gray color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items green</td>
+          <td class="col1">Syntax: .ahbot items green $GreenItems
+
+Set amount of Green color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items orange</td>
+          <td class="col1">Syntax: .ahbot items orange $OrangeItems
+
+Set amount of Orange color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items purple</td>
+          <td class="col1">Syntax: .ahbot items purple $PurpleItems
+
+Set amount of Purple color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items white</td>
+          <td class="col1">Syntax: .ahbot items white $WhiteItems
+
+Set amount of White color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot items yellow</td>
+          <td class="col1">Syntax: .ahbot items yellow $YellowItems
+
+Set amount of Yellow color items be selled on auction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot ratio</td>
+          <td class="col1">Syntax: .ahbot ratio $allianceratio $horderatio $neutralratio
+
+Set ratio of items in 3 auctions house.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot ratio alliance</td>
+          <td class="col1">Syntax: .ahbot ratio alliance $allianceratio
+
+Set ratio of items in alliance auction house.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot ratio horde</td>
+          <td class="col1">Syntax: .ahbot ratio horde $horderatio
+
+Set ratio of items in horde auction house.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot ratio neutral</td>
+          <td class="col1">Syntax: .ahbot ratio neutral $neutralratio
+
+Set ratio of items in $neutral auction house.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot rebuild</td>
+          <td class="col1">Syntax: .ahbot rebuild [all]
+
+Expire all actual auction of ahbot except bided by player. Binded auctions included to expire if "all" option used. Ahbot re-fill auctions base at current settings then.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot reload</td>
+          <td class="col1">Syntax: .ahbot reload
+
+Reload AHBot settings from configuration file.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ahbot status</td>
+          <td class="col1">Syntax: .ahbot status [all]
+
+Show current ahbot state data in short form, and with "all" with details.</td>
+        </tr>
+        <tr>
+          <td class="col0"> announce</td>
+          <td class="col1">Syntax: .announce $MessageToBroadcast
+
+Send a global message to all players online in chat log.</td>
+        </tr>
+        <tr>
+          <td class="col0"> appear</td>
+          <td class="col1">Syntax: .appear [$charactername]
+
+Teleport to the given character. Either specify the character name or click on the character's portrait,e.g. when you are in a group. Character can be offline.</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> arena captain</td>
+          <td class="col1">Syntax: .arena captain #TeamID $name
+
+A command to set new captain to the team $name must be in the team</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena create</td>
+          <td class="col1">Syntax: .arena create $name "arena name" #type
+
+A command to create a new Arena-team in game. #type  = [2/3/5]</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena disband</td>
+          <td class="col1">Syntax: .arena disband #TeamID
+
+A command to disband Arena-team in game.</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena info</td>
+          <td class="col1">Syntax: .arena info #TeamID
+
+A command that show info about arena team</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena lookup</td>
+          <td class="col1">Syntax: .arena lookup $name
+
+A command that give a list of arenateam with the given $name</td>
+        </tr>
+        <tr>
+          <td class="col0"> arena rename</td>
+          <td class="col1">Syntax: .arena rename "oldname" "newname"
+
+A command to rename Arena-team name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> aura</td>
+          <td class="col1">Syntax: .aura #spellid
+
+Add the aura from spell #spellid to the selected Unit.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ban</td>
+          <td class="col1">Syntax: .ban $subcommand
+Type .ban to see the list of possible subcommands or .help ban $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> ban account</td>
+          <td class="col1">Syntax: .ban account $Name $bantime $reason
+Ban account kick player.
+$bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".</td>
+        </tr>
+        <tr>
+          <td class="col0"> ban character</td>
+          <td class="col1">Syntax: .ban character $Name $bantime $reason
+Ban character and kick player.
+$bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".</td>
+        </tr>
+        <tr>
+          <td class="col0"> ban ip</td>
+          <td class="col1">Syntax: .ban ip $Ip $bantime $reason
+Ban IP.
+$bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".</td>
+        </tr>
+        <tr>
+          <td class="col0"> ban playeraccount</td>
+          <td class="col1">Syntax: .ban playeraccount $Name $bantime $reason
+Ban account and kick player.
+$bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".</td>
+        </tr>
+        <tr>
+          <td class="col0"> baninfo</td>
+          <td class="col1">Syntax: .baninfo $subcommand
+Type .baninfo to see the list of possible subcommands or .help baninfo $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> baninfo account</td>
+          <td class="col1">Syntax: .baninfo account $accountid
+Watch full information about a specific ban.</td>
+        </tr>
+        <tr>
+          <td class="col0"> baninfo character</td>
+          <td class="col1">Syntax: .baninfo character $charactername 
+Watch full information about a specific ban.</td>
+        </tr>
+        <tr>
+          <td class="col0"> baninfo ip</td>
+          <td class="col1">Syntax: .baninfo ip $ip
+Watch full information about a specific ban.</td>
+        </tr>
+        <tr>
+          <td class="col0"> bank</td>
+          <td class="col1">Syntax: .bank
+
+Show your bank inventory.</td>
+        </tr>
+        <tr>
+          <td class="col0"> banlist</td>
+          <td class="col1">Syntax: .banlist $subcommand
+Type .banlist to see the list of possible subcommands or .help banlist $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> banlist account</td>
+          <td class="col1">Syntax: .banlist account [$Name]
+Searches the banlist for a account name pattern or show full list account bans.</td>
+        </tr>
+        <tr>
+          <td class="col0"> banlist character</td>
+          <td class="col1">Syntax: .banlist character $Name
+Searches the banlist for a character name pattern. Pattern required.</td>
+        </tr>
+        <tr>
+          <td class="col0"> banlist ip</td>
+          <td class="col1">Syntax: .banlist ip [$Ip]
+Searches the banlist for a IP pattern or show full list of IP bans.</td>
+        </tr>
+        <tr>
+          <td class="col0"> bf</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> bf enable</td>
+          <td class="col1">Syntax: .bf enable #battleid</td>
+        </tr>
+        <tr>
+          <td class="col0"> bf start</td>
+          <td class="col1">Syntax: .bf start #battleid</td>
+        </tr>
+        <tr>
+          <td class="col0"> bf stop</td>
+          <td class="col1">Syntax: .bf stop #battleid</td>
+        </tr>
+        <tr>
+          <td class="col0"> bf switch</td>
+          <td class="col1">Syntax: .bf switch #battleid</td>
+        </tr>
+        <tr>
+          <td class="col0"> bf timer</td>
+          <td class="col1">Syntax: .bf timer #battleid #timer</td>
+        </tr>
+        <tr>
+          <td class="col0"> bindsight</td>
+          <td class="col1">Syntax: .bindsight
+
+Binds vision to the selected unit indefinitely. Cannot be used while currently possessing a target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> broadcast_text</td>
+          <td class="col1">Syntax: .broadcast_text
+
+Reload broadcast_text table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast</td>
+          <td class="col1">Syntax: .cast #spellid [triggered]
+  Cast #spellid to selected target. If no target selected cast to self. If 'trigered' or part provided then spell casted with triggered flag.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast back</td>
+          <td class="col1">Syntax: .cast back #spellid [triggered]
+  Selected target will cast #spellid to your character. If 'trigered' or part provided then spell casted with triggered flag.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast dest</td>
+          <td class="col1">Syntax: .cast dest #spellid #x #y #z [triggered]
+  Selected target will cast #spellid at provided destination. If 'trigered' or part provided then spell casted with triggered flag.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast dist</td>
+          <td class="col1">Syntax: .cast dist #spellid [#dist [triggered]]
+  You will cast spell to pint at distance #dist. If 'trigered' or part provided then spell casted with triggered flag. Not all spells can be casted as area spells.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast self</td>
+          <td class="col1">Syntax: .cast self #spellid [triggered]
+Cast #spellid by target at target itself. If 'trigered' or part provided then spell casted with triggered flag.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cast target</td>
+          <td class="col1">Syntax: .cast target #spellid [triggered]
+  Selected target will cast #spellid to his victim. If 'trigered' or part provided then spell casted with triggered flag.</td>
+        </tr>
+        <tr>
+          <td class="col0"> channel</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> channel set</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> channel set ownership</td>
+          <td class="col1">Syntax: .channel set ownership $channel [on/off]
+
+Grant ownership to the first person that joins the channel.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> character changefaction</td>
+          <td class="col1">Syntax: .character changefaction $name
+
+Change character faction.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character changerace</td>
+          <td class="col1">Syntax: .character changerace $name
+
+Change character race.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character customize</td>
+          <td class="col1">Syntax: .character customize [$name]
+
+Mark selected in game or by $name in command character for customize at next login.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character deleted</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> character deleted list</td>
+          <td class="col1">Syntax: .character deleted list [#guid|$name]
+
+Shows a list with all deleted characters.
+If $name is supplied, only characters with that string in their name will be selected, if #guid is supplied, only the character with that GUID will be selected.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character deleted restore</td>
+          <td class="col1">Syntax: .character deleted restore #guid|$name [$newname] [#new account]
+
+Restores deleted characters.
+If $name is supplied, only characters with that string in their name will be restored, if $guid is supplied, only the character with that GUID will be restored.
+If $newname is set, the character will be restored with that name instead of the original one. If #newaccount is set, the character will be restored to specific account character list. This works only with one character!</td>
+        </tr>
+        <tr>
+          <td class="col0"> character level</td>
+          <td class="col1">Syntax: .character level [$playername] [#level]
+
+Set the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character rename</td>
+          <td class="col1">Syntax: .character rename [$name] [$newName] 
+
+Mark selected in game or by $name in command character for rename at next login.
+
+If $newName then the player will be forced rename.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character reputation</td>
+          <td class="col1">Syntax: .character reputation [$player_name]
+
+Show reputation information for selected player or player find by $player_name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> character titles</td>
+          <td class="col1">Syntax: .character titles [$player_name]
+
+Show known titles list for selected player or player find by $player_name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat</td>
+          <td class="col1">Syntax: .cheat $subcommand
+Type .cheat to see the list of possible subcommands or .help cheat $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat casttime</td>
+          <td class="col1">Syntax: .cheat casttime [on/off]
+Enables or disables your character's spell cast times.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat cooldown</td>
+          <td class="col1">Syntax: .cheat cooldown [on/off]
+Enables or disables your character's spell cooldowns.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat explore</td>
+          <td class="col1">Syntax: .cheat explore #flag
+Reveal or hide all maps for the selected player. If no player is selected, hide or reveal maps to you.
+Use a #flag of value 1 to reveal, use a #flag value of 0 to hide all maps.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat god</td>
+          <td class="col1">Syntax: .cheat god [on/off]
+Enables or disables your character's ability to take damage.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat power</td>
+          <td class="col1">Syntax: .cheat power [on/off]
+Enables or disables your character's spell cost (e.g mana).</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat status</td>
+          <td class="col1">Syntax: .cheat status 
+
+Shows the cheats you currently have enabled.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat taxi</td>
+          <td class="col1">Syntax: .cheat taxi on/off
+Temporary grant access or remove to all taxi routes for the selected character.
+ If no character is selected, hide or reveal all routes to you.Visited taxi nodes sill accessible after removing access.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cheat waterwalk</td>
+          <td class="col1">Syntax: .cheat waterwalk on/off
+Set on/off waterwalk state for selected player or self if no player selected.</td>
+        </tr>
+        <tr>
+          <td class="col0"> combatstop</td>
+          <td class="col1">Syntax: .combatstop [$playername]
+Stop combat for selected character. If selected non-player then command applied to self. If $playername provided then attempt applied to online player $playername.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cometome</td>
+          <td class="col1">SYntax: .cometome $parameter
+Make selected creature come to your current location (new position not saved to DB).</td>
+        </tr>
+        <tr>
+          <td class="col0"> commands</td>
+          <td class="col1">Syntax: .commands
+
+Display a list of available commands for your account level.</td>
+        </tr>
+        <tr>
+          <td class="col0"> cooldown</td>
+          <td class="col1">Syntax: .cooldown [#spell_id]
+
+Remove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection).</td>
+        </tr>
+        <tr>
+          <td class="col0"> damage</td>
+          <td class="col1">Syntax: .damage $damage_amount [$school [$spellid]]
+
+Apply $damage to target. If not $school and $spellid provided then this flat clean melee damage without any modifiers. If $school provided then damage modified by armor reduction (if school physical), and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link.</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug</td>
+          <td class="col1">Syntax: .debug $subcommand
+Type .debug to see the list of possible subcommands or .help debug $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug anim</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug areatriggers</td>
+          <td class="col1">Syntax: .debug areatriggers
+Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug arena</td>
+          <td class="col1">Syntax: .debug arena
+
+Toggle debug mode for arenas. In debug mode GM can start arena with single player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug bg</td>
+          <td class="col1">Syntax: .debug bg
+
+Toggle debug mode for battlegrounds. In debug mode GM can start battleground with single player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug entervehicle</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug getitemstate</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug getitemvalue</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug getvalue</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug hostil</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug itemexpire</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug lootrecipient</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug los</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug mod32value</td>
+          <td class="col1">Syntax: .debug Mod32Value #field #value
+
+Add #value to field #field of your character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug moveflags</td>
+          <td class="col1">Syntax: .debug moveflags [$newMoveFlags [$newMoveFlags2]]
+No params given will output the current moveflags of the target</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug play</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug play cinematics</td>
+          <td class="col1">Syntax: .debug play cinematic #cinematicid
+
+Play cinematic #cinematicid for you. You stay at place while your mind fly.
+</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug play movie</td>
+          <td class="col1">Syntax: .debug play movie #movieid
+
+Play movie #movieid for you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug play sound</td>
+          <td class="col1">Syntax: .debug play sound #soundid
+
+Play sound with #soundid.
+Sound will be play only for you. Other players do not hear this.
+Warning: client may have more 5000 sounds...</td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send buyerror</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send channelnotify</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send chatmessage</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send equiperror</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send largepacket</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send opcode</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send qinvalidmsg</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send qpartymsg</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send sellerror</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send setphaseshift</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug send spellfail</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug setaurastate</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug setbit</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug setitemvalue</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug setvalue</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug setvid</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug spawnvehicle</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug threat</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug update</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> debug uws</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> demorph</td>
+          <td class="col1">Syntax: .demorph
+
+Demorph the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter bg</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter bg add</td>
+          <td class="col1">Syntax: .deserter bg add $time 
+
+ Adds the bg deserter debuff to your target with $time duration.</td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter bg remove</td>
+          <td class="col1">Syntax: .deserter bg remove 
+
+ Removes the bg deserter debuff from your target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter instance</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter instance add</td>
+          <td class="col1">Syntax: .deserter instance add $time 
+
+ Adds the instance deserter debuff to your target with $time duration.</td>
+        </tr>
+        <tr>
+          <td class="col0"> deserter instance remove</td>
+          <td class="col1">Syntax: .deserter instance remove 
+
+ Removes the instance deserter debuff from your target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> dev</td>
+          <td class="col1">Syntax: .dev [on/off]
+
+Enable or Disable in game Dev tag or show current state if on/off not provided.</td>
+        </tr>
+        <tr>
+          <td class="col0"> die</td>
+          <td class="col1">Syntax: .die
+
+Kill the selected player. If no player is selected, it will kill you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add achievement_criteria</td>
+          <td class="col1">Syntax: .disable add achievement_criteria $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add battleground</td>
+          <td class="col1">Syntax: .disable add battleground $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add map</td>
+          <td class="col1">Syntax: .disable add map $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add mmap</td>
+          <td class="col1">Syntax: .disable add mmap $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add outdoorpvp</td>
+          <td class="col1">Syntax: .disable add outdoorpvp $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add quest</td>
+          <td class="col1">Syntax: .disable add quest $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add spell</td>
+          <td class="col1">Syntax: .disable add spell $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable add vmap</td>
+          <td class="col1">Syntax: .disable add vmap $entry $flag $comment</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove achievement_criteria</td>
+          <td class="col1">Syntax: .disable remove achievement_criteria $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove battleground</td>
+          <td class="col1">Syntax: .disable remove battleground $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove map</td>
+          <td class="col1">Syntax: .disable remove map $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove mmap</td>
+          <td class="col1">Syntax: .disable remove mmap $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove outdoorpvp</td>
+          <td class="col1">Syntax: .disable remove outdoorpvp $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove quest</td>
+          <td class="col1">Syntax: .disable remove quest $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove spell</td>
+          <td class="col1">Syntax: .disable remove spell $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> disable remove vmap</td>
+          <td class="col1">Syntax: .disable remove vmap $entry</td>
+        </tr>
+        <tr>
+          <td class="col0"> dismount</td>
+          <td class="col1">Syntax: .dismount
+
+Dismount you, if you are mounted.</td>
+        </tr>
+        <tr>
+          <td class="col0"> distance</td>
+          <td class="col1">Syntax: .distance
+
+Display the distance from your character to the selected creature.</td>
+        </tr>
+        <tr>
+          <td class="col0"> event</td>
+          <td class="col1">Syntax: .event #event_id
+Show details about event with #event_id.</td>
+        </tr>
+        <tr>
+          <td class="col0"> event activelist</td>
+          <td class="col1">Syntax: .event activelist
+Show list of currently active events.</td>
+        </tr>
+        <tr>
+          <td class="col0"> event start</td>
+          <td class="col1">Syntax: .event start #event_id
+Start event #event_id. Set start time for event to current moment (change not saved in DB).</td>
+        </tr>
+        <tr>
+          <td class="col0"> event stop</td>
+          <td class="col1">Syntax: .event stop #event_id
+Stop event #event_id. Set start time for event to time in past that make current moment is event stop time (change not saved in DB).</td>
+        </tr>
+        <tr>
+          <td class="col0"> flusharenapoints</td>
+          <td class="col1">Syntax: .flusharenapoints
+
+Use it to distribute arena points based on arena team ratings, and start a new week.</td>
+        </tr>
+        <tr>
+          <td class="col0"> freeze</td>
+          <td class="col1">Syntax: .freeze [#player] [#duration]
+Freezes #player for #duration (seconds)
+Freezes the selected player if no arguments are given.
+Default duration: GM.FreezeAuraDuration (worldserver.conf)</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm</td>
+          <td class="col1">Syntax: .gm [on/off]
+
+Enable or Disable in game GM MODE or show current state of on/off not provided.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm chat</td>
+          <td class="col1">Syntax: .gm chat [on/off]
+
+Enable or disable chat GM MODE (show gm badge in messages) or show current state of on/off not provided.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm fly</td>
+          <td class="col1">Syntax: .gm fly [on/off]
+Enable/disable gm fly mode.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm ingame</td>
+          <td class="col1">Syntax: .gm ingame
+
+Display a list of available in game Game Masters.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm list</td>
+          <td class="col1">Syntax: .gm list
+
+Display a list of all Game Masters accounts and security levels.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gm visible</td>
+          <td class="col1">Syntax: .gm visible on/off
+
+Output current visibility state or make GM visible(on) and invisible(off) for other players.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gmannounce</td>
+          <td class="col1">Syntax: .gmannounce $announcement
+Send an announcement to online Gamemasters.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gmnameannounce</td>
+          <td class="col1">Syntax: .gmnameannounce $announcement.
+Send an announcement to all online GM's, displaying the name of the sender.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gmnotify</td>
+          <td class="col1">Syntax: .gmnotify $notification
+Displays a notification on the screen of all online GM's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go</td>
+          <td class="col1">Syntax: .go $subcommand
+Type .go to see the list of possible subcommands or .help go $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> go creature</td>
+          <td class="col1">Syntax: .go creature #creature_guid
+Teleport your character to creature with guid #creature_guid.
+.gocreature #creature_name
+Teleport your character to creature with this name.
+.gocreature id #creature_id
+Teleport your character to a creature that was spawned from the template with this entry.
+*If* more than one creature is found, then you are teleported to the first that is found inside the database.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go graveyard</td>
+          <td class="col1">Syntax: .go graveyard #graveyardId
+ Teleport to graveyard with the graveyardId specified.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go grid</td>
+          <td class="col1">Syntax: .go grid #gridX #gridY [#mapId]
+
+Teleport the gm to center of grid with provided indexes at map #mapId (or current map if it not provided).</td>
+        </tr>
+        <tr>
+          <td class="col0"> go object</td>
+          <td class="col1">Syntax: .go object #object_guid
+Teleport your character to gameobject with guid #object_guid</td>
+        </tr>
+        <tr>
+          <td class="col0"> go taxinode</td>
+          <td class="col1">Syntax: .go taxinode #taxinode
+
+Teleport player to taxinode coordinates. You can look up zone using .lookup taxinode $namepart</td>
+        </tr>
+        <tr>
+          <td class="col0"> go ticket</td>
+          <td class="col1">Syntax: .go ticket #ticketid
+Teleports the user to the location where $ticketid was created.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go trigger</td>
+          <td class="col1">Syntax: .go trigger #trigger_id
+
+Teleport your character to areatrigger with id #trigger_id. Character will be teleported to trigger target if selected areatrigger is telporting trigger.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go xyz</td>
+          <td class="col1">Syntax: .go xyz #x #y [#z [#mapid [#orientation]]]
+
+Teleport player to point with (#x,#y,#z) coordinates at map #mapid with orientation #orientation. If z is not provided, ground/water level will be used. If mapid is not provided, the current map will be used. If #orientation is not provided, the current orientation will be used.</td>
+        </tr>
+        <tr>
+          <td class="col0"> go zonexy</td>
+          <td class="col1">Syntax: .go zonexy #x #y [#zone]
+
+Teleport player to point with (#x,#y) client coordinates at ground(water) level in zone #zoneid or current zone if #zoneid not provided. You can look up zone using .lookup area $namepart</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject</td>
+          <td class="col1">Syntax: .gobject $subcommand
+Type .gobject to see the list of possible subcommands or .help gobject $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject activate</td>
+          <td class="col1">Syntax: .gobject activate #guid
+
+Activates an object like a door or a button.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject add</td>
+          <td class="col1">Syntax: .gobject add #id &lt;spawntimeSecs&gt;
+
+Add a game object from game object templates to the world at your current location using the #id.
+spawntimesecs sets the spawntime, it is optional.
+
+Note: this is a copy of .gameobject.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject add temp</td>
+          <td class="col1">Adds a temporary gameobject that is not saved to DB.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject delete</td>
+          <td class="col1">Syntax: .gobject delete #go_guid
+Delete gameobject with guid #go_guid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject info</td>
+          <td class="col1">Syntax: .gobject info [$object_entry]
+ 
+ Query Gameobject information for selected gameobject or given entry.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject move</td>
+          <td class="col1">Syntax: .gobject move #goguid [#x #y #z]
+
+Move gameobject #goguid to character coordinates (or to (#x,#y,#z) coordinates if its provide).</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject near</td>
+          <td class="col1">Syntax: .gobject near  [#distance]
+
+Output gameobjects at distance #distance from player. Output gameobject guids and coordinates sorted by distance from character. If #distance not provided use 10 as default value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject set</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject set phase</td>
+          <td class="col1">Syntax: .gobject set phase #guid #phasemask
+
+Gameobject with DB guid #guid phasemask changed to #phasemask with related world vision update for players. Gameobject state saved to DB and persistent.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject set state</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject target</td>
+          <td class="col1">Syntax: .gobject target [#go_id|#go_name_part]
+
+Locate and show position nearest gameobject. If #go_id or #go_name_part provide then locate and show position of nearest gameobject with gameobject template id #go_id or name included #go_name_part as part.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gobject turn</td>
+          <td class="col1">Syntax: .gobject turn #goguid 
+
+Set for gameobject #goguid orientation same as current character orientation.</td>
+        </tr>
+        <tr>
+          <td class="col0"> gps</td>
+          <td class="col1">Syntax: .gps [$name|$shift-link]
+
+Display the position information for a selected character or creature (also if player name $name provided then for named player, or if creature/gameobject shift-link provided then pointed creature/gameobject if it loaded). Position information includes X, Y, Z, and orientation, map Id and zone Id</td>
+        </tr>
+        <tr>
+          <td class="col0"> group</td>
+          <td class="col1">Syntax: .group $subcommand
+Type .group to see the list of possible subcommands or .help group $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> group disband</td>
+          <td class="col1">Syntax: .group disband [$characterName]
+
+Disbands the given character's group.</td>
+        </tr>
+        <tr>
+          <td class="col0"> group join</td>
+          <td class="col1">Syntax: .group join $AnyCharacterNameFromGroup [$CharacterName] 
+Adds to group of player $AnyCharacterNameFromGroup player $CharacterName (or selected).</td>
+        </tr>
+        <tr>
+          <td class="col0"> group leader</td>
+          <td class="col1">Syntax: .group leader [$characterName]
+
+Sets the given character as his group's leader.</td>
+        </tr>
+        <tr>
+          <td class="col0"> group list</td>
+          <td class="col1">Syntax: .group list [$CharacterName] 
+Lists all the members of the group/party the player is in.</td>
+        </tr>
+        <tr>
+          <td class="col0"> group remove</td>
+          <td class="col1">Syntax: .group remove [$characterName]
+
+Removes the given character from his group.</td>
+        </tr>
+        <tr>
+          <td class="col0"> group summon</td>
+          <td class="col1">Syntax: .group summon [$charactername]
+
+Teleport the given character and his group to you. Teleported only online characters but original selected group member can be offline.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guid</td>
+          <td class="col1">Syntax: .guid
+
+Display the GUID for the selected character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild</td>
+          <td class="col1">Syntax: .guild $subcommand
+Type .guild to see the list of possible subcommands or .help guild $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild create</td>
+          <td class="col1">Syntax: .guild create [$GuildLeaderName] "$GuildName"
+
+Create a guild named $GuildName with the player $GuildLeaderName (or selected) as leader.  Guild name must in quotes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild delete</td>
+          <td class="col1">Syntax: .guild delete "$GuildName"
+
+Delete guild $GuildName. Guild name must in quotes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild invite</td>
+          <td class="col1">Syntax: .guild invite [$CharacterName] "$GuildName"
+
+Add player $CharacterName (or selected) into a guild $GuildName. Guild name must in quotes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild rank</td>
+          <td class="col1">Syntax: .guild rank [$CharacterName] #Rank
+
+Set for player $CharacterName (or selected) rank #Rank in a guild.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild rename</td>
+          <td class="col1">Syntax: .guild rename "$GuildName" "$NewGuildName" 
+
+ Rename a guild named $GuildName with $NewGuildName. Guild name and new guild name must in quotes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> guild uninvite</td>
+          <td class="col1">Syntax: .guild uninvite [$CharacterName]
+
+Remove player $CharacterName (or selected) from a guild.</td>
+        </tr>
+        <tr>
+          <td class="col0"> help</td>
+          <td class="col1">Syntax: .help [$command]
+
+Display usage instructions for the given $command. If no $command provided show list available commands.</td>
+        </tr>
+        <tr>
+          <td class="col0"> hidearea</td>
+          <td class="col1">Syntax: .hidearea #areaid
+
+Hide the area of #areaid to the selected character. If no character is selected, hide this area to you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> honor</td>
+          <td class="col1">Syntax: .honor $subcommand
+Type .honor to see the list of possible subcommands or .help honor $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> honor add</td>
+          <td class="col1">Syntax: .honor add $amount
+
+Add a certain amount of honor (gained today) to the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> honor add kill</td>
+          <td class="col1">Syntax: .honor add kill
+
+Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)</td>
+        </tr>
+        <tr>
+          <td class="col0"> honor update</td>
+          <td class="col1">Syntax: .honor update
+
+Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance</td>
+          <td class="col1">Syntax: .instance $subcommand
+Type .instance to see the list of possible subcommands or .help instance $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance getbossstate</td>
+          <td class="col1">Syntax: .instance getbossstate $bossId [$Name]
+Gets the current EncounterState for the provided boss id.
+If no character name is provided, the current map will be used as target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance listbinds</td>
+          <td class="col1">Syntax: .instance listbinds
+  Lists the binds of the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance savedata</td>
+          <td class="col1">Syntax: .instance savedata
+  Save the InstanceData for the current player's map to the DB.</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance stats</td>
+          <td class="col1">Syntax: .instance stats
+  Shows statistics about instances.</td>
+        </tr>
+        <tr>
+          <td class="col0"> instance unbind</td>
+          <td class="col1">Syntax: .instance unbind &lt;mapid|all&gt; [difficulty]
+  Clear all/some of player's binds</td>
+        </tr>
+        <tr>
+          <td class="col0"> itemmove</td>
+          <td class="col1">Syntax: .itemmove #sourceslotid #destinationslotid
+
+Move an item from slots #sourceslotid to #destinationslotid in your inventory
+
+Not yet implemented</td>
+        </tr>
+        <tr>
+          <td class="col0"> kick</td>
+          <td class="col1">Syntax: .kick [$charactername] [$reason]
+
+Kick the given character name from the world with or without reason. If no character name is provided then the selected player (except for yourself) will be kicked. If no reason is provided, default is "No Reason".</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn</td>
+          <td class="col1">Syntax: .learn #spell [all]
+
+Selected character learn a spell of id #spell. If 'all' provided then all ranks learned.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all crafts</td>
+          <td class="col1">Syntax: .learn crafts
+
+Learn all professions and recipes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all default</td>
+          <td class="col1">Syntax: .learn all default [$playername]
+
+Learn for selected/$playername player all default spells for his race/class and spells rewarded by completed quests.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all gm</td>
+          <td class="col1">Syntax: .learn all gm
+
+Learn all default spells for Game Masters.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all lang</td>
+          <td class="col1">Syntax: .learn all lang
+
+Learn all languages</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all my</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all my class</td>
+          <td class="col1">Syntax: .learn all my class
+
+Learn all spells and talents available for his class.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all my pettalents</td>
+          <td class="col1">Syntax: .learn all my pettalents
+
+Learn all talents for your pet available for his creature type (only for hunter pets).</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all my spells</td>
+          <td class="col1">Syntax: .learn all my spells
+
+Learn all spells (except talents and spells with first rank learned as talent) available for his class.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all my talents</td>
+          <td class="col1">Syntax: .learn all my talents
+
+Learn all talents (and spells with first rank learned as talent) available for his class.</td>
+        </tr>
+        <tr>
+          <td class="col0"> learn all recipes</td>
+          <td class="col1">Syntax: .learn all recipes [$profession]
+
+Learns all recipes of specified profession and sets skill level to max.
+Example: .learn all recipes enchanting</td>
+        </tr>
+        <tr>
+          <td class="col0"> levelup</td>
+          <td class="col1">Syntax: .levelup [$playername] [#numberoflevels]
+
+Increase/decrease the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg clean</td>
+          <td class="col1">Syntax: .flg clean
+ Cleans current queue, only for debugging purposes.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg group</td>
+          <td class="col1">Syntax: .lfg group
+ Shows information about all players in the group  (state, roles, comment, dungeons selected).</td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg options</td>
+          <td class="col1">Syntax: .lfg options [new value]
+ Shows current lfg options. New value is set if extra param is present.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg player</td>
+          <td class="col1">Syntax: .lfg player
+ Shows information about player (state, roles, comment, dungeons selected).</td>
+        </tr>
+        <tr>
+          <td class="col0"> lfg queue</td>
+          <td class="col1">Syntax: .lfg queue
+ Shows info about current lfg queues.</td>
+        </tr>
+        <tr>
+          <td class="col0"> linkgrave</td>
+          <td class="col1">Syntax: .linkgrave #graveyard_id [alliance|horde]
+
+Link current zone to graveyard for any (or alliance/horde faction ghosts). This let character ghost from zone teleport to graveyard after die if graveyard is nearest from linked to zone and accept ghost of this faction. Add only single graveyard at another map and only if no graveyards linked (or planned linked at same map).</td>
+        </tr>
+        <tr>
+          <td class="col0"> list</td>
+          <td class="col1">Syntax: .list $subcommand
+Type .list to see the list of possible subcommands or .help list $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> list auras</td>
+          <td class="col1">Syntax: .list auras
+List auras (passive and active) of selected creature or player. If no creature or player is selected, list your own auras.</td>
+        </tr>
+        <tr>
+          <td class="col0"> list creature</td>
+          <td class="col1">Syntax: .list creature #creature_id [#max_count]
+
+Output creatures with creature id #creature_id found in world. Output creature guids and coordinates sorted by distance from character. Will be output maximum #max_count creatures. If #max_count not provided use 10 as default value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> list item</td>
+          <td class="col1">Syntax: .list item #item_id [#max_count]
+
+Output items with item id #item_id found in all character inventories, mails, auctions, and guild banks. Output item guids, item owner guid, owner account and owner name (guild name and guid in case guild bank). Will be output maximum #max_count items. If #max_count not provided use 10 as default value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> list mail</td>
+          <td class="col1">Syntax: .list mail $character
+List of mails the character received.</td>
+        </tr>
+        <tr>
+          <td class="col0"> list object</td>
+          <td class="col1">Syntax: .list object #gameobject_id [#max_count]
+
+Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> listfreeze</td>
+          <td class="col1">Syntax: .listfreeze
+
+Search and output all frozen players.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup</td>
+          <td class="col1">Syntax: .lookup $subcommand
+Type .lookup to see the list of possible subcommands or .help lookup $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup area</td>
+          <td class="col1">Syntax: .lookup area $namepart
+
+Looks up an area by $namepart, and returns all matches with their area ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup creature</td>
+          <td class="col1">Syntax: .lookup creature $namepart
+
+Looks up a creature by $namepart, and returns all matches with their creature ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup event</td>
+          <td class="col1">Syntax: .lookup event $name
+Attempts to find the ID of the event with the provided $name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup faction</td>
+          <td class="col1">Syntax: .lookup faction $name
+Attempts to find the ID of the faction with the provided $name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup item</td>
+          <td class="col1">Syntax: .lookup item $itemname
+
+Looks up an item by $itemname, and returns all matches with their Item ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup itemset</td>
+          <td class="col1">Syntax: .lookup itemset $itemname
+
+Looks up an item set by $itemname, and returns all matches with their Item set ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup map</td>
+          <td class="col1">Syntax: .lookup map $namepart
+
+Looks up a map by $namepart, and returns all matches with their map ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup object</td>
+          <td class="col1">Syntax: .lookup object $objname
+
+Looks up an gameobject by $objname, and returns all matches with their Gameobject ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup player</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup player account</td>
+          <td class="col1">Syntax: .lookup player account $account ($limit) 
+
+ Searchs players, which account username is $account with optional parametr $limit of results.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup player email</td>
+          <td class="col1">Syntax: .lookup player email $email ($limit) 
+
+ Searchs players, which account email is $email with optional parametr $limit of results.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup player ip</td>
+          <td class="col1">Syntax: .lookup player ip $ip ($limit) 
+
+ Searchs players, which account ast_ip is $ip with optional parametr $limit of results.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup quest</td>
+          <td class="col1">Syntax: .lookup quest $namepart
+
+Looks up a quest by $namepart, and returns all matches with their quest ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup skill</td>
+          <td class="col1">Syntax: .lookup skill $$namepart
+
+Looks up a skill by $namepart, and returns all matches with their skill ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup spell</td>
+          <td class="col1">Syntax: .lookup spell $namepart
+
+Looks up a spell by $namepart, and returns all matches with their spell ID's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup spell id</td>
+          <td class="col1">Syntax: .lookup spell id #spellid
+
+Looks up a spell by #spellid, and returns the match with its spell name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup taxinode</td>
+          <td class="col1">Syntax: .lookup taxinode $substring
+
+Search and output all taxinodes with provide $substring in name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup tele</td>
+          <td class="col1">Syntax: .lookup tele $substring
+
+Search and output all .tele command locations with provide $substring in name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> lookup title</td>
+          <td class="col1">Syntax: .lookup title $$namepart
+
+Looks up a title by $namepart, and returns all matches with their title ID's and index's.</td>
+        </tr>
+        <tr>
+          <td class="col0"> mailbox</td>
+          <td class="col1">Syntax: .mailbox
+
+Show your mailbox content.</td>
+        </tr>
+        <tr>
+          <td class="col0"> maxskill</td>
+          <td class="col1">Syntax: .maxskill
+Sets all skills of the targeted player to their maximum values for its current level.</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap</td>
+          <td class="col1">Syntax: Syntax: .mmaps $subcommand Type .mmaps to see the list of possible subcommands or .help mmaps $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap loadedtiles</td>
+          <td class="col1">Syntax: .mmap loadedtiles to show which tiles are currently loaded</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap loc</td>
+          <td class="col1">Syntax: .mmap loc to print on which tile one is</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap path</td>
+          <td class="col1">Syntax: .mmap path to calculate and show a path to current select unit</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap stats</td>
+          <td class="col1">Syntax: .mmap stats to show information about current state of mmaps</td>
+        </tr>
+        <tr>
+          <td class="col0"> mmap testarea</td>
+          <td class="col1">Syntax: .mmap testarea to calculate paths for all nearby npcs to player</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify</td>
+          <td class="col1">Syntax: .modify $subcommand
+Type .modify to see the list of possible subcommands or .help modify $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify arenapoints</td>
+          <td class="col1">Syntax: .modify arenapoints #value
+Add $amount arena points to the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify bit</td>
+          <td class="col1">Syntax: .modify bit #field #bit
+
+Toggle the #bit bit of the #field field for the selected player. If no player is selected, modify your character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify drunk</td>
+          <td class="col1">Syntax: .modify drunk #value
+ Set drunk level to #value (0..100). Value 0 remove drunk state, 100 is max drunked state.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify energy</td>
+          <td class="col1">Syntax: .modify energy #energy
+
+Modify the energy of the selected player. If no player is selected, modify your energy.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify faction</td>
+          <td class="col1">Syntax: .modify faction #factionid #flagid #npcflagid #dynamicflagid
+
+Modify the faction and flags of the selected creature. Without arguments, display the faction and flags of the selected creature.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify gender</td>
+          <td class="col1">Syntax: .modify gender male/female
+
+Change gender of selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify honor</td>
+          <td class="col1">Syntax: .modify honor $amount
+
+Add $amount honor points to the selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify hp</td>
+          <td class="col1">Syntax: .modify hp #newhp
+
+Modify the hp of the selected player. If no player is selected, modify your hp.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify mana</td>
+          <td class="col1">Syntax: .modify mana #newmana
+
+Modify the mana of the selected player. If no player is selected, modify your mana.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify money</td>
+          <td class="col1">Syntax: .modify money #money
+.money #money
+
+Add or remove money to the selected player. If no player is selected, modify your money.
+
+ #gold can be negative to remove money.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify mount</td>
+          <td class="col1">Syntax: .modify mount #id #speed
+Display selected player as mounted at #id creature and set speed to #speed value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify phase</td>
+          <td class="col1">Syntax: .modify phase #phasemask
+
+Selected character phasemask changed to #phasemask with related world vision update. Change active until in game phase changed, or GM-mode enable/disable, or re-login. Character pts pasemask update to same value.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify rage</td>
+          <td class="col1">Syntax: .modify rage #newrage
+
+Modify the rage of the selected player. If no player is selected, modify your rage.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify reputation</td>
+          <td class="col1">Syntax: .modify reputation #repId (#repvalue | $rankname [#delta])
+Sets the selected players reputation with faction #repId to #repvalue or to $reprank.
+If the reputation rank name is provided, the resulting reputation will be the lowest reputation for that rank plus the delta amount, if specified.
+You can use '.pinfo rep' to list all known reputation ids, or use '.lookup faction $name' to locate a specific faction id.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify runicpower</td>
+          <td class="col1">Syntax: .modify runicpower #newrunicpower
+
+Modify the runic power of the selected player. If no player is selected, modify your runic power.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify scale</td>
+          <td class="col1">.modify scale #scale
+Modify size of the selected player or creature to "normal scale"*rate. If no player or creature is selected, modify your size.
+#rate may range from 0.1 to 10.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed</td>
+          <td class="col1">Syntax: .modify speed $speedtype #rate
+
+Modify the running speed of the selected player to "normal base run speed"= 1. If no player is selected, modify your speed.
+
+$speedtypes may be fly, all, walk, backwalk, or swim.
+
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed all</td>
+          <td class="col1">Syntax: .modify aspeed #rate
+
+Modify all speeds -run,swim,run back,swim back- of the selected player to "normalbase speed for this move type"*rate. If no player is selected, modify your speed.
+
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed backwalk</td>
+          <td class="col1">Syntax: .modify speed backwalk #rate
+
+Modify the speed of the selected player while running backwards to "normal walk back speed"*rate. If no player is selected, modify your speed.
+
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed fly</td>
+          <td class="col1">.modify speed fly #rate
+Modify the flying speed of the selected player to "normal flying speed"*rate. If no player is selected, modify your speed.
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed swim</td>
+          <td class="col1">Syntax: .modify speed swim #rate
+
+Modify the swim speed of the selected player to "normal swim speed"*rate. If no player is selected, modify your speed.
+
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify speed walk</td>
+          <td class="col1">Syntax: .modify speed bwalk #rate
+
+Modify the speed of the selected player while running to "normal walk speed"*rate. If no player is selected, modify your speed.
+
+ #rate may range from 0.1 to 50.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify spell</td>
+          <td class="col1">TODO</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify standstate</td>
+          <td class="col1">Syntax: .modify standstate #emoteid
+
+Change the emote of your character while standing to #emoteid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> modify talentpoints</td>
+          <td class="col1">Syntax: .modify talentpoints #amount
+
+Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.</td>
+        </tr>
+        <tr>
+          <td class="col0"> morph</td>
+          <td class="col1">Syntax: .morph #displayid
+
+Change your current model id to #displayid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> movegens</td>
+          <td class="col1">Syntax: .movegens
+  Show movement generators stack for selected creature or player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> mute</td>
+          <td class="col1">Syntax: .mute [$playerName] $timeInMinutes [$reason]
+
+Disible chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.</td>
+        </tr>
+        <tr>
+          <td class="col0"> nameannounce</td>
+          <td class="col1">Syntax: .nameannounce $announcement.
+Send an announcement to all online players, displaying the name of the sender.</td>
+        </tr>
+        <tr>
+          <td class="col0"> neargrave</td>
+          <td class="col1">Syntax: .neargrave [alliance|horde]
+
+Find nearest graveyard linked to zone (or only nearest from accepts alliance or horde faction ghosts).</td>
+        </tr>
+        <tr>
+          <td class="col0"> notify</td>
+          <td class="col1">Syntax: .notify $MessageToBroadcast
+
+Send a global message to all players online in screen.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc</td>
+          <td class="col1">Syntax: .npc $subcommand
+Type .npc to see the list of possible subcommands or .help npc $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add</td>
+          <td class="col1">Syntax: .npc add #creatureid
+
+Spawn a creature by the given template id of #creatureid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add delete</td>
+          <td class="col1">Syntax: .npc delete [#guid]
+
+Delete creature with guid #guid (or the selected if no guid is provided)</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add delete item</td>
+          <td class="col1">Syntax: .npc delete item #itemId
+
+Remove item #itemid from item list of selected vendor.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add follow</td>
+          <td class="col1">Syntax: .npc follow start
+
+Selected creature start follow you until death/fight/etc.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add follow stop</td>
+          <td class="col1">Syntax: .npc follow stop
+
+Selected creature (non pet) stop follow you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add formation</td>
+          <td class="col1">Syntax: .npc add formation $leader
+Add selected creature to a leader's formation.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add item</td>
+          <td class="col1">Syntax: .npc add item #itemId &lt;#maxcount&gt;&lt;#incrtime&gt;&lt;#extendedcost&gt;r
+
+Add item #itemid to item list of selected vendor. Also optionally set max count item in vendor item list and time to item count restoring and items ExtendedCost.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add move</td>
+          <td class="col1">Syntax: .npc add move #creature_guid [#waittime]
+
+Add your current location as a waypoint for creature with guid #creature_guid. And optional add wait time.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc add temp</td>
+          <td class="col1">Syntax: .npc add temp
+
+Adds temporary NPC, not saved to database.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc info</td>
+          <td class="col1">Syntax: .npc info
+
+Display a list of details for the selected creature.
+
+The list includes:
+- GUID, Faction, NPC flags, Entry ID, Model ID,
+- Level,
+- Health (current/maximum),
+
+- Field flags, dynamic flags, faction template, 
+- Position information,
+- and the creature type, e.g. if the creature is a vendor.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc move</td>
+          <td class="col1">Syntax: .npc move [#creature_guid]
+
+Move the targeted creature spawn point to your coordinates.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc near</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> npc playemote</td>
+          <td class="col1">Syntax: .npc playemote #emoteid
+
+Make the selected creature emote with an emote of id #emoteid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc say</td>
+          <td class="col1">Syntax: .npc say $message
+Make selected creature say specified message.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set allowmove</td>
+          <td class="col1">Syntax: .npc set allowmove
+
+Enable or disable movement creatures in world. Not implemented.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set data</td>
+          <td class="col1">Syntax: .npc set data $field $data
+Sets data for the selected creature. Used for testing Scripting</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set entry</td>
+          <td class="col1">Syntax: .npc set entry $entry
+Switch selected creature with another entry from creature_template. - New creature.id value not saved to DB.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set factionid</td>
+          <td class="col1">Syntax: .npc set factionid #factionid
+
+Set the faction of the selected creature to #factionid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set flag</td>
+          <td class="col1">Syntax: .npc set flag #npcflag
+
+Set the NPC flags of creature template of the selected creature and selected creature to #npcflag. NPC flags will applied to all creatures of selected creature template after server restart or grid unload/load.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set level</td>
+          <td class="col1">Syntax: .npc set level #level
+
+Change the level of the selected creature to #level.
+
+#level may range from 1 to (CONFIG_MAX_PLAYER_LEVEL) + 3.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set link</td>
+          <td class="col1">Syntax: .npc set link $creatureGUID
+
+Links respawn of selected creature to the condition that $creatureGUID defined is alive.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set model</td>
+          <td class="col1">Syntax: .npc set model #displayid
+
+Change the model id of the selected creature to #displayid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set movetype</td>
+          <td class="col1">Syntax: .npc set movetype [#creature_guid] stay/random/way [NODEL]
+
+Set for creature pointed by #creature_guid (or selected if #creature_guid not provided) movement type and move it to respawn position (if creature alive). Any existing waypoints for creature will be removed from the database if you do not use NODEL. If the creature is dead then movement type will applied at creature respawn.
+Make sure you use NODEL, if you want to keep the waypoints.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set phase</td>
+          <td class="col1">Syntax: .npc set phase #phasemask
+
+Selected unit or pet phasemask changed to #phasemask with related world vision update for players. In creature case state saved to DB and persistent. In pet case change active until in game phase changed for owner, owner re-login, or GM-mode enable/disable..</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set spawndist</td>
+          <td class="col1">Syntax: .npc set spawndist #dist
+
+Adjust spawndistance of selected creature to dist.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc set spawntime</td>
+          <td class="col1">Syntax: .npc set spawntime #time 
+
+Adjust spawntime of selected creature to time.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc tame</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> npc textemote</td>
+          <td class="col1">Syntax: .npc textemote #emoteid
+
+Make the selected creature to do textemote with an emote of id #emoteid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc whisper</td>
+          <td class="col1">Syntax: .npc whisper #playerguid #text
+Make the selected npc whisper #text to  #playerguid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> npc yell</td>
+          <td class="col1">Syntax: .npc yell $message
+Make selected creature yell specified message.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pdump</td>
+          <td class="col1">Syntax: .pdump $subcommand
+Type .pdump to see the list of possible subcommands or .help pdump $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> pdump load</td>
+          <td class="col1">Syntax: .pdump load $filename $account [$newname] [$newguid]
+Load character dump from dump file into character list of $account with saved or $newname, with saved (or first free) or $newguid guid.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pdump write</td>
+          <td class="col1">Syntax: .pdump write $filename $playerNameOrGUID
+Write character dump with name/guid $playerNameOrGUID to file $filename.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pet</td>
+          <td class="col1">Syntax: .pet $subcommand
+Type .pet to see the list of possible subcommands or .help pet $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> pet create</td>
+          <td class="col1">Syntax: .pet create
+
+Creates a pet of the selected creature.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pet learn</td>
+          <td class="col1">Syntax: .pet learn
+
+Learn #spellid to pet.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pet unlearn</td>
+          <td class="col1">Syntax: .pet unlean
+
+unLearn #spellid to pet.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pinfo</td>
+          <td class="col1">Syntax: .pinfo [$player_name/#GUID]
+
+Output account information and guild information for selected player or player find by $player_name or #GUID.</td>
+        </tr>
+        <tr>
+          <td class="col0"> playall</td>
+          <td class="col1">Syntax: .playall #soundid
+
+Player a sound to whole server.</td>
+        </tr>
+        <tr>
+          <td class="col0"> possess</td>
+          <td class="col1">Syntax: .possess
+
+Possesses indefinitely the selected creature.</td>
+        </tr>
+        <tr>
+          <td class="col0"> pvpstats</td>
+          <td class="col1">Shows number of battleground victories in the last 7 days</td>
+        </tr>
+        <tr>
+          <td class="col0"> quest</td>
+          <td class="col1">Syntax: .quest $subcommand
+Type .quest to see the list of possible subcommands or .help quest $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> quest add</td>
+          <td class="col1">Syntax: .quest add #quest_id
+
+Add to character quest log quest #quest_id. Quest started from item can't be added by this command but correct .additem call provided in command output.</td>
+        </tr>
+        <tr>
+          <td class="col0"> quest complete</td>
+          <td class="col1">Syntax: .quest complete #questid
+Mark all quest objectives as completed for target character active quest. After this target character can go and get quest reward.</td>
+        </tr>
+        <tr>
+          <td class="col0"> quest remove</td>
+          <td class="col1">Syntax: .quest remove #quest_id
+
+Set quest #quest_id state to not completed and not active (and remove from active quest list) for selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> quest reward</td>
+          <td class="col1">Syntax: .quest reward #questId
+
+Grants quest reward to selected player and removes quest from his log (quest must be in completed state).</td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac account</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac account deny</td>
+          <td class="col1">Syntax: rbac account deny [$account] #id [#realmId]
+
+Deny a permission to selected player or given account.
+
+#reamID may be -1 for all realms.</td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac account grant</td>
+          <td class="col1">Syntax: rbac account grant [$account] #id [#realmId]
+
+Grant a permission to selected player or given account.
+
+#reamID may be -1 for all realms.</td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac account list</td>
+          <td class="col1">Syntax: rbac account list [$account]
+
+View permissions of selected player or given account
+Note: Only those that affect current realm</td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac account revoke</td>
+          <td class="col1">Syntax: rbac account revoke [$account] #id
+
+Remove a permission from an account
+
+Note: Removes the permission from granted or denied permissions</td>
+        </tr>
+        <tr>
+          <td class="col0"> rbac list</td>
+          <td class="col1">Syntax: rbac list [$id]
+
+View list of all permissions. If $id is given will show only info for that permission.</td>
+        </tr>
+        <tr>
+          <td class="col0"> recall</td>
+          <td class="col1">Syntax: .recall [$playername]
+
+Teleport $playername or selected player to the place where he has been before last use of a teleportation command. If no $playername is entered and no player is selected, it will teleport you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload</td>
+          <td class="col1">Syntax: .reload $subcommand
+Type .reload to see the list of possible subcommands or .help reload $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload access_requirement</td>
+          <td class="col1">Syntax: .reload access_requirement
+Reload access_requirement table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload achievement_criteria_data</td>
+          <td class="col1">Syntax: .reload achievement_criteria_data
+Reload achievement_criteria_data table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload achievement_reward</td>
+          <td class="col1">Syntax: .reload achievement_reward
+Reload achievement_reward table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all</td>
+          <td class="col1">Syntax: .reload all
+
+Reload all tables with reload support added and that can be _safe_ reloaded.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all achievement</td>
+          <td class="col1">Syntax: .reload all achievement
+
+Reload achievement_reward, achievement_criteria_data tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all area</td>
+          <td class="col1">Syntax: .reload all area
+
+Reload areatrigger_teleport, areatrigger_tavern, game_graveyard_zone tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all gossips</td>
+          <td class="col1">Syntax: .reload all gossips
+Reload gossip_menu, gossip_menu_option, gossip_scripts, points_of_interest tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all item</td>
+          <td class="col1">Syntax: .reload all item
+Reload page_text, item_enchantment_table tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all locales</td>
+          <td class="col1">Syntax: .reload all locales
+
+Reload all `locales_*` tables with reload support added and that can be _safe_ reloaded.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all loot</td>
+          <td class="col1">Syntax: .reload all loot
+
+Reload all `*_loot_template` tables. This can be slow operation with lags for server run.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all npc</td>
+          <td class="col1">Syntax: .reload all npc
+Reload npc_option, npc_trainer, npc vendor, points of interest tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all quest</td>
+          <td class="col1">Syntax: .reload all quest
+
+Reload all quest related tables if reload support added for this table and this table can be _safe_ reloaded.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all scripts</td>
+          <td class="col1">Syntax: .reload all scripts
+Reload gameobject_scripts, event_scripts, quest_end_scripts, quest_start_scripts, spell_scripts, db_script_string, waypoint_scripts tables.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload all spell</td>
+          <td class="col1">Syntax: .reload all spell
+
+Reload all `spell_*` tables with reload support added and that can be _safe_ reloaded.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload areatrigger_involvedrelation</td>
+          <td class="col1">Syntax: .reload areatrigger_involvedrelation
+Reload areatrigger_involvedrelation table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload areatrigger_tavern</td>
+          <td class="col1">Syntax: .reload areatrigger_tavern
+Reload areatrigger_tavern table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload areatrigger_teleport</td>
+          <td class="col1">Syntax: .reload areatrigger_teleport
+Reload areatrigger_teleport table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload auctions</td>
+          <td class="col1">Syntax: .reload auctions
+Reload dynamic data tables from the database.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload autobroadcast</td>
+          <td class="col1">Syntax: .reload autobroadcast
+Reload autobroadcast table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload battleground_template</td>
+          <td class="col1">Syntax: .reload battleground_template
+Reload Battleground Templates.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload command</td>
+          <td class="col1">Syntax: .reload command
+Reload command table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload conditions</td>
+          <td class="col1">Reload conditions table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload config</td>
+          <td class="col1">Syntax: .reload config
+
+Reload config settings (by default stored in trinityd.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_linked_respawn</td>
+          <td class="col1">Syntax: .reload creature_linked_respawn
+Reload creature_linked_respawn table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_loot_template</td>
+          <td class="col1">Syntax: .reload creature_loot_template
+Reload creature_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_onkill_reputation</td>
+          <td class="col1">Syntax: .reload creature_onkill_reputation
+Reload creature_onkill_reputation table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_questender</td>
+          <td class="col1">Syntax: .reload creature_questender
+Reload creature_questender table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_queststarter</td>
+          <td class="col1">Syntax: .reload creature_queststarter
+Reload creature_queststarter table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_summon_groups</td>
+          <td class="col1">Syntax: .reload creature_summon_groups
+Reload creature_summon_groups table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_template</td>
+          <td class="col1">Syntax: .reload creature_template $entry
+Reload the specified creature's template.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload creature_text</td>
+          <td class="col1">Syntax: .reload creature_text
+Reload creature_text Table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload disables</td>
+          <td class="col1">Syntax: .reload disables
+Reload disables table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload disenchant_loot_template</td>
+          <td class="col1">Syntax: .reload disenchant_loot_template
+Reload disenchant_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload event_scripts</td>
+          <td class="col1">Syntax: .reload event_scripts
+Reload event_scripts table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload fishing_loot_template</td>
+          <td class="col1">Syntax: .reload fishing_loot_template
+Reload fishing_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gameobject_loot_template</td>
+          <td class="col1">Syntax: .reload gameobject_loot_template
+Reload gameobject_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gameobject_questender</td>
+          <td class="col1">Syntax: .reload gameobject_questender\nReload gameobject_questender table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gameobject_queststarter</td>
+          <td class="col1">Syntax: .reload gameobject_queststarter
+Reload gameobject_queststarter table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload game_graveyard_zone</td>
+          <td class="col1">Syntax: .reload game_graveyard_zone
+Reload game_graveyard_zone table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload game_tele</td>
+          <td class="col1">Syntax: .reload game_tele
+Reload game_tele table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gm_tickets</td>
+          <td class="col1">Syntax: .reload gm_tickets
+Reload gm_tickets table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gossip_menu</td>
+          <td class="col1">Syntax: .reload gossip_menu
+Reload gossip_menu table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload gossip_menu_option</td>
+          <td class="col1">Syntax: .reload gossip_menu_option
+Reload gossip_menu_option table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload item_enchantment_template</td>
+          <td class="col1">Syntax: .reload item_enchantment_template
+Reload item_enchantment_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload item_loot_template</td>
+          <td class="col1">Syntax: .reload item_loot_template
+Reload item_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload item_set_names</td>
+          <td class="col1">Syntax: .reload item_set_names
+Reload item_set_names table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload lfg_dungeon_rewards</td>
+          <td class="col1">Syntax: .reload lfg_dungeon_rewards
+Reload lfg_dungeon_rewards table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_achievement_reward</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_creature</td>
+          <td class="col1">Syntax: .reload locales_creature
+Reload locales_creature table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_creature_text</td>
+          <td class="col1">Syntax: .reload locales_creature_text
+Reload locales_creature_text Table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_gameobject</td>
+          <td class="col1">Syntax: .reload locales_gameobject
+Reload locales_gameobject table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_gossip_menu_option</td>
+          <td class="col1">Syntax: .reload locales_gossip_menu_option
+Reload locales_gossip_menu_option table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_item</td>
+          <td class="col1">Syntax: .reload locales_item
+Reload locales_item table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_item_set_name</td>
+          <td class="col1">Syntax: .reload locales_item_set_name
+Reload locales_item_set_name table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_npc_text</td>
+          <td class="col1">Syntax: .reload locales_npc_text
+Reload locales_npc_text table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_page_text</td>
+          <td class="col1">Syntax: .reload locales_page_text
+Reload locales_page_text table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_points_of_interest</td>
+          <td class="col1">Syntax: .reload locales_points_of_interest
+Reload locales_point_of_interest table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload locales_quest</td>
+          <td class="col1">Syntax: .reload locales_quest
+Reload locales_quest table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload mail_level_reward</td>
+          <td class="col1">Syntax: .reload mail_level_reward
+Reload mail_level_reward table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload mail_loot_template</td>
+          <td class="col1">Syntax: .reload quest_mail_loot_template
+Reload quest_mail_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload milling_loot_template</td>
+          <td class="col1">Syntax: .reload milling_loot_template
+Reload milling_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload npc_spellclick_spells</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> reload npc_trainer</td>
+          <td class="col1">Syntax: .reload npc_trainer
+Reload npc_trainer table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload npc_vendor</td>
+          <td class="col1">Syntax: .reload npc_vendor
+Reload npc_vendor table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload page_text</td>
+          <td class="col1">Syntax: .reload page_text
+Reload page_text table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload pickpocketing_loot_template</td>
+          <td class="col1">Syntax: .reload pickpocketing_loot_template
+Reload pickpocketing_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload points_of_interest</td>
+          <td class="col1">Syntax: .reload points_of_interest
+Reload points_of_interest table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload prospecting_loot_template</td>
+          <td class="col1">Syntax: .reload prospecting_loot_template
+Reload prospecting_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload quest_poi</td>
+          <td class="col1">Syntax: .reload quest_poi
+Reload quest_poi table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload quest_template</td>
+          <td class="col1">Syntax: .reload quest_template
+Reload quest_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload rbac</td>
+          <td class="col1">Syntax: .reload rbac
+Reload rbac system.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload reference_loot_template</td>
+          <td class="col1">Syntax: .reload reference_loot_template
+Reload reference_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload reputation_reward_rate</td>
+          <td class="col1">Syntax: .reload reputation_reward_rate
+Reload reputation_reward_rate table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload reputation_spillover_template</td>
+          <td class="col1">Syntax: .reload reputation_spillover_template
+Reload reputation_spillover_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload reserved_name</td>
+          <td class="col1">Syntax: .reload reserved_name
+Reload reserved_name table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload skill_discovery_template</td>
+          <td class="col1">Syntax: .reload skill_discovery_template
+Reload skill_discovery_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload skill_extra_item_template</td>
+          <td class="col1">Syntax: .reload skill_extra_item_template
+Reload skill_extra_item_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload skill_fishing_base_level</td>
+          <td class="col1">Syntax: .reload skill_fishing_base_level
+Reload skill_fishing_base_level table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload skinning_loot_template</td>
+          <td class="col1">Syntax: .reload skinning_loot_template
+Reload skinning_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload smart_scripts</td>
+          <td class="col1">Syntax: .reload smart_scripts
+Reload smart_scripts table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_area</td>
+          <td class="col1">Syntax: .reload spell_area
+Reload spell_area table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_bonus_data</td>
+          <td class="col1">Syntax: .reload spell_bonus_data
+Reload spell_bonus_data table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_group</td>
+          <td class="col1">Syntax: .reload spell_group
+Reload spell_group table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_group_stack_rules</td>
+          <td class="col1">Syntax: .reload spell_group
+Reload spell_group_stack_rules table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_learn_spell</td>
+          <td class="col1">Syntax: .reload spell_learn_spell
+Reload spell_learn_spell table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_linked_spell</td>
+          <td class="col1">Usage: .reload spell_linked_spell
+Reloads the spell_linked_spell DB table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_loot_template</td>
+          <td class="col1">Syntax: .reload spell_loot_template
+Reload spell_loot_template table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_pet_auras</td>
+          <td class="col1">Syntax: .reload spell_pet_auras
+Reload spell_pet_auras table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_proc</td>
+          <td class="col1">Syntax: .reload spell_proc
+Reload spell_proc table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_proc_event</td>
+          <td class="col1">Syntax: .reload spell_proc_event
+Reload spell_proc_event table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_required</td>
+          <td class="col1">Syntax: .reload spell_required
+Reload spell_required table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_scripts</td>
+          <td class="col1">Syntax: .reload spell_scripts
+Reload spell_scripts table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_target_position</td>
+          <td class="col1">Syntax: .reload spell_target_position
+Reload spell_target_position table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload spell_threats</td>
+          <td class="col1">Syntax: .reload spell_threats
+Reload spell_threats table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload trinity_string</td>
+          <td class="col1">Syntax: .reload trinity_string
+Reload trinity_string table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload vehicle_accessory</td>
+          <td class="col1">Syntax: .reload vehicle_accessory
+
+Reloads GUID-based vehicle accessory definitions from the database.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload vehicle_template_accessory</td>
+          <td class="col1">Syntax: .reload vehicle_template_accessory
+
+Reloads entry-based vehicle accessory definitions from the database.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload warden_action</td>
+          <td class="col1">Syntax: .reload warden_action
+Reload warden_action.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload waypoint_data</td>
+          <td class="col1">Syntax: .reload waypoint_data will reload waypoint_data table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reload waypoint_scripts</td>
+          <td class="col1">Syntax: .reload waypoint_scripts
+Reload waypoint_scripts table.</td>
+        </tr>
+        <tr>
+          <td class="col0"> repairitems</td>
+          <td class="col1">Syntax: .repairitems
+
+Repair all selected player's items.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset</td>
+          <td class="col1">Syntax: .reset $subcommand
+Type .reset to see the list of possible subcommands or .help reset $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset achievements</td>
+          <td class="col1">Syntax: .reset achievements [$playername]
+
+Reset achievements data for selected or named (online or offline) character. Achievements for persistance progress data like completed quests/etc re-filled at reset. Achievements for events like kills/casts/etc will lost.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset all</td>
+          <td class="col1">Syntax: .reset all spells
+
+Syntax: .reset all talents
+
+Request reset spells or talents (including talents for all character's pets if any) at next login each existed character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset honor</td>
+          <td class="col1">Syntax: .reset honor [Playername]
+  Reset all honor data for targeted character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset level</td>
+          <td class="col1">Syntax: .reset level [Playername]
+  Reset level to 1 including reset stats and talents.  Equipped items with greater level requirement can be lost.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset spells</td>
+          <td class="col1">Syntax: .reset spells [Playername]
+  Removes all non-original spells from spellbook.
+. Playername can be name of offline character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset stats</td>
+          <td class="col1">Syntax: .reset stats [Playername]
+  Resets(recalculate) all stats of the targeted player to their original VALUESat current level.</td>
+        </tr>
+        <tr>
+          <td class="col0"> reset talents</td>
+          <td class="col1">Syntax: .reset talents [Playername]
+  Removes all talents of the targeted player or pet or named player. Playername can be name of offline character. With player talents also will be reset talents for all character's pets if any.</td>
+        </tr>
+        <tr>
+          <td class="col0"> respawn</td>
+          <td class="col1">Syntax: .respawn
+
+Respawn all nearest creatures and GO without waiting respawn time expiration.</td>
+        </tr>
+        <tr>
+          <td class="col0"> revive</td>
+          <td class="col1">Syntax: .revive
+
+Revive the selected player. If no player is selected, it will revive you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> save</td>
+          <td class="col1">Syntax: .save
+
+Saves your character.</td>
+        </tr>
+        <tr>
+          <td class="col0"> saveall</td>
+          <td class="col1">Syntax: .saveall
+
+Save all characters in game.</td>
+        </tr>
+        <tr>
+          <td class="col0"> send</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> send items</td>
+          <td class="col1">Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]
+
+Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count &gt; max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.</td>
+        </tr>
+        <tr>
+          <td class="col0"> send mail</td>
+          <td class="col1">Syntax: .send mail #playername "#subject" "#text"
+
+Send a mail to a player. Subject and mail text must be in "".</td>
+        </tr>
+        <tr>
+          <td class="col0"> send message</td>
+          <td class="col1">Syntax: .send message $playername $message
+
+Send screen message to player from ADMINISTRATOR.</td>
+        </tr>
+        <tr>
+          <td class="col0"> send money</td>
+          <td class="col1">Syntax: .send money #playername "#subject" "#text" #money
+
+Send mail with money to a player. Subject and mail text must be in "".</td>
+        </tr>
+        <tr>
+          <td class="col0"> server</td>
+          <td class="col1">Syntax: .server $subcommand
+Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> server corpses</td>
+          <td class="col1">Syntax: .server corpses
+
+Triggering corpses expire check in world.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server exit</td>
+          <td class="col1">Syntax: .server exit
+
+Terminate trinity-core NOW. Exit code 0.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server idlerestart</td>
+          <td class="col1">Syntax: .server idlerestart #delay [#exit_code] [reason]
+
+Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code or 2 as program exit code.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server idlerestart cancel</td>
+          <td class="col1">Syntax: .server idlerestart cancel
+
+Cancel the restart/shutdown timer if any.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server idleshutdown</td>
+          <td class="col1">Syntax: .server idleshutdown #delay [#exit_code] [reason]
+
+Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code or 0 as program exist code.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server idleshutdown cancel</td>
+          <td class="col1">Syntax: .server idleshutdown cancel
+
+Cancel the restart/shutdown timer if any.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server info</td>
+          <td class="col1">Syntax: .server info
+
+Display server version and the number of connected players.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server motd</td>
+          <td class="col1">Syntax: .server motd
+
+Show server Message of the day.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server plimit</td>
+          <td class="col1">Syntax: .server plimit [#num|-1|-2|-3|reset|player|moderator|gamemaster|administrator]
+
+Without arg show current player amount and security level limitations for login to server, with arg set player linit ($num &gt; 0) or securiti limitation ($num &lt; 0 or security leme name. With `reset` sets player limit to the one in the config file</td>
+        </tr>
+        <tr>
+          <td class="col0"> server restart</td>
+          <td class="col1">Syntax: .server restart #delay [#exit_code] [reason]
+
+Restart the server after #delay seconds. Use #exit_code or 2 as program exist code.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server restart cancel</td>
+          <td class="col1">Syntax: .server restart cancel
+
+Cancel the restart/shutdown timer if any.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server set</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> server set closed</td>
+          <td class="col1">Syntax: server set closed on/off
+
+Sets whether the world accepts new client connectsions.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server set difftime</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> server set loglevel</td>
+          <td class="col1">Syntax: .server set loglevel $facility $name $loglevel. $facility can take the values: appender (a) or logger (l). $loglevel can take the values: disabled (0), trace (1), debug (2), info (3), warn (4), error (5) or fatal (6)</td>
+        </tr>
+        <tr>
+          <td class="col0"> server set motd</td>
+          <td class="col1">Syntax: .server set motd $MOTD
+
+Set server Message of the day.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server shutdown</td>
+          <td class="col1">Syntax: .server shutdown #delay [#exit_code] [reason]
+
+Shut the server down after #delay seconds. Use #exit_code or 0 as program exit code.</td>
+        </tr>
+        <tr>
+          <td class="col0"> server shutdown cancel</td>
+          <td class="col1">Syntax: .server shutdown cancel
+
+Cancel the restart/shutdown timer if any.</td>
+        </tr>
+        <tr>
+          <td class="col0"> setskill</td>
+          <td class="col1">Syntax: .setskill #skill #level [#max]
+
+Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.</td>
+        </tr>
+        <tr>
+          <td class="col0"> showarea</td>
+          <td class="col1">Syntax: .showarea #areaid
+
+Reveal the area of #areaid to the selected character. If no character is selected, reveal this area to you.</td>
+        </tr>
+        <tr>
+          <td class="col0"> summon</td>
+          <td class="col1">Syntax: .summon [$charactername]
+
+Teleport the given character to you. Character can be offline.</td>
+        </tr>
+        <tr>
+          <td class="col0"> tele</td>
+          <td class="col1">Syntax: .tele #location
+
+Teleport player to a given location.</td>
+        </tr>
+        <tr>
+          <td class="col0"> tele add</td>
+          <td class="col1">Syntax: .tele add $name
+
+Add current your position to .tele command target locations list with name $name.</td>
+        </tr>
+        <tr>
+          <td class="col0"> tele del</td>
+          <td class="col1">Syntax: .tele del $name
+
+Remove location with name $name for .tele command locations list.</td>
+        </tr>
+        <tr>
+          <td class="col0"> tele group</td>
+          <td class="col1">Syntax: .tele group#location
+
+Teleport a selected player and his group members to a given location.</td>
+        </tr>
+        <tr>
+          <td class="col0"> tele name</td>
+          <td class="col1">Syntax: .tele name [#playername] #location
+
+Teleport the given character to a given location. Character can be offline.
+
+To teleport to homebind, set #location to "$home" (without quotes).</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket</td>
+          <td class="col1">Syntax: .ticket $subcommand
+Type .ticket to see the list of possible subcommands or .help ticket $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket assign</td>
+          <td class="col1">Usage: .ticket assign $ticketid $gmname.
+Assigns the specified ticket to the specified Game Master.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket close</td>
+          <td class="col1">Usage: .ticket close $ticketid.
+Closes the specified ticket. Does not delete permanently.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket closedlist</td>
+          <td class="col1">Displays a list of closed GM tickets.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket comment</td>
+          <td class="col1">Usage: .ticket comment $ticketid $comment.
+Allows the adding or modifying of a comment to the specified ticket.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket complete</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket delete</td>
+          <td class="col1">Usage: .ticket delete $ticketid.
+Deletes the specified ticket permanently. Ticket must be closed first.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket escalate</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket escalatedlist</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket list</td>
+          <td class="col1">Displays a list of open GM tickets.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket onlinelist</td>
+          <td class="col1">Displays a list of open GM tickets whose owner is online.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket reset</td>
+          <td class="col1">Syntax: .ticket reset
+Removes all closed tickets and resets the counter, if no pending open tickets are existing.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket response</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket response append</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket response appendln</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket togglesystem</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket unassign</td>
+          <td class="col1">Usage: .ticket unassign $ticketid.
+Unassigns the specified ticket from the current assigned Game Master.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket viewid</td>
+          <td class="col1">Usage: .ticket viewid $ticketid.
+Returns details about specified ticket. Ticket must be open and not deleted.</td>
+        </tr>
+        <tr>
+          <td class="col0"> ticket viewname</td>
+          <td class="col1">Usage: .ticket viewname $creatorname. 
+Returns details about specified ticket. Ticket must be open and not deleted.</td>
+        </tr>
+        <tr>
+          <td class="col0"> titles</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> titles add</td>
+          <td class="col1">Syntax: .titles add #title
+Add title #title (id or shift-link) to known titles list for selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> titles current</td>
+          <td class="col1">Syntax: .titles current #title
+Set title #title (id or shift-link) as current selected title for selected player. If title is not in known title list for player then it will be added to list.</td>
+        </tr>
+        <tr>
+          <td class="col0"> titles remove</td>
+          <td class="col1">Syntax: .titles remove #title
+Remove title #title (id or shift-link) from known titles list for selected player.</td>
+        </tr>
+        <tr>
+          <td class="col0"> titles set</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> titles set mask</td>
+          <td class="col1">Syntax: .titles set mask #mask
+
+Allows user to use all titles from #mask.
+
+ #mask=0 disables the title-choose-field</td>
+        </tr>
+        <tr>
+          <td class="col0"> unaura</td>
+          <td class="col1">Syntax: .unaura #spellid
+
+Remove aura due to spell #spellid from the selected Unit.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unban</td>
+          <td class="col1">Syntax: .unban $subcommand
+Type .unban to see the list of possible subcommands or .help unban $subcommand to see info on subcommands</td>
+        </tr>
+        <tr>
+          <td class="col0"> unban account</td>
+          <td class="col1">Syntax: .unban account $Name
+Unban accounts for account name pattern.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unban character</td>
+          <td class="col1">Syntax: .unban character $Name
+Unban accounts for character name pattern.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unban ip</td>
+          <td class="col1">Syntax : .unban ip $Ip
+Unban accounts for IP pattern.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unban playeraccount</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> unbindsight</td>
+          <td class="col1">Syntax: .unbindsight
+
+Removes bound vision. Cannot be used while currently possessing a target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unfreeze</td>
+          <td class="col1">Syntax: .unfreeze (#player)
+"Unfreezes" #player and enables his chat again. When using this without #name it will unfreeze your target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unlearn</td>
+          <td class="col1">Syntax: .unlearn #spell [all]
+
+Unlearn for selected player a spell #spell.  If 'all' provided then all ranks unlearned.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unmute</td>
+          <td class="col1">Syntax: .unmute [$playerName]
+
+Restore chat messaging for any character from account of character $playerName (or selected). Character can be ofline.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unpossess</td>
+          <td class="col1">Syntax: .unpossess
+
+If you are possessed, unpossesses yourself; otherwise unpossesses current possessed target.</td>
+        </tr>
+        <tr>
+          <td class="col0"> unstuck</td>
+          <td class="col1">Syntax: .unstuck $playername [inn/graveyard/startzone]
+
+Teleports specified player to specified location. Default location is player's current hearth location.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wchange</td>
+          <td class="col1">Syntax: .wchange #weathertype #status
+
+Set current weather to #weathertype with an intensity of #status.
+
+#weathertype can be 1 for rain, 2 for snow, and 3 for sand. #status can be 0 for disabled, and 1 for enabled.</td>
+        </tr>
+        <tr>
+          <td class="col0"> whispers</td>
+          <td class="col1">Syntax: .whispers on|off
+Enable/disable accepting whispers by GM from players. By default use trinityd.conf setting.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wp</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> wp add</td>
+          <td class="col1">Syntax: .wp add
+
+Add a waypoint for the selected creature at your current position.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wp event</td>
+          <td class="col1">Syntax: .wp event $subcommand
+Type .path event to see the list of possible subcommands or .help path event $subcommand to see info on subcommands.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wp load</td>
+          <td class="col1">Syntax: .wp load $pathid
+Load pathid number for selected creature. Creature must have no waypoint data.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wp modify</td>
+          <td class="col1"></td>
+        </tr>
+        <tr>
+          <td class="col0"> wp reload</td>
+          <td class="col1">Syntax: .wp reload $pathid
+Load path changes ingame - IMPORTANT: must be applied first for new paths before .wp load #pathid </td>
+        </tr>
+        <tr>
+          <td class="col0"> wp show</td>
+          <td class="col1">Syntax: .wp show $option
+Options:
+on $pathid (or selected creature with loaded path) - Show path
+off - Hide path
+info $slected_waypoint - Show info for selected waypoint.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wp unload</td>
+          <td class="col1">Syntax: .wp unload
+Unload path for selected creature.</td>
+        </tr>
+        <tr>
+          <td class="col0"> wpgps</td>
+          <td class="col1">Syntax: .wpgps
+
+Output current position to sql developer log as partial SQL query to be used in pathing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <em>generated 2015-04-07 23:52:23      by <a href="http://www.heidisql.com/">HeidiSQL 9.1.0.4913</a></em>
+    </p>
+
+  </body>
+</html>
