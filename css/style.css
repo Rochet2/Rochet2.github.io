@@ -1,0 +1,198 @@
+* {
+    word-wrap: break-word;
+}
+
+html, body {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+img {
+    border: none;
+}
+
+a, a * {
+    text-decoration: none;
+}
+
+a {
+    color: #00A2C5;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+/*Remember to set line height of valign to same as height*/
+.valign {
+    text-align: center;
+}
+
+.valign>span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#topnav {
+    display: block;
+    text-align: center;
+    /*height: 100px;*/
+    min-width: 160px;
+    /*padding-left: 120px;*/
+    background-color: rgb(26, 26, 26);
+    /*background: url("../images/Rochet2_100.png") no-repeat scroll 20px center / auto 75% rgb(26, 26, 26);*/
+}
+
+#topnav>div{
+    min-width: 320px;
+    display: inline-block;
+}
+
+#topnav a{
+    transition: background-color 500ms, box-shadow 200ms;
+    -webkit-transition: background-color 500ms, box-shadow 200ms;
+    width: 160px;
+    height: 100px;
+    line-height: 100px; /*required for valign*/
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-weight: bold;
+}
+
+#topnav a:hover{
+    background-color: #00ADE6 !important;
+    box-shadow: inset 0px 0px 10px #000;
+}
+
+#content {
+    margin: 0 auto;
+    padding: 5px 15px;
+    max-width: 830px;
+    padding-bottom: 200px !important;   /* Height of the footer + bottom margin between footer and content*/
+}
+
+#content iframe{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 360px;
+}
+
+#content h1, #content h2, #content h3, #content h4 {
+    margin-top: 60px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgb(86, 86, 86);
+    background-color: rgb(26, 26, 26);
+    height: 100px;   /* Height of the footer */
+    line-height: 100px; /*required for valign*/
+}
+
+.blocklink {
+    text-align: center;
+    position: relative;
+    width: 160px;
+    height: 142px;
+    display: inline-block;
+}
+
+.blocklink:hover {
+    background-color: #EFEFEF;
+}
+
+.blocklink>.projecttitle{
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    color: #333;
+    padding: 10px 0px;
+    line-height: 40px;
+}
+.blocklink>.projectlogo{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+}
+.blocklink>.projectlogo>img{
+    margin: auto;
+}
+
+.social {
+    display: inline-block;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+#twitter-widget-0 {
+    width: 100% !important;
+}
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 98%;
+    padding: 0;
+    margin: 40px 1%;
+    box-shadow: 0px 0px 10px 5px #000;
+    background-color: #333;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.download{
+    transition: background-color 500ms, box-shadow 200ms;
+    -webkit-transition: background-color 500ms, box-shadow 200ms;
+    width: 96%;
+    padding: 10px 2%;
+    display: block;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.download:hover{
+    background-color: #00ADE6 !important;
+}

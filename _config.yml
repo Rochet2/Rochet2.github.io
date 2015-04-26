@@ -1,0 +1,9 @@
+permalink: none # Clean permalinks like https://rochet2.github.io/Issues/Reforging.html
+baseurl: "" # Root folder path of the site from site root
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"

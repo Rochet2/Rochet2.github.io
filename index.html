@@ -1,199 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name=viewport content="width=device-width, initial-scale=1" />
-    <meta http-equiv="cache-control" content="max-age=1800" />
-    <meta name="Robots" content="ALL" />
-    <meta name="Description" content="Opensource Coding" />
-    <meta name="Author" content="Rochet2" />
-    <meta name="Keywords" content="portal master, teleport npc, stormwind, WMO, mangos, trinity, core, arcemu, download, jukebox, project, code,
-                          projectcode, wiki, forum, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
-                          npc, code, world, warcraft, private, download, change, teleportation, trinitydb, smartai, mangadmin, project-code, emuproject,
-                          emu, emulator, gossip, telenpc, project, zzl, org" />
+---
+title: Home
+---
 
-    <title>RochetCode | Rochet2.github.io</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png"/>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-17459395-5', 'rochet2.github.io');
-        ga('send', 'pageview');
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/github_markdown.css" media="screen" />
-
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/gist-embed.js"></script>
-    <script type="text/javascript" src="/js/github-files.js"></script>
-    <script type="text/javascript" src="/js/marked.js"></script>
+<h1>Welcome to RochetCode</h1>
+<p>Take a look at <a href="{{ site.baseurl }}/projects">projects</a> for releases</p>
+<h1 style="display: inline-block; margin-right: 10px;">Like us:</h1>
+<div class="social">
+    <!-- Aseta tämä tagi paikkaan, jossa haluat widgetin +1-painike näkyvän. -->
+    <div class="g-plusone" data-size="tall" data-href="https://rochet2.github.io/"></div>
     
+    <!-- Aseta tämä tagi viimeisen widgetin +1-painike tagin jälkeen. -->
     <script type="text/javascript">
-        /**
-        * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
-        * Common usage: wipe images (left and right to show the previous or next image)
-        *
-        * @author Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
-        * @version 1.1.1 (9th December 2010) - fix bug (older IE's had problems)
-        * @version 1.1 (1st September 2010) - support wipe up and wipe down
-        * @version 1.0 (15th July 2010)
-        */
-        (function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft()}else{config.wipeRight()}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown()}else{config.wipeUp()}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
     </script>
-  </head>
-  <body>
-    <div id="header">
-      <div id="Image"></div>
-      <div id="topnav">
-        <a href="/" class="Home_active active"><span>Home</span></a>
-        <a href="?page=Contact" class="Social_active"><span>Contact</span></a>
-        <a href="https://github.com/Rochet2/Issues/issues" class="Issues_active"><span>Issues</span></a>
-      </div>
-    </div>
-    <div id="projects">
-      <div id="label">
-        <div>
-          <div>
-            <p>Projects</p>
-          </div>
-        </div>
-      </div>
-      <div id="catcher"></div>
-      <div id="boxes">
-        <a class="Portal_Master_active" href="?page=Portal_Master">
-          <div>
-            <div style="background-image: url('/images/Portal_Master_icon.png');"></div>
-            <p>Portal Master</p>
-          </div>
-        </a>
-        <a class="Jukebox_active" href="?page=Jukebox">
-          <div>
-            <div style="background-image: url('/images/Jukebox_icon.png');"></div>
-            <p>Jukebox</p>
-          </div>
-        </a>
-        <a class="Eluna_active" href="?page=Eluna">
-          <div>
-            <div style="background-image: url('/images/Eluna_icon.png');"></div>
-            <p>Eluna</p>
-          </div>
-        </a>
-        <a class="Player_and_Item_Gossip_active" href="?page=Player_and_Item_Gossip">
-          <div>
-            <div style="background-image: url('/images/Player_and_Item_Gossip_icon.png');"></div>
-            <p>Player and Item Gossip</p>
-          </div>
-        </a>
-        <a class="Dress_NPCs_active" href="?page=Dress_NPCs">
-          <div>
-            <div style="background-image: url('/images/Dress_NPCs_icon.png');"></div>
-            <p>Dress NPCs</p>
-          </div>
-        </a>
-        <a class="Transmogrification_active" href="?page=Transmogrification">
-          <div>
-            <div style="background-image: url('/images/Transmogrification_icon.png');"></div>
-            <p>Transmogrification</p>
-          </div>
-        </a>
-        <a class="Reforging_active" href="?page=Reforging">
-          <div>
-            <div style="background-image: url('/images/Reforging_icon.png');"></div>
-            <p>Reforging</p>
-          </div>
-        </a>
-        <a class="Item_Enchant_Visuals_active" href="?page=Item_Enchant_Visuals">
-          <div>
-            <div style="background-image: url('/images/Item_Enchant_Visuals_icon.png');"></div>
-            <p>Item Enchant Visuals</p>
-          </div>
-        </a>
-        <a class="GOMove_active" href="?page=GOMove">
-          <div>
-            <div style="background-image: url('/images/GOMove_icon.png');"></div>
-            <p>GOMove</p>
-          </div>
-        </a>
-        <a class="Multivendor_active" href="?page=Multivendor">
-          <div>
-            <div style="background-image: url('/images/Multivendor_icon.png');"></div>
-            <p>Multivendor</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="content">
-      <div>
-        <h1>Error loading content</h1>
-        <p>Enable JavaScript</p>
-      </div>
-      <script>
-        var page = document.URL.match(/page=(\w+)/);
-        if (!page) {
-            page = "Home";
-        } else {
-            page = page[1].replace(/%20/g,"_");
-        }
-        $(".active").removeClass("active");
-        $("." + page + "_active").addClass("active");
-        page = page.replace(/_/g," ");
-        document.title = page + " | RochetCode";
-        $.get("/pages/" + page + ".html", function(data) {
-            $("#content>div").empty().html(data);
-            EmbedGists();
-            var sliderTime;
-            $(".media").click(function() {
-                $("#media").fadeIn();
-                if ($(this).hasClass("html")) {
-                    $("#media>div>div").load($(this).attr("src"), function(data) {
-                        function slideSwitch() {
-                            var active = $('.slideshow > .slide_active');
-                            var next = active.next();
-                            if (!next.length) {
-                                next = $('.slideshow > :nth-child(1)');
-                            }
-                            active.removeClass('slide_active');
-                            next.addClass('slide_active');
-                        }
-                        sliderTime = setInterval(slideSwitch, 5000 );
-                    }, "html");
-                } else {
-                    $("#media>div>div").html($(this).attr("src"));
-                }
-            });
-            $("#media").click(function() {
-                $(this).fadeOut();
-                $("#media>div>div").empty();
-                clearInterval(sliderTime);
-            });
-        }, "html")
-        .fail(function(data) {
-            document.title = "404 | RochetCode";
-            $("#content>div").empty().html("<h1>Error loading content</h1><p>Page does not exist or content could not be loaded</p><p>Try <A HREF='javascript:history.go(0)'>refreshing</A> the page or go to <a href='/'>site index</a></p>");
-        });
-      </script>
-      <footer id="footer">&copy; GPL v2</footer>
-    </div>
-    <script>
-        $("#content, #projects").touchwipe({
-            wipeLeft: function() {
-                $("#projects").removeClass("active");
-            },
-            wipeRight: function() {
-                $("#projects").addClass("active");
-            },
-            min_move_x: 20,
-            min_move_y: 20,
-            preventDefaultEvents: false
-        });
-    </script>
-    <div id="media">
-      <div>
-        <div></div>
-      </div>
-    </div>
-  </body>
-</html>
+</div>
+<div class="social">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-like" data-href="https://rochet2.github.io/" data-width="50" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+</div>
+<div style="margin: 25px 0;">
+    <a class="twitter-timeline" data-dnt="true" height="500px" href="https://twitter.com/projectcode_zzl" data-widget-id="482233260429156352">Tweets by @projectcode_zzl</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>

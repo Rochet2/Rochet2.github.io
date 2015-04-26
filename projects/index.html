@@ -1,0 +1,16 @@
+---
+title: Projects
+---
+
+<p>Click a project below to read more about a project and download it</p>
+
+<div style="text-align: center; margin: 50px 0;">
+    {% for post in site.posts %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink">
+            <div class="projectlogo">
+                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80">
+            </div>
+            <div class="valign projecttitle"><span>{{ post.title }}</span></div>
+        </a>
+    {% endfor %}
+</div>

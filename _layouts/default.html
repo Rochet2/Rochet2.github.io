@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RochetCode - coding and scripting">
+    <meta name=viewport content="width=device-width, initial-scale=1" />
+    <meta name="Robots" content="ALL" />
+    <meta name="Author" content="Rochet2" />
+    <meta name="Keywords" content="portal master, teleport npc, stormwind, WMO, mangos, trinity, core, arcemu, download, jukebox, project, code,
+                          projectcode, wiki, forum, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
+                          npc, code, world, warcraft, private, download, change, teleportation, trinitydb, smartai, mangadmin, project-code, emuproject,
+                          emu, emulator, gossip, telenpc, project, zzl, org" />
+    
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css" media="screen" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css">
+    <!--[if lt IE 7]>
+        <style media="screen" type="text/css">
+            #container {
+                height:100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-rs.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/gist-embed.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/github-files.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/marked.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/js.js"></script>
+
+    <title>{{ page.title }} | RochetCode</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- HEADER -->
+        <div id="topnav">
+            <!-- Note that having these in one line removes spaces between the blocks -->
+            <div><a href="{{ site.baseurl }}" class="valign"><span><img src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/projects" class="valign"><span>Projects</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" href="https://github.com/Rochet2/Issues/issues/new" class="valign"><span>Feedback</span></a></div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+            <section id="main_content">
+                
+                {% if page.title != 'Home' %}
+                    <h1 id="title">{{ page.title }}</h1>
+                {% endif %}
+                
+                {% if page.images %}
+                    <ul id="images" class="rslides">
+                    {% for imagepath in page.images %}
+                        <li><img src="{{ site.baseurl }}{{ imagepath }}"></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                
+                {{ content }}
+                
+                {% if page.downloads %}
+                    <h3>Downloads</h3>
+                    {% for download in page.downloads %}
+                        {{ download }}
+                    {% endfor %}
+                {% endif %}
+                
+                {% if page.videos %}
+                    <h3>Videos</h3>
+                {% endif %}
+                
+                {% if page.videos %}
+                    {% for videopath in page.videos %}
+                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen></iframe>
+                    {% endfor %}
+                {% endif %}
+                
+                <script>
+                    $(function() {
+                        $(".rslides").responsiveSlides({
+                            //auto: false,              // Boolean: Animate automatically, true or false
+                            //speed: 500,               // Integer: Speed of the transition, in milliseconds
+                            //timeout: 4000,            // Integer: Time between slide transitions, in milliseconds
+                            //pager: true,              // Boolean: Show pager, true or false
+                            //nav: true,                // Boolean: Show navigation, true or false
+                            random: true,               // Boolean: Randomize the order of the slides, true or false
+                            //pause: true,              // Boolean: Pause on hover, true or false
+                            //pauseControls: true,      // Boolean: Pause when hovering controls, true or false
+                            //prevText: "Previous",     // String: Text for the "previous" button
+                            //nextText: "Next",         // String: Text for the "next" button
+                            //maxwidth: "",             // Integer: Max-width of the slideshow, in pixels
+                            //navContainer: "",         // Selector: Where controls should be appended to, default is after the 'ul'
+                            //manualControls: "",       // Selector: Declare custom pager navigation
+                            //namespace: "rslides",     // String: Change the default namespace used
+                            //before: function(){},     // Function: Before callback
+                            //after: function(){}       // Function: After callback
+                        });
+                    });
+                </script>
+                
+                <script>
+                    EmbedGists();
+                </script>
+            </section>
+        </div>
+
+        <!-- FOOTER  -->
+        <div id="footer">
+            <footer>
+                <div class="valign">
+                    <span>&copy;{{ site.time | date: '%Y' }} <a href="https://github.com/Rochet2">Rochet2</a> - Since 6.7.2010</span>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+</body>
+</html>
