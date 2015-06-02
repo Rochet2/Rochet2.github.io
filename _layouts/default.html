@@ -11,7 +11,7 @@
                           projectcode, wiki, forum, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
                           npc, code, world, warcraft, private, download, change, teleportation, trinitydb, smartai, mangadmin, project-code, emuproject,
                           emu, emulator, gossip, telenpc, project, zzl, org" />
-    
+
     <title>{{ page.title }} | RochetCode</title>
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png"/>
 
@@ -24,20 +24,20 @@
             }
         </style>
     <![endif]-->
-    
+
     <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-rs.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/gist-embed.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/github-files.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/marked.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/js.js"></script>
-    
+
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        
+
         ga('create', 'UA-17459395-5', 'auto');
         ga('send', 'pageview');
     </script>
@@ -49,17 +49,17 @@
         <!-- HEADER -->
         <div id="topnav">
             <!-- Note that having these in one line removes spaces between the blocks -->
-            <div><a href="{{ site.baseurl }}/" class="valign"><span><img src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/projects" class="valign"><span>Projects</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" href="https://github.com/Rochet2/Issues/issues/new" class="valign"><span>Feedback</span></a></div>
+            <div><a href="{{ site.baseurl }}/" class="valign"><span><img src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" href="https://github.com/Rochet2/Issues/issues/new" class="valign"><span>Feedback</span></a></div>
         </div>
 
         <!-- MAIN CONTENT -->
         <div id="content">
             <section id="main_content">
-                
+
                 {% if page.title != 'Home' %}
                     <h1 id="title">{{ page.title }}</h1>
                 {% endif %}
-                
+
                 {% if page.images %}
                     <ul id="images" class="rslides">
                     {% for imagepath in page.images %}
@@ -67,26 +67,26 @@
                     {% endfor %}
                     </ul>
                 {% endif %}
-                
+
                 {{ content }}
-                
+
                 {% if page.downloads %}
                     <h3>Downloads</h3>
                     {% for download in page.downloads %}
                         {{ download }}
                     {% endfor %}
                 {% endif %}
-                
+
                 {% if page.videos %}
                     <h3>Videos</h3>
                 {% endif %}
-                
+
                 {% if page.videos %}
                     {% for videopath in page.videos %}
                         <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen></iframe>
                     {% endfor %}
                 {% endif %}
-                
+
                 <script>
                     $(function() {
                         $(".rslides").responsiveSlides({
@@ -109,7 +109,7 @@
                         });
                     });
                 </script>
-                
+
                 <script>
                     EmbedGists();
                 </script>
