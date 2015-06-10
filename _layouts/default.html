@@ -7,10 +7,9 @@
     <meta name=viewport content="width=device-width, initial-scale=1" />
     <meta name="Robots" content="ALL" />
     <meta name="Author" content="Rochet2" />
-    <meta name="Keywords" content="portal master, teleport npc, stormwind, WMO, mangos, trinity, core, arcemu, download, jukebox, project, code,
-                          projectcode, wiki, forum, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
-                          npc, code, world, warcraft, private, download, change, teleportation, trinitydb, smartai, mangadmin, project-code, emuproject,
-                          emu, emulator, gossip, telenpc, project, zzl, org" />
+    <meta name="Keywords" content="{% for post in site.posts %}{{ post.title }}, {% endfor %}mangos, cmangos, trinity, arcemu, download, project code,
+                          projectcode, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
+                          smartai, project-code, emuproject, emulator, gossip, telenpc, project, zzl, org, Rochet2, github, ac-web, emudevs" />
 
     <title>{{ page.title }} | RochetCode</title>
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png"/>
@@ -56,16 +55,19 @@
         <div id="content">
             <section id="main_content">
 
-                {% if page.title != 'Home' %}
-                    <h1 id="title">{{ page.title }}</h1>
-                {% endif %}
-
                 {% if page.images %}
                     <ul id="images" class="rslides">
                     {% for imagepath in page.images %}
                         <li><img src="{{ site.baseurl }}{{ imagepath }}"></li>
                     {% endfor %}
                     </ul>
+                {% endif %}
+
+                {% if page.title != 'Home' %}
+                    <div style="margin: 30px 20px;">
+                        <img src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" style="float: left;">
+                        <h1 style="line-height: 80px; height: 80px; margin: 0px; float: left;" id="title">{{ page.title }}</h1>
+                    </div>
                 {% endif %}
 
                 {{ content }}
