@@ -36,8 +36,6 @@ downloads:
     - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs/src/server/scripts/Custom/DressNPCs/" class="download button">TrinityCore</a>
 ---
 
-###About
-
 Dress NPCs is a C++ core modification which allows you to equip armor items on NPCs **without using any client side patches or DBC editing**.  
 You can also choose the facial features and hair as well as race and gender for the NPC.  
 The outfits are created in the database, so no recompiling is required after installing the core modification.  
