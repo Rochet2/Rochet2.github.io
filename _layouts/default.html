@@ -70,17 +70,19 @@
                     </div>
                 {% endif %}
 
+                <div id="description">
                 {{ content }}
+                </div>
 
                 {% if page.downloads %}
-                    <h3>Downloads</h3>
+                    <h3 id="downloads">Downloads</h3>
                     {% for download in page.downloads %}
                         {{ download }}
                     {% endfor %}
                 {% endif %}
 
                 {% if page.videos %}
-                    <h3>Videos</h3>
+                    <h3 id="videos">Videos</h3>
                 {% endif %}
 
                 {% if page.videos %}
