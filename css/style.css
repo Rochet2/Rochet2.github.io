@@ -143,11 +143,9 @@ a:hover, a:focus, a:active {
     vertical-align: middle;
 }
 
-/*
 #twitter-widget-0 {
-    width: 100% !important;
+    width: 680px !important;
 }
-*/
 
 .rslides {
     position: relative;
