@@ -33,7 +33,8 @@ videos:
     - https://www.youtube.com/embed/tZe8rJsdkmg?list=PL5CF7437D71BB0795
 
 downloads:
-    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs/src/server/scripts/Custom/DressNPCs/" class="download button">TrinityCore</a>
+    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs/src/server/scripts/Custom/DressNPCs/" class="download button">TrinityCore 3.3.5</a>
+    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs_6.x/src/server/scripts/Custom/DressNPCs/" class="download button">TrinityCore 6.x</a>
 ---
 
 Dress NPCs is a C++ core modification which allows you to equip armor items on NPCs **without using any client side patches or DBC editing**.  
