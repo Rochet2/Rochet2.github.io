@@ -4,9 +4,11 @@ title: Transmogrification
 videos:
     - https://www.youtube.com/embed/xtH4ogz12iM?list=PL5CF7437D71BB0795
     - https://www.youtube.com/embed/wuNWPqiIm64?list=PL5CF7437D71BB0795
+    - https://www.youtube.com/embed/PIheEziN_dY?list=PL5CF7437D71BB0795
 
 downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog/src/server/scripts/Custom/Transmog/">TrinityCore</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog/src/server/scripts/Custom/Transmog/">TrinityCore 3.3.5 - Blizzlike</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmogvendor/src/server/scripts/Custom/TransmogDisplayVendor/">TrinityCore 3.3.5 - TransmogVendor</a>
 ---
 
 Transmogrification allows you to change the appearance of an item to another item - **on 3.3.5 patch**.  
@@ -17,6 +19,8 @@ The system is dynamicly using all items - custom items work by default.
 The transmogrifier includes a system to store a limited amount of outfits.  
 The default requirements are blizzlike however you can easily change these settings through configuration files.  
 You can also tweak many other settings through the configuration file without recompiling.  
+
+**There are two different transmogrification scripts here. One has blizzlike way of using your own items and the other - transmog vendor - has all item displays in it from the database.**
 
 ####Default rules:
 * The character must be able to equip both items.  
