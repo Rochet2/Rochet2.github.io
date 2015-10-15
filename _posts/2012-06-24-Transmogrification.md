@@ -7,8 +7,8 @@ videos:
     - https://www.youtube.com/embed/PIheEziN_dY?list=PL5CF7437D71BB0795
 
 downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog/src/server/scripts/Custom/Transmog/"  onClick="_gaq.push(['_trackEvent', 'External Link', 'TrinityCore 3.3.5 - Blizzlike']);">TrinityCore 3.3.5 - Blizzlike</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmogvendor/src/server/scripts/Custom/TransmogDisplayVendor/" onClick="_gaq.push(['_trackEvent', 'External Link', 'TrinityCore 3.3.5 - TransmogVendor']);">TrinityCore 3.3.5 - TransmogVendor</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog/src/server/scripts/Custom/Transmog/" onClick="ga('send', 'event', 'Download', 'click', 'TrinityCore 3.3.5 - Blizzlike');">TrinityCore 3.3.5 - Blizzlike</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmogvendor/src/server/scripts/Custom/TransmogDisplayVendor/" onClick="ga('send', 'event', 'Download', 'click', 'TrinityCore 3.3.5 - TransmogVendor');">TrinityCore 3.3.5 - TransmogVendor</a>
 ---
 
 Transmogrification allows you to change the appearance of an item to another item - **on 3.3.5 patch**.  
