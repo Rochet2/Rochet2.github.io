@@ -6,7 +6,7 @@ title: Downloads
 
 <div style="text-align: center; margin: 50px 0;">
     {% for post in site.posts %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink" onClick="ga('send', 'event', 'Project', 'view', '{{ post.title }}');">
             <div class="projectlogo">
                 <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80">
             </div>

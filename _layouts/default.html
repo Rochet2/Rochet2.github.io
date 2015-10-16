@@ -40,6 +40,12 @@
         ga('create', 'UA-17459395-5', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script>
+        $("a").click(function() {
+            ga('send', 'event', 'url', 'click', $(this)[0].outerHTML);
+        });
+    </script>
 </head>
 
 <body>

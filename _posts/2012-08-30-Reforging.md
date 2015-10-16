@@ -5,7 +5,7 @@ videos:
     - https://www.youtube.com/embed/84EtvKTfqQM?list=PL5CF7437D71BB0795
 
 downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/reforging/src/server/scripts/Custom/Reforging/">TrinityCore</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/reforging/src/server/scripts/Custom/Reforging/" onClick="ga('send', 'event', 'Download', 'click', 'Reforging TrinityCore');">TrinityCore</a>
 ---
 
 Reforging allows you to exchange 40% of an item's stat value to some other stat - **on 3.3.5 patch**.  
