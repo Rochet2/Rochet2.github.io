@@ -3,7 +3,7 @@ title: Multivendor
 
 downloads:
     - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore');">TrinityCore 3.3.5</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 6.x');">TrinityCore 6.x</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_6.x/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 6.x');">TrinityCore 6.x</a>
 ---
 
 Multivendor is a core modification which allows the player to access multiple vendor views from a single NPC.  
