@@ -22,7 +22,7 @@ You can also tweak many other settings through the configuration file without re
 
 **There are two different transmogrification scripts here. One has blizzlike way of using your own items and the other - transmog vendor - has all item displays in it from the database.**
 
-####Default rules:
+#### Default rules:
 * The character must be able to equip both items.  
 * Only uncommon (green), rare (blue), heirloom (pale gold) or epic (purple) items may be transmogrified (exceptions: a select few of these items will be prevented from being used to transmogrify if they are deemed inappropriate).  
  * Heirlooms and Account Bound items can be transmogrified.  
