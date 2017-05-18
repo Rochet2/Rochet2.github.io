@@ -24,11 +24,11 @@ SET
 @Z := 0.0,
 @O := 0.0;
 
-UPDATE `gossip_menu_option` SET `id` = `id`+1 WHERE `menu_id` = @MENU_ID AND `id` >= @ID ORDER BY `id` DESC;
+UPDATE `gossip_menu_option` SET `optionid` = `optionid`+1 WHERE `menuid` = @MENU_ID AND `optionid` >= @ID ORDER BY `optionid` DESC;
 UPDATE `conditions` SET `SourceEntry` = `SourceEntry`+1 WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = @MENU_ID AND `SourceEntry` >= @ID ORDER BY `SourceEntry` DESC;
 UPDATE `smart_scripts` SET `event_param2` = `event_param2`+1 WHERE `entryorguid` = @NPC_ENTRY AND `source_type` = 0 AND `event_param1` = @MENU_ID AND `event_param2` >= @ID ORDER BY `event_param2` DESC;
 
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `box_money`, `box_text`) VALUES
+INSERT INTO `gossip_menu_option` (`menuid`, `optionid`, `optionicon`, `optiontext`, `optiontype`, `optionnpcflag`, `actionmenuid`, `boxmoney`, `boxtext`) VALUES
 (@MENU_ID, @ID, @ICON, @TELE_NAME, 1, 1, @MENU_ID, @COST, @POPUP);
 
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ConditionTypeOrReference`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `Comment`) VALUES
