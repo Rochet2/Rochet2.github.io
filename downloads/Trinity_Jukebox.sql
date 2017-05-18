@@ -16,15 +16,15 @@ SET
 
 
 DELETE FROM creature_template WHERE entry = @ENTRY;
-DELETE FROM gossip_menu WHERE entry BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
 DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+6;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
-DELETE FROM gossip_menu_option WHERE menu_id BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
 
 INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, unit_class, unit_flags, type, type_flags, InhabitType, RegenHealth, flags_extra, AiName) VALUES
 (@ENTRY, @MODEL, @NAME, @SUBNAME, "", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 3, 1, 2, "SmartAI");
 
-INSERT INTO gossip_menu (entry, text_id) VALUES 
+INSERT INTO gossip_menu (menuid, textid) VALUES 
 (@GOSSIP_MENU, @TEXT_ID),
 (@GOSSIP_MENU+1, @TEXT_ID+2),
 (@GOSSIP_MENU+2, @TEXT_ID+2),
@@ -81,7 +81,7 @@ INSERT INTO npc_text (ID, text0_0, em0_1) VALUES
 (@TEXT_ID+1, "Main menu two$B$B$B What would you like to hear $C?$B$B", 0),
 (@TEXT_ID, "Main menu$B$B$B Hello $N. What would you like to hear?$B$B", 0);
 
-INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, box_coded, box_money, box_text) VALUES 
+INSERT INTO gossip_menu_option (menuid, optionid, optionicon, optiontext, optiontype, optionnpcflag, actionmenuid, actionpoiid, boxcoded, boxmoney, boxtext) VALUES 
 (@GOSSIP_MENU, 1, 8, "Logo", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Sure about the movie?"),
 (@GOSSIP_MENU, 2, 8, "Intro", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Sure about the movie?"),
 (@GOSSIP_MENU, 3, 8, "Wrathgate", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Sure about the movie?"),
