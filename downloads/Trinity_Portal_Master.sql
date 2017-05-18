@@ -22,9 +22,9 @@ SET
 
 DELETE FROM creature_template WHERE entry = @ENTRY;
 DELETE FROM creature_template_addon WHERE Entry = @ENTRY ;
-DELETE FROM gossip_menu WHERE entry BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
+DELETE FROM gossip_menu WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
 DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+4;
-DELETE FROM gossip_menu_option WHERE menu_id BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
+DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
 DELETE FROM conditions WHERE (SourceTypeOrReferenceId = 15 OR SourceTypeOrReferenceId = 14) AND SourceGroup BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+8;
 DELETE from creature WHERE ID = @ENTRY;
@@ -41,7 +41,7 @@ INSERT INTO creature_template_addon (entry, mount, bytes1, bytes2, emote, path_i
 
 -- Gossip header text link to menus
 
-INSERT INTO gossip_menu (entry, text_id) VALUES
+INSERT INTO gossip_menu (menuid, textid) VALUES
 (@GOSSIP_MENU+4, @TEXT_ID+3),
 (@GOSSIP_MENU+3, @TEXT_ID+2),
 (@GOSSIP_MENU+2, @TEXT_ID+2),
@@ -232,7 +232,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 
 -- Gossip options:
 
-INSERT INTO gossip_menu_option (menu_id, id, option_icon, option_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, box_coded, box_money, box_text) VALUES
+INSERT INTO gossip_menu_option (menuid, optionid, optionicon, optiontext, optiontype, optionnpcflag, actionmenuid, actionpoiid, boxcoded, boxmoney, boxtext) VALUES
 (@GOSSIP_MENU, 1, 2, "Stormwind", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Stormwind?"),
 (@GOSSIP_MENU, 2, 2, "Orgrimmar", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Orgrimmar?"),
 (@GOSSIP_MENU, 3, 2, "Darnassus", 1, 1, @GOSSIP_MENU, 0, 0, 0, "Are you sure, that you want to go to Darnassus?"),
