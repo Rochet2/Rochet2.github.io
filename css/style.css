@@ -98,7 +98,7 @@ a:hover, a:focus, a:active {
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: rgb(86, 86, 86);
+    color: rgb(200, 200, 200);
     background-color: rgb(26, 26, 26);
     height: 100px;   /* Height of the footer */
     line-height: 100px; /*required for valign*/
