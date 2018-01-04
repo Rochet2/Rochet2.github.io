@@ -47,6 +47,5 @@ The equipped items provide no armor or other effects for the creatures - the arm
 The outfits are assigned to a creature through the modelId columns like normal models.  
 Since the server allow you to use multiple modelIds on a single NPC, you can also use multiple outfits as well. Mixed use of outfits and modelids is also possible.
 
-In the video below I am using wow modelviewer to build up a specific transmogrification set from a forum and then I use the set through DB with a creature and show how it looks ingame.  
-Do note that this was my first test so the video contains a few bloopers.  
+In the video below I am using wow modelviewer to build up a specific transmogrification set from a forum and then I use the set through DB with a creature and show how it looks ingame.   
 The images are from a server project by Valkryst, which is using Dress NPCs.
