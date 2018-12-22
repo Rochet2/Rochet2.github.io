@@ -2,7 +2,7 @@
 title: Multivendor
 
 downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore');">TrinityCore 3.3.5</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_3.3.5/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore');">TrinityCore 3.3.5</a>
     - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_6.x/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 6.x');">TrinityCore 6.x</a>
     - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_7.x/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 7.x');">TrinityCore 7.x</a>
 ---
