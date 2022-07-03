@@ -21,10 +21,10 @@ DELETE FROM npc_text WHERE ID BETWEEN @TEXT_ID AND @TEXT_ID+6;
 DELETE FROM smart_scripts WHERE entryorguid = @ENTRY AND source_type = 0;
 DELETE FROM gossip_menu_option WHERE menuid BETWEEN @GOSSIP_MENU AND @GOSSIP_MENU+45;
 
-INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, unit_class, unit_flags, type, type_flags, RegenHealth, flags_extra, AiName) VALUES
+INSERT INTO creature_template (entry, modelid1, `name`, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, `rank`, unit_class, unit_flags, `type`, type_flags, RegenHealth, flags_extra, AiName) VALUES
 (@ENTRY, @MODEL, @NAME, @SUBNAME, "", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 1, 2, "SmartAI");
 
-INSERT INTO gossip_menu (menuid, textid) VALUES 
+INSERT INTO gossip_menu (`menuid`, `textid`) VALUES 
 (@GOSSIP_MENU, @TEXT_ID),
 (@GOSSIP_MENU+1, @TEXT_ID+2),
 (@GOSSIP_MENU+2, @TEXT_ID+2),
@@ -72,7 +72,7 @@ INSERT INTO gossip_menu (menuid, textid) VALUES
 (@GOSSIP_MENU+44, @TEXT_ID+3),
 (@GOSSIP_MENU+45, @TEXT_ID+3);
 
-INSERT INTO npc_text (ID, text0_0, emote0_1) VALUES 
+INSERT INTO npc_text (`ID`, `text0_0`, `emote0_1`) VALUES 
 (@TEXT_ID+6, "Page five$B$B$B Select a song and I will play it.$B$B", 0),
 (@TEXT_ID+5, "Page four$B$B$B Select a song and I will play it.$B$B", 0),
 (@TEXT_ID+4, "Page three$B$B$B Select a song and I will play it.$B$B", 0),
@@ -800,7 +800,7 @@ INSERT INTO gossip_menu_option (menuid, optionid, optionicon, optiontext, option
 (@GOSSIP_MENU+45, 26, 4, "Back..", 1, 1, @GOSSIP_MENU+34, 0, 0, 0, "");
 
 
-INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, comment) VALUES
+INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES
 (@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU+45, 1, 0, 0, 4, 14863, 1, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, "Jukebox script"),
 (@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU+44, 1, 0, 0, 4, 14869, 1, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, "Jukebox script"),
 (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU+34, 1, 0, 0, 4, 14829, 1, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, "Jukebox script"),

@@ -32,7 +32,7 @@ DELETE from gameobject WHERE ID = @RUNE AND guid >= 200000;
 
 -- Teleporter
 
-INSERT INTO creature_template (entry, modelid1, name, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, rank, unit_class, unit_flags, type, type_flags, RegenHealth, flags_extra, AiName) VALUES
+INSERT INTO creature_template (entry, modelid1, `name`, subname, IconName, gossip_menu_id, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, `rank`, unit_class, unit_flags, `type`, type_flags, RegenHealth, flags_extra, AiName) VALUES
 (@ENTRY, @MODEL, @NAME, @SUBNAME, "Directions", @GOSSIP_MENU, 71, 71, 35, 3, 1, 1.14286, 1.25, 1, 1, 2, 7, 138936390, 1, 2, "SmartAI");
 
 -- Teleporter aura
@@ -41,7 +41,7 @@ INSERT INTO creature_template_addon (entry, mount, bytes1, bytes2, emote, path_i
 
 -- Gossip header text link to menus
 
-INSERT INTO gossip_menu (menuid, textid) VALUES
+INSERT INTO gossip_menu (`menuid`, `textid`) VALUES
 (@GOSSIP_MENU+4, @TEXT_ID+3),
 (@GOSSIP_MENU+3, @TEXT_ID+2),
 (@GOSSIP_MENU+2, @TEXT_ID+2),
@@ -55,7 +55,7 @@ INSERT INTO gossip_menu (menuid, textid) VALUES
 
 -- Gossip header texts
 
-INSERT INTO npc_text (ID, text0_0, emote0_1) VALUES
+INSERT INTO npc_text (`ID`, `text0_0`, `emote0_1`) VALUES
 (@TEXT_ID+4, "$BWhere would you like to be ported?$B", 0),
 (@TEXT_ID+3, "$BBe careful with choosing raids, I won't be there if you wipe.$B", 0),
 (@TEXT_ID+2, "$BUp for some dungeon exploring?$B", 0),
@@ -64,7 +64,7 @@ INSERT INTO npc_text (ID, text0_0, emote0_1) VALUES
 
 -- Conditions for gossip option and menu factions
 
-INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, Comment) VALUES
+INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, `Comment`) VALUES
 (15, @GOSSIP_MENU, 1, 6, 469, "Stormwind"),
 (15, @GOSSIP_MENU+5, 2, 6, 469, "Dun Morogh"),
 (15, @GOSSIP_MENU+5, 3, 6, 67, "Tirisfal Glades"),
@@ -107,7 +107,7 @@ INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, Condi
 
 -- Conditions for gossip option levels
 
-INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, Comment) VALUES
+INSERT INTO conditions (SourceTypeOrReferenceId, SourceGroup, SourceEntry, ConditionTypeOrReference, ConditionValue1, ConditionValue2, ConditionValue3, `Comment`) VALUES
 (15, @GOSSIP_MENU+8, 9, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+8, 8, 27, 77, 3, 0, "Portal Master - Level req"),
 (15, @GOSSIP_MENU+8, 7, 27, 77, 3, 0, "Portal Master - Level req"),
@@ -383,7 +383,7 @@ INSERT INTO gossip_menu_option (menuid, optionid, optionicon, optiontext, option
 
 -- Teleport scripts:
 
-INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, comment) VALUES 
+INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event_phase_mask, event_chance, event_flags, event_param1, event_param2, event_param3, event_param4, action_type, action_param1, action_param2, action_param3, action_param4, action_param5, action_param6, target_type, target_param1, target_param2, target_param3, target_x, target_y, target_z, target_o, `comment`) VALUES 
 (@ENTRY, 0, 1, 0, 62, 0, 100, 0, @GOSSIP_MENU, 1, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -8842.09, 626.358, 94.0867, 3.61363, "Teleporter script"),
 (@ENTRY, 0, 2, 0, 62, 0, 100, 0, @GOSSIP_MENU, 2, 0, 0, 62, 1, 0, 0, 0, 0, 0, 7, 0, 0, 0, 1601.08, -4378.69, 9.9846, 2.14362, "Teleporter script"),
 (@ENTRY, 0, 3, 0, 62, 0, 100, 0, @GOSSIP_MENU, 11, 0, 0, 62, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, -14281.9, 552.564, 8.90422, 0.860144, "Teleporter script"),
