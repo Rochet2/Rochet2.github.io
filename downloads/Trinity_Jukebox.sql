@@ -72,7 +72,7 @@ INSERT INTO gossip_menu (menuid, textid) VALUES
 (@GOSSIP_MENU+44, @TEXT_ID+3),
 (@GOSSIP_MENU+45, @TEXT_ID+3);
 
-INSERT INTO npc_text (ID, text0_0, em0_1) VALUES 
+INSERT INTO npc_text (ID, text0_0, emote0_1) VALUES 
 (@TEXT_ID+6, "Page five$B$B$B Select a song and I will play it.$B$B", 0),
 (@TEXT_ID+5, "Page four$B$B$B Select a song and I will play it.$B$B", 0),
 (@TEXT_ID+4, "Page three$B$B$B Select a song and I will play it.$B$B", 0),
