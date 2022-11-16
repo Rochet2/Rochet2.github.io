@@ -518,7 +518,6 @@ INSERT INTO smart_scripts (entryorguid, source_type, id, link, event_type, event
 
 -- Teleporter spawns:
 
-ALTER TABLE creature AUTO_INCREMENT = 200000;
 INSERT INTO creature (id, map, spawnMask, phaseMask, modelid, position_x, position_y, position_z, orientation, spawntimesecs, wander_distance, curhealth, curmana) VALUES
 (@ENTRY, 0, 1, 1, 0, -13180.5, 342.503, 43.1936, 4.32977, 25, 0, 13700, 6540), 
 (@ENTRY, 530, 1, 1, 0, -3862.69, -11645.8, -137.629, 2.38273, 25, 0, 13700, 6540), 
@@ -535,7 +534,6 @@ INSERT INTO creature (id, map, spawnMask, phaseMask, modelid, position_x, positi
 
 -- Rune spawns:
 
-ALTER TABLE gameobject AUTO_INCREMENT = 200000;
 INSERT INTO gameobject (id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation2, rotation3, spawntimesecs, state) VALUES
 (@RUNE, 1, 1, 1, 1601.08, -4378.69, 9.9846, 2.14362, 0.878068, 0.478536, 25, 1), 
 (@RUNE, 0, 1, 1, -14281.9, 552.564, 8.90382, 0.860144, 0.416936, 0.908936, 25, 1), 

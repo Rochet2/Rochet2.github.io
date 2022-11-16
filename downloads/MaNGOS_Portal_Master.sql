@@ -434,7 +434,6 @@ INSERT INTO dbscripts_on_gossip (id, delay, command, datalong, x, y, z, o, comme
 (@GOSSIP_SCRIPT+133, 0, 6, 571, 8323.28, 2763.5, 655.093, 2.87223, ""),
 (@GOSSIP_SCRIPT+134, 0, 6, 571, 4522.23, 2828.01, 389.975, 0.215009, "");
 
-ALTER TABLE creature AUTO_INCREMENT = 200000;
 INSERT INTO creature (id, map, spawnMask, phaseMask, modelid, position_x, position_y, position_z, orientation, spawntimesecs, spawndist, curhealth, curmana) VALUES
 (@ENTRY, 0, 1, 1, 0, -13180.5, 342.503, 43.1936, 4.32977, 25, 0, 13700, 6540), 
 (@ENTRY, 530, 1, 1, 0, -3862.69, -11645.8, -137.629, 2.38273, 25, 0, 13700, 6540), 
@@ -449,7 +448,6 @@ INSERT INTO creature (id, map, spawnMask, phaseMask, modelid, position_x, positi
 (@ENTRY, 0, 1, 1, 0, -14279.8, 555.014, 8.90011, 3.97606, 25, 0, 13700, 6540), 
 (@ENTRY, 530, 1, 1, 0, -1888.65, 5355.88, -12.4279, 1.25883, 25, 0, 13700, 6540);
 
-ALTER TABLE gameobject AUTO_INCREMENT = 200000;
 INSERT INTO gameobject (id, map, spawnMask, phaseMask, position_x, position_y, position_z, orientation, rotation2, rotation3, spawntimesecs, state) VALUES
 (@RUNE, 1, 1, 1, 1601.08, -4378.69, 9.9846, 2.14362, 0.878068, 0.478536, 25, 1), 
 (@RUNE, 0, 1, 1, -14281.9, 552.564, 8.90382, 0.860144, 0.416936, 0.908936, 25, 1), 
