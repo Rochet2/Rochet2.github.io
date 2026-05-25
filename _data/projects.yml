@@ -2,19 +2,25 @@
   downloads:
     - label: TrinityCore
       url: /downloads/Trinity_Portal_Master.sql
+      version: 1
     - label: TrinityCore Option
       url: /downloads/Trinity_Portal_Master_Option.sql
+      version: 1
     - label: MaNGOS
       url: /downloads/MaNGOS_Portal_Master.sql
+      version: 1
 
 Jukebox:
   downloads:
     - label: TrinityCore
       url: /downloads/Trinity_Jukebox.sql
+      version: 1
     - label: MaNGOS
       url: /downloads/MaNGOS_Jukebox.sql
+      version: 1
     - label: All soundIDs
       url: /downloads/Sounds.html
+      version: 1
 
 Transmogrification:
   downloads:
