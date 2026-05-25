@@ -1,18 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RochetCode - coding and scripting">
-    <meta name=viewport content="width=device-width, initial-scale=1" />
-    <meta name="Robots" content="ALL" />
-    <meta name="Author" content="Rochet2" />
-    <meta name="Keywords" content="{% for post in site.posts %}{{ post.title }}, {% endfor %}mangos, cmangos, trinity, arcemu, download, project code,
-                          projectcode, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
-                          smartai, project-code, emuproject, emulator, gossip, telenpc, project, zzl, org, Rochet2, github, ac-web, emudevs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Rochet2" />
 
-    <title>{{ page.title }} | RochetCode</title>
+    {% assign site_root = site.url | append: site.baseurl %}
+    {% assign canonical_url = site_root | append: page.url %}
+    {% assign page_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160, "" %}
+    {% assign og_image = page.image %}
+    {% if og_image == nil and page.images.size > 0 %}
+        {% assign og_image = page.images.first %}
+    {% endif %}
+    {% if og_image == nil and page.title != 'Home' and page.hide_header != true %}
+        {% assign og_image = '/images/icon_' | append: page.title | append: '.png' %}
+    {% endif %}
+    {% if og_image == nil %}
+        {% assign og_image = '/images/Rochet2_100.png' %}
+    {% endif %}
+    {% assign og_image_url = site_root | append: og_image %}
+    {% if page.date %}
+        {% assign og_type = 'article' %}
+    {% else %}
+        {% assign og_type = 'website' %}
+    {% endif %}
+
+    <meta name="description" content="{{ page_description | xml_escape }}" />
+    <meta property="og:site_name" content="{{ site.title | xml_escape }}" />
+    <meta property="og:title" content="{{ page.title | append: ' | ' | append: site.title | xml_escape }}" />
+    <meta property="og:description" content="{{ page_description | xml_escape }}" />
+    <meta property="og:url" content="{{ canonical_url | xml_escape }}" />
+    <meta property="og:type" content="{{ og_type }}" />
+    <meta property="og:image" content="{{ og_image_url | xml_escape }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title | append: ' | ' | append: site.title | xml_escape }}" />
+    <meta name="twitter:description" content="{{ page_description | xml_escape }}" />
+    <meta name="twitter:image" content="{{ og_image_url | xml_escape }}" />
+
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | xml_escape }} RSS feed" href="{{ site_root }}/feed.xml" />
+    <link rel="canonical" href="{{ canonical_url | xml_escape }}" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css">
@@ -112,6 +142,8 @@
             <footer>
                 <div class="valign">
                     <span>&copy;{{ site.time | date: '%Y' }} <a href="https://github.com/Rochet2">Rochet2</a> - Since 6.7.2010</span>
+                    <span> · </span>
+                    <a href="{{ site.url }}{{ site.baseurl }}/feed.xml">RSS</a>
                 </div>
             </footer>
         </div>

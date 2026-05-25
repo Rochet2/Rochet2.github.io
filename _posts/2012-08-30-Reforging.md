@@ -1,5 +1,6 @@
 ---
 title: Reforging
+description: Exchange item stat values on 3.3.5 with a dynamic blizzlike TrinityCore reforging system.
 
 videos:
     - https://www.youtube.com/embed/84EtvKTfqQM?list=PL5CF7437D71BB0795

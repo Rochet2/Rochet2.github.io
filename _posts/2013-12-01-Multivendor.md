@@ -1,5 +1,6 @@
 ---
 title: Multivendor
+description: Access multiple vendor views from one NPC using TrinityCore gossip tables or C++.
 
 downloads:
     - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_3.3.5/src/server/scripts/Custom/Multivendor/">TrinityCore 3.3.5</a>

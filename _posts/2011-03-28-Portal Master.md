@@ -1,5 +1,6 @@
 ---
 title: Portal Master
+description: SQL teleporter NPC for 3.3.5a with 130+ blizzlike faction-aware teleports for TrinityCore and MaNGOS.
 
 images:
     - /images/portalmaster/rsWoWScrnShot_031315_153231.jpg

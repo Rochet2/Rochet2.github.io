@@ -1,5 +1,6 @@
 ---
 title: Player and item gossip
+description: Enable gossip menus on players and items through TrinityCore C++ scripting APIs.
 
 downloads:
     - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_3.3.5/src/server/scripts/Custom/Player and Item Gossip/">TrinityCore 3.3.5</a>

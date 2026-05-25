@@ -1,5 +1,6 @@
 ---
 title: Dress NPCs
+description: Preview NPC equipment and models on yourself before applying the look, for multiple TrinityCore branches.
 
 images:
     - /images/dressnpcs/rs5sD3W2i.jpg
