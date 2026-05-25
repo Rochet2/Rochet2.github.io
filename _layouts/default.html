@@ -69,7 +69,7 @@
                     </ul>
                 {% endif %}
 
-                {% if page.title != 'Home' %}
+                {% if page.title != 'Home' and page.hide_header != true %}
                     <div style="margin: 30px 20px;">
                         <img src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" style="float: left; margin: 0 20px 0 0;">
                         <h1 style="line-height: 80px; margin: 0px;" id="title">{{ page.title }}</h1>
