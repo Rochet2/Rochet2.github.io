@@ -13,9 +13,10 @@ description: Browse Rochet2 emulator mods and tools, including Eluna, Transmogri
 
 <div id="project-grid" class="project-grid" data-baseurl="{{ site.baseurl }}">
     {% for post in site.posts %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink" data-title="{{ post.title | xml_escape }}" data-description="{{ post.description | xml_escape }}">
+        {% assign project = site.data.projects[post.title] %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink" data-title="{{ post.title | xml_escape }}" data-description="{{ post.description | xml_escape }}" data-tags="{% if project.tags %}{{ project.tags | join: ' ' | xml_escape }}{% endif %}">
             <div class="projectlogo">
-                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80" alt="">
+                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80" alt="{{ post.title | xml_escape }} icon">
             </div>
             <div class="valign projecttitle"><span>{{ post.title }}</span></div>
         </a>
