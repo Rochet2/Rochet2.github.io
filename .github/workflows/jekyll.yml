@@ -17,6 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate projects.yml
+        run: ruby script/validate_projects.rb
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
