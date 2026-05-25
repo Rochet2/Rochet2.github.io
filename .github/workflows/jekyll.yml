@@ -17,8 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate projects.yml
-        run: ruby script/validate_projects.rb
+      - name: Validate site
+        run: ruby script/validate_site.rb
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -27,4 +27,8 @@ jobs:
         uses: actions/jekyll-build-pages@v1
 
       - name: Verify build output
-        run: test -d _site
+        run: |
+          test -d _site
+          test -f _site/search.json
+          test -f _site/sitemap.xml
+          test -f _site/feed.xml

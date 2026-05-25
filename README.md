@@ -68,4 +68,12 @@ Otherwise push to a branch and check the GitHub Actions build, or review the dep
 
 ### Validation
 
-CI runs `script/validate_projects.rb` to ensure every post has a `projects.yml` entry and every `projects.yml` key matches a post title.
+CI runs `script/validate_site.rb` before building. It checks:
+
+- every post has a matching `projects.yml` entry (and vice versa)
+- every post has a `description` in front matter
+- local `/downloads/` files referenced in `projects.yml` exist
+- every project has an `images/icon_{title}.png` file
+- site source files do not use plain `http://` links
+
+After the Jekyll build, CI verifies `_site/search.json`, `_site/sitemap.xml`, and `_site/feed.xml` exist.
