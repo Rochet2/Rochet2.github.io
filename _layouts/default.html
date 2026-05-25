@@ -64,7 +64,12 @@
                 {% if page.images %}
                     <div class="gallery" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
                     {% for imagepath in page.images %}
-                        <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
+                        {% assign image_base = imagepath | split: '.' | first %}
+                        {% assign webp_path = image_base | append: '.webp' %}
+                        <picture>
+                            <source srcset="{{ site.baseurl }}{{ webp_path }}" type="image/webp">
+                            <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
+                        </picture>
                     {% endfor %}
                     </div>
                 {% endif %}

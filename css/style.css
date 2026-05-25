@@ -316,12 +316,16 @@ a:focus-visible,
     background-color: #333;
 }
 
-.gallery img {
+.gallery picture {
     flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.gallery img {
     max-height: 360px;
     width: auto;
     max-width: 100%;
-    scroll-snap-align: start;
+    display: block;
 }
 
 .download{
