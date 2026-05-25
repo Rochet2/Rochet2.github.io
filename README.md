@@ -1,0 +1,63 @@
+# RochetCode
+
+GitHub Pages site for [rochet2.github.io](https://rochet2.github.io) — downloads and documentation for World of Warcraft emulator mods and tools.
+
+## Editing the site
+
+Most content lives in plain files. No build tools are required locally; GitHub Pages runs Jekyll when you push to `master`.
+
+### Add or update a project
+
+1. Create or edit a post in `_posts/` with front matter:
+
+   ```yaml
+   ---
+   title: My Project
+   description: Short summary used for search and social previews.
+   ---
+   ```
+
+   The post filename date controls sort order on the downloads page.
+
+2. Add a matching entry in `_data/projects.yml` (the key must match `title` exactly):
+
+   ```yaml
+   "My Project":
+     status: active
+     updated: 2026-05-26
+     tags: [trinity, cpp]
+     downloads:
+       - label: GitHub source
+         url: https://github.com/Rochet2/...
+   ```
+
+3. Add an icon at `images/icon_My Project.png` (same naming pattern as existing projects).
+
+4. Optional: add screenshots via an `images:` list in the post front matter.
+
+See the comment at the top of `_data/projects.yml` for download and cache-busting details.
+
+### Site-hosted download files
+
+SQL and other files in `downloads/` use a `version` field. Bump `version` when you change the file so browsers fetch the new copy:
+
+```yaml
+- label: TrinityCore
+  url: /downloads/My_File.sql
+  version: 2
+```
+
+### Local preview
+
+If you have Ruby and Bundler installed:
+
+```bash
+gem install github-pages
+jekyll serve
+```
+
+Otherwise push to a branch and check the GitHub Actions build, or review the deployed site after merge.
+
+### Validation
+
+CI runs `script/validate_projects.rb` to ensure every post has a `projects.yml` entry and every `projects.yml` key matches a post title.
