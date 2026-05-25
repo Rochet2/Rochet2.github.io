@@ -46,9 +46,6 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css">
-
-    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/gist-embed.js"></script>
 </head>
 
 <body>
@@ -73,13 +70,13 @@
                 {% endif %}
 
                 {% if page.title != 'Home' and page.hide_header != true %}
-                    <div style="margin: 30px 20px;">
-                        <img src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" style="float: left; margin: 0 20px 0 0;">
-                        <h1 style="line-height: 80px; margin: 0px;" id="title">{{ page.title }}</h1>
+                    <div class="project-header">
+                        <img class="project-header-icon" src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" width="80" alt="">
+                        <h1 class="project-header-title" id="title">{{ page.title }}</h1>
                     </div>
                 {% endif %}
 
-                <div id="description">
+                <div id="description" class="markdown-body">
                 {{ content }}
                 </div>
 
@@ -90,6 +87,9 @@
                         {% assign download_url = download.url %}
                         {% unless download_url contains '://' %}
                             {% assign download_url = site.baseurl | append: download_url %}
+                            {% if download.version %}
+                                {% assign download_url = download_url | append: '?v=' | append: download.version %}
+                            {% endif %}
                         {% endunless %}
                         <a target="_blank" rel="noopener noreferrer" class="download button" href="{{ download_url }}">{{ download.label }}</a>
                     {% endfor %}
@@ -104,10 +104,6 @@
                         <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     {% endfor %}
                 {% endif %}
-
-                <script>
-                    EmbedGists();
-                </script>
             </section>
         </div>
 
