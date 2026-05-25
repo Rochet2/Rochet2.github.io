@@ -124,7 +124,7 @@ a:focus-visible,
 
 .project-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin: 30px 20px;
 }
@@ -133,10 +133,52 @@ a:focus-visible,
     flex: 0 0 auto;
 }
 
+.project-header-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 .project-header-title {
     margin: 0;
     line-height: 1.2;
     font-size: 2rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.project-status,
+.project-updated,
+.project-tag {
+    display: inline-block;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+.project-status {
+    text-transform: capitalize;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.project-status-external {
+    background-color: #444444;
+}
+
+.project-updated {
+    color: #666666;
+}
+
+.project-tag {
+    background-color: #EFEFEF;
+    color: #333333;
 }
 
 .home-intro {

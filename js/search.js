@@ -16,8 +16,9 @@
   links.forEach(function (link) {
     var title = link.getAttribute('data-title') || '';
     var description = link.getAttribute('data-description') || '';
+    var tags = link.getAttribute('data-tags') || '';
     linkByTitle[title] = link;
-    projects.push({ title: title, description: description });
+    projects.push({ title: title, description: description, tags: tags.split(/\s+/).filter(Boolean) });
   });
 
   function filter(query) {
@@ -30,7 +31,8 @@
         return;
       }
 
-      var haystack = (project.title + ' ' + (project.description || '')).toLowerCase();
+      var tagText = Array.isArray(project.tags) ? project.tags.join(' ') : (project.tags || '');
+      var haystack = (project.title + ' ' + (project.description || '') + ' ' + tagText).toLowerCase();
       var visible = !needle || haystack.indexOf(needle) !== -1;
       link.style.display = visible ? '' : 'none';
       if (visible) {
