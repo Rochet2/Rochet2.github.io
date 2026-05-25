@@ -1,0 +1,27 @@
+name: Jekyll build
+
+on:
+  push:
+    branches:
+      - master
+      - site-cleanup
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+
+      - name: Verify build output
+        run: test -d _site
