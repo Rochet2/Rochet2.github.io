@@ -7,10 +7,6 @@ videos:
     - https://www.youtube.com/embed/xtH4ogz12iM?list=PL5CF7437D71BB0795
     - https://www.youtube.com/embed/PIheEziN_dY?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/tree/transmog_legion_3.3.5/src/server/scripts/Custom/Transmog/">TrinityCore 3.3.5 - Legion</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog_3.3.5/src/server/scripts/Custom/Transmog/">TrinityCore 3.3.5 - Cataclysm</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmogvendor_3.3.5/src/server/scripts/Custom/TransmogDisplayVendor/">TrinityCore 3.3.5 - TransmogVendor</a>
 ---
 
 Transmogrification allows you to change the appearance of an item to another item - **on 3.3.5 patch**.  

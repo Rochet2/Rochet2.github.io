@@ -1,0 +1,114 @@
+"Portal Master":
+  downloads:
+    - label: TrinityCore
+      url: /downloads/Trinity_Portal_Master.sql
+    - label: TrinityCore Option
+      url: /downloads/Trinity_Portal_Master_Option.sql
+    - label: MaNGOS
+      url: /downloads/MaNGOS_Portal_Master.sql
+
+Jukebox:
+  downloads:
+    - label: TrinityCore
+      url: /downloads/Trinity_Jukebox.sql
+    - label: MaNGOS
+      url: /downloads/MaNGOS_Jukebox.sql
+    - label: All soundIDs
+      url: /downloads/Sounds.html
+
+Transmogrification:
+  downloads:
+    - label: TrinityCore 3.3.5 - Legion
+      url: https://github.com/Rochet2/TrinityCore/tree/transmog_legion_3.3.5/src/server/scripts/Custom/Transmog/
+    - label: TrinityCore 3.3.5 - Cataclysm
+      url: https://github.com/Rochet2/TrinityCore/blob/transmog_3.3.5/src/server/scripts/Custom/Transmog/
+    - label: TrinityCore 3.3.5 - TransmogVendor
+      url: https://github.com/Rochet2/TrinityCore/blob/transmogvendor_3.3.5/src/server/scripts/Custom/TransmogDisplayVendor/
+
+Reforging:
+  downloads:
+    - label: TrinityCore
+      url: https://github.com/Rochet2/TrinityCore/blob/reforging_3.3.5/src/server/scripts/Custom/Reforging/
+
+GOMove:
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_3.3.5/src/server/scripts/Custom/GOMove/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_7.x/src/server/scripts/Custom/GOMove/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_master/src/server/scripts/Custom/GOMove/
+
+Eluna:
+  downloads:
+    - label: Installation guide
+      url: https://github.com/ElunaLuaEngine/Eluna/blob/master/docs/INSTALL.md
+    - label: API documentation
+      url: http://elunaluaengine.github.io/
+    - label: Eluna source
+      url: https://github.com/ElunaLuaEngine/Eluna
+    - label: TrinityCore WotLK with Eluna
+      url: https://github.com/ElunaLuaEngine/ElunaTrinityWotlk
+    - label: Example scripts
+      url: https://github.com/ElunaLuaEngine/Scripts
+
+"Item enchant visuals":
+  downloads:
+    - label: TrinityCore
+      url: https://gist.github.com/Rochet2/8693564
+    - label: Eluna Lua Engine
+      url: https://github.com/ElunaLuaEngine/Scripts/blob/master/Custom/Weapon%20visuals.lua
+
+"Dress NPCs":
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_3.3.5/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_6.x/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_7.x/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_master/src/server/scripts/Custom/DressNPCs/
+
+Multivendor:
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_3.3.5/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_6.x/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_7.x/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_master/src/server/scripts/Custom/Multivendor/
+
+"Player and item gossip":
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_3.3.5/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_6.x/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_7.x/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_master/src/server/scripts/Custom/Player and Item Gossip/
+
+AIO:
+  downloads:
+    - label: Eluna Lua Engine
+      url: https://github.com/Rochet2/AIO
+
+Objscale:
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_3.3.5/src/server/scripts/Custom/objscale/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_6.x/src/server/scripts/Custom/objscale/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_7.x/src/server/scripts/Custom/objscale/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_master/src/server/scripts/Custom/objscale/
+
+Multitrainer:
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/tree/multitrainer_3.3.5/src/server/scripts/Custom/multitrainer

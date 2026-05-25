@@ -19,10 +19,6 @@ images:
 videos:
     - https://www.youtube.com/embed/SOKq1EAmV-k?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" class="download button" href="downloads/Trinity_Portal_Master.sql">TrinityCore</a>
-    - <a target="_blank" class="download button" href="downloads/Trinity_Portal_Master_Option.sql">TrinityCore Option</a>
-    - <a target="_blank" class="download button" href="downloads/MaNGOS_Portal_Master.sql">MaNGOS</a>
 ---
 
 Portal Master is a teleporter NPC for 3.3.5a.  

@@ -46,16 +46,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css">
-    <!--[if lt IE 7]>
-        <style media="screen" type="text/css">
-            #container {
-                height:100%;
-            }
-        </style>
-    <![endif]-->
 
     <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-rs.js"></script>
     <script type="text/javascript" src="{{ site.baseurl }}/js/gist-embed.js"></script>
 </head>
 
@@ -65,7 +57,7 @@
         <!-- HEADER -->
         <div id="topnav">
             <!-- Note that having these in one line removes spaces between the blocks -->
-            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42" class="valign"><div style="position: absolute;line-height: initial;margin-top: 30px;font-size: small;margin-left: 100px;color: orange;">new</div><span>Feedback</span></a></div>
+            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42" class="valign"><span>Feedback</span></a></div>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -73,11 +65,11 @@
             <section id="main_content">
 
                 {% if page.images %}
-                    <ul id="images" class="rslides">
+                    <div class="gallery" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
                     {% for imagepath in page.images %}
-                        <li><img src="{{ site.baseurl }}{{ imagepath }}"></li>
+                        <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
                     {% endfor %}
-                    </ul>
+                    </div>
                 {% endif %}
 
                 {% if page.title != 'Home' and page.hide_header != true %}
@@ -91,10 +83,15 @@
                 {{ content }}
                 </div>
 
-                {% if page.downloads %}
+                {% assign project = site.data.projects[page.title] %}
+                {% if project.downloads %}
                     <h3 id="downloads">Downloads</h3>
-                    {% for download in page.downloads %}
-                        {{ download }}
+                    {% for download in project.downloads %}
+                        {% assign download_url = download.url %}
+                        {% unless download_url contains '://' %}
+                            {% assign download_url = site.baseurl | append: download_url %}
+                        {% endunless %}
+                        <a target="_blank" rel="noopener noreferrer" class="download button" href="{{ download_url }}">{{ download.label }}</a>
                     {% endfor %}
                 {% endif %}
 
@@ -104,32 +101,9 @@
 
                 {% if page.videos %}
                     {% for videopath in page.videos %}
-                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     {% endfor %}
                 {% endif %}
-
-                <script>
-                    $(function() {
-                        $(".rslides").responsiveSlides({
-                            //auto: false,              // Boolean: Animate automatically, true or false
-                            //speed: 500,               // Integer: Speed of the transition, in milliseconds
-                            //timeout: 4000,            // Integer: Time between slide transitions, in milliseconds
-                            //pager: true,              // Boolean: Show pager, true or false
-                            //nav: true,                // Boolean: Show navigation, true or false
-                            random: true,               // Boolean: Randomize the order of the slides, true or false
-                            //pause: true,              // Boolean: Pause on hover, true or false
-                            //pauseControls: true,      // Boolean: Pause when hovering controls, true or false
-                            //prevText: "Previous",     // String: Text for the "previous" button
-                            //nextText: "Next",         // String: Text for the "next" button
-                            //maxwidth: "",             // Integer: Max-width of the slideshow, in pixels
-                            //navContainer: "",         // Selector: Where controls should be appended to, default is after the 'ul'
-                            //manualControls: "",       // Selector: Declare custom pager navigation
-                            //namespace: "rslides",     // String: Change the default namespace used
-                            //before: function(){},     // Function: Before callback
-                            //after: function(){}       // Function: After callback
-                        });
-                    });
-                </script>
 
                 <script>
                     EmbedGists();

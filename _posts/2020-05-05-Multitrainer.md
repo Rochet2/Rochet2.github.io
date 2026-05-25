@@ -2,8 +2,6 @@
 title: Multitrainer
 description: Open multiple trainer views from a single NPC on TrinityCore 3.3.5 using gossip tables or C++.
 
-downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/tree/multitrainer_3.3.5/src/server/scripts/Custom/multitrainer">TrinityCore 3.3.5</a>
 ---
 
 The patch was coded originally by [CyberMist2](https://github.com/CyberMist2).
