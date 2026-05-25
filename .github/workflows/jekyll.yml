@@ -20,6 +20,16 @@ jobs:
       - name: Validate site
         run: ruby script/validate_site.rb
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check WebP derivatives
+        run: |
+          pip install -r script/requirements.txt
+          python script/generate_webp.py --check
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

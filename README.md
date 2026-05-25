@@ -77,3 +77,16 @@ CI runs `script/validate_site.rb` before building. It checks:
 - site source files do not use plain `http://` links
 
 After the Jekyll build, CI verifies `_site/search.json`, `_site/sitemap.xml`, and `_site/feed.xml` exist.
+
+### WebP gallery images
+
+Gallery screenshots keep their original JPG/PNG files. Compressed WebP copies are generated alongside them and served via `<picture>` when available.
+
+Regenerate derivatives after adding or changing images:
+
+```bash
+pip install -r script/requirements.txt
+python script/generate_webp.py
+```
+
+CI runs `python script/generate_webp.py --check` to ensure WebP copies are present and up to date. Commit the generated `.webp` files with your image changes.
