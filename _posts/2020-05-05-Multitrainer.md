@@ -2,7 +2,7 @@
 title: Multitrainer
 
 downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/tree/multitrainer_3.3.5/src/server/scripts/Custom/multitrainer" onClick="ga('send', 'event', 'Download', 'click', 'Multitrainer TrinityCore');">TrinityCore 3.3.5</a>
+    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/tree/multitrainer_3.3.5/src/server/scripts/Custom/multitrainer">TrinityCore 3.3.5</a>
 ---
 
 The patch was coded originally by [CyberMist2](https://github.com/CyberMist2).
