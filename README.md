@@ -37,6 +37,14 @@ Most content lives in plain files. No build tools are required locally; GitHub P
 
 See the comment at the top of `_data/projects.yml` for download and cache-busting details.
 
+### URLs and sorting
+
+Project pages use clean URLs based on the post title, not the filename date. With `permalink: none` in `_config.yml`, a post titled `Item enchant visuals` is published at `/Item-enchant-visuals.html` (Jekyll slugifies the title).
+
+The date in the `_posts/` filename (for example `2013-04-21-Item Enchant Visuals.md`) is **not** part of the URL. It is still important because Jekyll uses it to sort posts. The downloads page lists projects in reverse date order (newest filename date first).
+
+If you rename a post title, the public URL changes. Update any external links pointing at the old path.
+
 ### Site-hosted download files
 
 SQL and other files in `downloads/` use a `version` field. Bump `version` when you change the file so browsers fetch the new copy:
