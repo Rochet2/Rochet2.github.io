@@ -5,13 +5,21 @@ description: Browse Rochet2 emulator mods and tools, including Eluna, Transmogri
 
 <p>Click a project below to read more about it and download it</p>
 
-<div style="text-align: center; margin: 50px 0;">
+<div class="project-search-wrap">
+    <label for="project-search" class="visually-hidden">Filter projects</label>
+    <input type="search" id="project-search" placeholder="Filter projects..." autocomplete="off">
+    <p id="project-search-empty" hidden>No matching projects.</p>
+</div>
+
+<div id="project-grid" class="project-grid" data-baseurl="{{ site.baseurl }}">
     {% for post in site.posts %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink" data-title="{{ post.title | xml_escape }}" data-description="{{ post.description | xml_escape }}">
             <div class="projectlogo">
-                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80">
+                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80" alt="">
             </div>
             <div class="valign projecttitle"><span>{{ post.title }}</span></div>
         </a>
     {% endfor %}
 </div>
+
+<script type="text/javascript" src="{{ site.baseurl }}/js/search.js"></script>
