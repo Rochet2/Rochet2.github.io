@@ -80,6 +80,12 @@ After the Jekyll build, CI verifies `_site/search.json`, `_site/sitemap.xml`, an
 
 Gallery screenshots keep their original JPG/PNG files. Compressed WebP copies are generated alongside them and served via `<picture>` when available. Project pages use a vanilla JS slideshow (same auto-advance behavior as the old ResponsiveSlides carousel, without jQuery).
 
+Optional post front matter `gallery_aspect` sets the carousel frame ratio when screenshots are not standard WoW captures (default `850 / 451`). Example for wide UI banners:
+
+```yaml
+gallery_aspect: 930 / 300
+```
+
 Regenerate derivatives after adding or changing images:
 
 ```bash

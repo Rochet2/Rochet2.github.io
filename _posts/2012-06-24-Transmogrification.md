@@ -5,6 +5,7 @@ description: Change item appearances on 3.3.5 with multiple TrinityCore versions
 images:
     - /images/Transmog.jpg
     - /images/Transmog_5_0.jpg
+gallery_aspect: 930 / 300
 
 videos:
     - https://www.youtube.com/embed/mCHAAfM4Rkg?list=PL5CF7437D71BB0795
