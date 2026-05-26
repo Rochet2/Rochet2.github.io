@@ -23,7 +23,7 @@ missing_projects = post_titles.reject { |title| projects.key?(title) }
 missing_projects.each { |title| errors << "Post without a matching projects.yml entry: #{title}" }
 
 def front_matter(path)
-  content = File.read(path)
+  content = File.read(path).delete("\r")
   return nil unless content.start_with?("---\n")
 
   end_idx = content.index("\n---\n", 4)
