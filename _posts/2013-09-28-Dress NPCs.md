@@ -3,6 +3,7 @@ title: Dress NPCs
 description: Preview NPC equipment and models on yourself before applying the look, for multiple TrinityCore branches.
 
 images:
+    - /images/Druid-All-Tiers-of-Armor.png
     - /images/dressnpcs/rs5sD3W2i.jpg
     - /images/dressnpcs/rsAFJC3xL.jpg
     - /images/dressnpcs/rsWoWScrnShot_031115_220229.jpg
