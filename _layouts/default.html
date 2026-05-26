@@ -67,16 +67,15 @@
                         {% for imagepath in page.images %}
                             {% assign image_base = imagepath | split: '.' | first %}
                             {% assign webp_path = image_base | append: '.webp' %}
-                            <li class="gallery-slide">
+                            <li class="gallery-slide{% if forloop.first %} is-active{% endif %}">
                                 <picture>
                                     <source srcset="{{ site.baseurl }}{{ webp_path }}" type="image/webp">
-                                    <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
+                                    <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
                                 </picture>
                             </li>
                         {% endfor %}
                         </ul>
                     </div>
-                    <script src="{{ site.baseurl }}/js/gallery.js" defer></script>
                 {% endif %}
 
                 {% assign project = site.data.projects[page.title] %}
@@ -143,5 +142,8 @@
         </div>
 
     </div>
+    {% if page.images %}
+    <script src="{{ site.baseurl }}/js/gallery.js" defer></script>
+    {% endif %}
 </body>
 </html>
