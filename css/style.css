@@ -39,7 +39,8 @@ a:hover, a:focus, a:active {
     text-align: center;
 }
 
-.valign>span {
+.valign>span,
+.valign>a {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
