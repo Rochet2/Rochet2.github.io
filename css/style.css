@@ -305,27 +305,46 @@ a:focus-visible,
     border: 0;
 }
 
-.gallery {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    margin: 40px 0;
-    padding: 10px 0 16px;
+.gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 98%;
+    padding: 0;
+    margin: 40px 1%;
     box-shadow: 0 0 10px 5px #000;
     background-color: #333;
 }
 
-.gallery picture {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
+.gallery-slides {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.gallery img {
-    max-height: 360px;
-    width: auto;
-    max-width: 100%;
+.gallery-slide {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    pointer-events: none;
+}
+
+.gallery-slide.is-active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gallery-slide picture,
+.gallery-slide img {
     display: block;
+    width: 100%;
+    height: auto;
+    border: 0;
 }
 
 .download{

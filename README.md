@@ -80,7 +80,7 @@ After the Jekyll build, CI verifies `_site/search.json`, `_site/sitemap.xml`, an
 
 ### WebP gallery images
 
-Gallery screenshots keep their original JPG/PNG files. Compressed WebP copies are generated alongside them and served via `<picture>` when available.
+Gallery screenshots keep their original JPG/PNG files. Compressed WebP copies are generated alongside them and served via `<picture>` when available. Project pages use a vanilla JS slideshow (same auto-advance behavior as the old ResponsiveSlides carousel, without jQuery).
 
 Regenerate derivatives after adding or changing images:
 

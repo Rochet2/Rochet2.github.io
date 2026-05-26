@@ -62,16 +62,21 @@
             <section id="main_content">
 
                 {% if page.images %}
-                    <div class="gallery" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
-                    {% for imagepath in page.images %}
-                        {% assign image_base = imagepath | split: '.' | first %}
-                        {% assign webp_path = image_base | append: '.webp' %}
-                        <picture>
-                            <source srcset="{{ site.baseurl }}{{ webp_path }}" type="image/webp">
-                            <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
-                        </picture>
-                    {% endfor %}
+                    <div class="gallery-carousel" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
+                        <ul class="gallery-slides">
+                        {% for imagepath in page.images %}
+                            {% assign image_base = imagepath | split: '.' | first %}
+                            {% assign webp_path = image_base | append: '.webp' %}
+                            <li class="gallery-slide">
+                                <picture>
+                                    <source srcset="{{ site.baseurl }}{{ webp_path }}" type="image/webp">
+                                    <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
+                                </picture>
+                            </li>
+                        {% endfor %}
+                        </ul>
                     </div>
+                    <script src="{{ site.baseurl }}/js/gallery.js" defer></script>
                 {% endif %}
 
                 {% assign project = site.data.projects[page.title] %}
