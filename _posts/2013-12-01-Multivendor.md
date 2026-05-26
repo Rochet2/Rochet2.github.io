@@ -2,6 +2,10 @@
 title: Multivendor
 description: Access multiple vendor views from one NPC using TrinityCore gossip tables or C++.
 
+images:
+    - /images/MV_1.png
+    - /images/MV_2.png
+
 ---
 
 Multivendor is a core modification which allows the player to access multiple vendor views from a single NPC.  

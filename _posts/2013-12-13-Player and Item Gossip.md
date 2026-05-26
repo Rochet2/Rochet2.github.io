@@ -2,6 +2,9 @@
 title: Player and item gossip
 description: Enable gossip menus on players and items through TrinityCore C++ scripting APIs.
 
+images:
+    - /images/VC_screenshot.png
+
 ---
 
 Player and item gossip enables the use of gossip menus with items and players.  

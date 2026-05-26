@@ -2,6 +2,10 @@
 title: Transmogrification
 description: Change item appearances on 3.3.5 with multiple TrinityCore versions including Legion-style account-wide visuals.
 
+images:
+    - /images/Transmog.jpg
+    - /images/Transmog_5_0.jpg
+
 videos:
     - https://www.youtube.com/embed/mCHAAfM4Rkg?list=PL5CF7437D71BB0795
     - https://www.youtube.com/embed/xtH4ogz12iM?list=PL5CF7437D71BB0795

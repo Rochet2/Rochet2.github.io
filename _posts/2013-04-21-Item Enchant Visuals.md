@@ -2,6 +2,9 @@
 title: Item enchant visuals
 description: Add random enchant visuals to looted weapons on TrinityCore or through Eluna Lua scripts.
 
+images:
+    - /images/ItemEncahtns.jpg
+
 ---
 
 Original idea by Nerc at AC-web

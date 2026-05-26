@@ -4,6 +4,15 @@ description: SQL teleporter NPC for 3.3.5a with 130+ blizzlike faction-aware tel
 
 images:
     - /images/portalmaster/rsWoWScrnShot_031315_153231.jpg
+    - /images/portalmaster/PM_10.jpg
+    - /images/portalmaster/PM_11.jpg
+    - /images/portalmaster/PM_12.jpg
+    - /images/portalmaster/PM_13.jpg
+    - /images/portalmaster/PM_14.jpg
+    - /images/portalmaster/PM_15.jpg
+    - /images/portalmaster/PM_16.jpg
+    - /images/portalmaster/PM_17.jpg
+    - /images/PM_ironforge.png
     - /images/portalmaster/rsWoWScrnShot_031315_153546.jpg
     - /images/portalmaster/rsWoWScrnShot_031315_153638.jpg
     - /images/portalmaster/rsWoWScrnShot_031315_153718.jpg
