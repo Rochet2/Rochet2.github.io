@@ -23,8 +23,6 @@ Most content lives in plain files. No build tools are required locally; GitHub P
 
    ```yaml
    "My Project":
-     status: active
-     updated: 2026-05-26
      tags: [trinity, cpp]
      downloads:
        - label: GitHub source

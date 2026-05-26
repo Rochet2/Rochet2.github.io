@@ -152,31 +152,12 @@ a:focus-visible,
     margin-top: 4px;
 }
 
-.project-status,
-.project-updated,
 .project-tag {
     display: inline-block;
     font-size: 0.8125rem;
     line-height: 1.4;
     padding: 2px 8px;
     border-radius: 3px;
-}
-
-.project-status {
-    text-transform: capitalize;
-    background-color: #1A1A1A;
-    color: #FFFFFF;
-}
-
-.project-status-external {
-    background-color: #444444;
-}
-
-.project-updated {
-    color: #666666;
-}
-
-.project-tag {
     background-color: #EFEFEF;
     color: #333333;
 }

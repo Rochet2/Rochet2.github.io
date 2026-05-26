@@ -54,7 +54,7 @@
         <!-- HEADER -->
         <div id="topnav">
             <!-- Note that having these in one line removes spaces between the blocks -->
-            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/Rochet2/Issues/issues/new" class="valign"><span>Feedback</span></a></div>
+            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42" class="valign"><span>Feedback</span></a></div>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -85,15 +85,11 @@
                         <img class="project-header-icon" src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" width="80" alt="{{ page.title | xml_escape }} icon">
                         <div class="project-header-text">
                             <h1 class="project-header-title" id="title">{{ page.title }}</h1>
-                            {% if project.status or project.updated or project.tags %}
+                            {% if project.tags %}
                             <div class="project-meta">
-                                {% if project.status %}<span class="project-status project-status-{{ project.status }}">{{ project.status }}</span>{% endif %}
-                                {% if project.updated %}<span class="project-updated">Updated {{ project.updated }}</span>{% endif %}
-                                {% if project.tags %}
-                                    {% for tag in project.tags %}
-                                        <span class="project-tag">{{ tag }}</span>
-                                    {% endfor %}
-                                {% endif %}
+                                {% for tag in project.tags %}
+                                    <span class="project-tag">{{ tag }}</span>
+                                {% endfor %}
                             </div>
                             {% endif %}
                         </div>
