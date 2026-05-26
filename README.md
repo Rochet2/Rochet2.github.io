@@ -94,3 +94,13 @@ python script/generate_webp.py
 ```
 
 CI runs `python script/generate_webp.py --check` to ensure WebP copies are present and up to date. Commit the generated `.webp` files with your image changes.
+
+### CSS/JS cache busting
+
+CI runs `python script/asset_version.py` before each Jekyll build. It hashes `css/style.css`, `css/github_markdown.css`, and `js/gallery.js`, then writes `_data/assets.yml`. Layout templates append `?v=` that hash to stylesheet and script URLs so browsers fetch new copies when those files change.
+
+For a local Jekyll preview, run the same script first:
+
+```bash
+python script/asset_version.py
+```
