@@ -1,26 +1,20 @@
 ---
 title: Downloads
 description: Browse Rochet2 emulator mods and tools, including Eluna, Transmogrification, and Portal Master.
+hide_header: true
 ---
+
+<h1>Downloads</h1>
 
 <p>Click a project below to read more about it and download it</p>
 
-<div class="project-search-wrap">
-    <label for="project-search" class="visually-hidden">Filter projects</label>
-    <input type="search" id="project-search" placeholder="Filter projects..." autocomplete="off">
-    <p id="project-search-empty" hidden>No matching projects.</p>
-</div>
-
-<div id="project-grid" class="project-grid" data-baseurl="{{ site.baseurl }}">
+<div id="project-grid" class="project-grid">
     {% for post in site.posts %}
-        {% assign project = site.data.projects[post.title] %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink" data-title="{{ post.title | xml_escape }}" data-description="{{ post.description | xml_escape }}" data-tags="{% if project.tags %}{{ project.tags | join: ' ' | xml_escape }}{% endif %}">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink">
             <div class="projectlogo">
                 <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80" alt="{{ post.title | xml_escape }} icon">
             </div>
-            <div class="valign projecttitle"><span>{{ post.title }}</span></div>
+            <div class="projecttitle"><span>{{ post.title }}</span></div>
         </a>
     {% endfor %}
 </div>
-
-<script type="text/javascript" src="{{ site.baseurl }}/js/search.js"></script>
