@@ -39,7 +39,8 @@ a:hover, a:focus, a:active {
     text-align: center;
 }
 
-.valign>span {
+.valign>span,
+.valign>a {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -124,23 +125,25 @@ a:focus-visible,
 
 .project-header {
     margin: 30px 20px;
-    overflow: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .project-header-icon {
-    float: left;
-    margin: 0 20px 0 0;
+    flex: 0 0 80px;
     height: 80px;
     width: 80px;
 }
 
 .project-header-text {
-    overflow: hidden;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .project-header-title {
     margin: 0;
-    line-height: 80px;
+    line-height: 1.25;
     font-size: 2rem;
 }
 
@@ -180,7 +183,7 @@ a:focus-visible,
 .home-cta {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #1A1A1A;
+    background-color: #1A1A1A !important;
     color: #FFFFFF !important;
     font-weight: bold;
     transition: background-color 500ms;
@@ -205,6 +208,37 @@ a:focus-visible,
 
 .home-links {
     margin-top: 2rem;
+}
+
+.contact-page {
+    max-width: 560px;
+    margin: 0 auto 3rem;
+}
+
+.contact-intro {
+    color: #444444;
+    margin: 0 0 1.5rem;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.75rem 1rem;
+    margin: 0 0 2rem;
+}
+
+.contact-details dt {
+    font-weight: bold;
+    color: #444444;
+}
+
+.contact-details dd {
+    margin: 0;
+}
+
+.contact-links {
+    line-height: 1.8;
+    margin: 0;
 }
 
 #footer {
@@ -283,32 +317,42 @@ a:focus-visible,
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.gallery-slides::after {
-    content: "";
-    display: table;
-    clear: both;
+    aspect-ratio: 16 / 9;
 }
 
 .gallery-slide {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .gallery-slide.is-active {
-    display: block;
-    float: left;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
 }
 
-.gallery-slide picture,
+.gallery-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .gallery-slide img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border: 0;
 }
 
