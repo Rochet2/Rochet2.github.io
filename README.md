@@ -68,7 +68,7 @@ Otherwise push to a branch and check the GitHub Actions build, or review the dep
 
 ### Validation
 
-CI runs `script/validate_site.rb` before building. It checks:
+CI runs `script/validate_site.py` before building. It checks:
 
 - every post has a matching `projects.yml` entry (and vice versa)
 - every post has a `description` in front matter
