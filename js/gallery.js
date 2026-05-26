@@ -12,9 +12,10 @@
         }
 
         window.setInterval(function () {
+            var next = (current + 1) % slides.length;
+            slides[next].classList.add("is-active");
             slides[current].classList.remove("is-active");
-            current = (current + 1) % slides.length;
-            slides[current].classList.add("is-active");
+            current = next;
         }, 4000);
     });
 })();

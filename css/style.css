@@ -283,32 +283,42 @@ a:focus-visible,
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.gallery-slides::after {
-    content: "";
-    display: table;
-    clear: both;
+    aspect-ratio: 16 / 9;
 }
 
 .gallery-slide {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .gallery-slide.is-active {
-    display: block;
-    float: left;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
 }
 
-.gallery-slide picture,
+.gallery-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .gallery-slide img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border: 0;
 }
 
