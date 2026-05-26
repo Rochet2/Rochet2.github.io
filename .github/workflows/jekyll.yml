@@ -1,0 +1,44 @@
+name: Jekyll build
+
+on:
+  push:
+    branches:
+      - master
+      - site-cleanup
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate site
+        run: |
+          pip install -r script/requirements.txt
+          python script/validate_site.py
+
+      - name: Check WebP derivatives
+        run: python script/generate_webp.py --check
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+
+      - name: Verify build output
+        run: |
+          test -d _site
+          test -f _site/search.json
+          test -f _site/sitemap.xml
+          test -f _site/feed.xml

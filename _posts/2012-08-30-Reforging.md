@@ -1,11 +1,13 @@
 ---
 title: Reforging
+description: Exchange item stat values on 3.3.5 with a dynamic blizzlike TrinityCore reforging system.
+
+images:
+    - /images/1.jpg
 
 videos:
     - https://www.youtube.com/embed/84EtvKTfqQM?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/reforging_3.3.5/src/server/scripts/Custom/Reforging/" onClick="ga('send', 'event', 'Download', 'click', 'Reforging TrinityCore');">TrinityCore</a>
 ---
 
 Reforging allows you to exchange 40% of an item's stat value to some other stat - **on 3.3.5 patch**.  

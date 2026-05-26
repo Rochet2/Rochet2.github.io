@@ -1,0 +1,159 @@
+# Project metadata and download buttons. Keys must match post titles exactly.
+# downloads: label + url; use version on /downloads/ files and bump when the file changes.
+# tags: search keywords; status: active, archived, or external; updated: YYYY-MM-DD shown on the project page.
+"Portal Master":
+  status: active
+  updated: 2011-03-28
+  tags: [sql, trinity, mangos, npc, teleport]
+  downloads:
+    - label: TrinityCore
+      url: /downloads/Trinity_Portal_Master.sql
+      version: 1
+    - label: TrinityCore Option
+      url: /downloads/Trinity_Portal_Master_Option.sql
+      version: 1
+    - label: MaNGOS
+      url: /downloads/MaNGOS_Portal_Master.sql
+      version: 1
+
+Jukebox:
+  status: active
+  updated: 2011-06-16
+  tags: [sql, trinity, mangos, npc]
+  downloads:
+    - label: TrinityCore
+      url: /downloads/Trinity_Jukebox.sql
+      version: 1
+    - label: MaNGOS
+      url: /downloads/MaNGOS_Jukebox.sql
+      version: 1
+
+Transmogrification:
+  status: active
+  updated: 2012-06-24
+  tags: [trinity, cpp, transmog, 3.3.5]
+  downloads:
+    - label: TrinityCore 3.3.5 - Legion
+      url: https://github.com/Rochet2/TrinityCore/tree/transmog_legion_3.3.5/src/server/scripts/Custom/Transmog/
+    - label: TrinityCore 3.3.5 - Cataclysm
+      url: https://github.com/Rochet2/TrinityCore/blob/transmog_3.3.5/src/server/scripts/Custom/Transmog/
+    - label: TrinityCore 3.3.5 - TransmogVendor
+      url: https://github.com/Rochet2/TrinityCore/blob/transmogvendor_3.3.5/src/server/scripts/Custom/TransmogDisplayVendor/
+
+Reforging:
+  status: active
+  updated: 2012-08-30
+  tags: [trinity, cpp, 3.3.5]
+  downloads:
+    - label: TrinityCore
+      url: https://github.com/Rochet2/TrinityCore/blob/reforging_3.3.5/src/server/scripts/Custom/Reforging/
+
+GOMove:
+  status: active
+  updated: 2012-09-12
+  tags: [trinity, cpp, gameobject]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_3.3.5/src/server/scripts/Custom/GOMove/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_7.x/src/server/scripts/Custom/GOMove/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/gomove_master/src/server/scripts/Custom/GOMove/
+
+Eluna:
+  status: external
+  updated: 2026-05-26
+  tags: [eluna, lua, trinity, mangos, cmangos]
+  downloads:
+    - label: Installation guide
+      url: https://github.com/ElunaLuaEngine/Eluna/blob/master/docs/INSTALL.md
+    - label: API documentation
+      url: https://elunaluaengine.github.io/
+    - label: Eluna source
+      url: https://github.com/ElunaLuaEngine/Eluna
+    - label: TrinityCore WotLK with Eluna
+      url: https://github.com/ElunaLuaEngine/ElunaTrinityWotlk
+    - label: Example scripts
+      url: https://github.com/ElunaLuaEngine/Scripts
+
+"Item enchant visuals":
+  status: active
+  updated: 2013-04-21
+  tags: [trinity, eluna, lua, items]
+  downloads:
+    - label: TrinityCore
+      url: https://gist.github.com/Rochet2/8693564
+    - label: Eluna Lua Engine
+      url: https://github.com/ElunaLuaEngine/Scripts/blob/master/Custom/Weapon%20visuals.lua
+
+"Dress NPCs":
+  status: active
+  updated: 2013-09-28
+  tags: [trinity, cpp, npc]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_3.3.5/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_6.x/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_7.x/src/server/scripts/Custom/DressNPCs/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/dressnpcs_master/src/server/scripts/Custom/DressNPCs/
+
+Multivendor:
+  status: active
+  updated: 2013-12-01
+  tags: [trinity, cpp, vendor, gossip]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_3.3.5/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_6.x/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_7.x/src/server/scripts/Custom/Multivendor/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/multivendor_master/src/server/scripts/Custom/Multivendor/
+
+"Player and item gossip":
+  status: active
+  updated: 2013-12-13
+  tags: [trinity, cpp, gossip]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_3.3.5/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_6.x/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_7.x/src/server/scripts/Custom/Player and Item Gossip/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/playeritemgossip_master/src/server/scripts/Custom/Player and Item Gossip/
+
+AIO:
+  status: active
+  updated: 2015-06-09
+  tags: [eluna, lua, client]
+  downloads:
+    - label: Eluna Lua Engine
+      url: https://github.com/Rochet2/AIO
+
+Objscale:
+  status: active
+  updated: 2015-08-12
+  tags: [trinity, cpp, creature, gameobject]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_3.3.5/src/server/scripts/Custom/objscale/
+    - label: TrinityCore 6.x
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_6.x/src/server/scripts/Custom/objscale/
+    - label: TrinityCore 7.x
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_7.x/src/server/scripts/Custom/objscale/
+    - label: TrinityCore master (8.x)
+      url: https://github.com/Rochet2/TrinityCore/blob/objscale_master/src/server/scripts/Custom/objscale/
+
+Multitrainer:
+  status: active
+  updated: 2020-05-05
+  tags: [trinity, cpp, trainer, npc, gossip]
+  downloads:
+    - label: TrinityCore 3.3.5
+      url: https://github.com/Rochet2/TrinityCore/tree/multitrainer_3.3.5/src/server/scripts/Custom/multitrainer

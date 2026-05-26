@@ -1,11 +1,11 @@
 ---
 title: Multivendor
+description: Access multiple vendor views from one NPC using TrinityCore gossip tables or C++.
 
-downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_3.3.5/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore');">TrinityCore 3.3.5</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_6.x/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 6.x');">TrinityCore 6.x</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_7.x/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore 7.x');">TrinityCore 7.x</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/multivendor_master/src/server/scripts/Custom/Multivendor/" onClick="ga('send', 'event', 'Download', 'click', 'Multivendor TrinityCore master');">TrinityCore master (8.x)</a>
+images:
+    - /images/MV_1.png
+    - /images/MV_2.png
+
 ---
 
 Multivendor is a core modification which allows the player to access multiple vendor views from a single NPC.  

@@ -1,15 +1,16 @@
 ---
 title: Transmogrification
+description: Change item appearances on 3.3.5 with multiple TrinityCore versions including Legion-style account-wide visuals.
+
+images:
+    - /images/Transmog.jpg
+    - /images/Transmog_5_0.jpg
 
 videos:
     - https://www.youtube.com/embed/mCHAAfM4Rkg?list=PL5CF7437D71BB0795
     - https://www.youtube.com/embed/xtH4ogz12iM?list=PL5CF7437D71BB0795
     - https://www.youtube.com/embed/PIheEziN_dY?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/tree/transmog_legion_3.3.5/src/server/scripts/Custom/Transmog/" onClick="ga('send', 'event', 'Download', 'click', 'Transmogrification TrinityCore Legion');">TrinityCore 3.3.5 - Legion</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmog_3.3.5/src/server/scripts/Custom/Transmog/" onClick="ga('send', 'event', 'Download', 'click', 'Transmogrification TrinityCore Blizzlike');">TrinityCore 3.3.5 - Cataclysm</a>
-    - <a target="_blank" class="download button" href="https://github.com/Rochet2/TrinityCore/blob/transmogvendor_3.3.5/src/server/scripts/Custom/TransmogDisplayVendor/" onClick="ga('send', 'event', 'Download', 'click', 'Transmogrification TrinityCore TransmogVendor');">TrinityCore 3.3.5 - TransmogVendor</a>
 ---
 
 Transmogrification allows you to change the appearance of an item to another item - **on 3.3.5 patch**.  

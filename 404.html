@@ -1,13 +1,17 @@
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-17459395-5', 'auto');
-    ga('send', 'pageview');
+---
+permalink: /404.html
+layout: default
+title: Page not found
+description: The requested RochetCode page could not be found.
+hide_header: true
+---
 
-    ga('send', 'event', '404', 'previous url', document.referrer);
-    ga('send', 'event', '404', 'current url', window.location.href);
-    alert("Page doesnt exist");
-    window.location.replace("/");
-</script>
+<div style="text-align: center; margin: 80px 0;">
+    <h1>Page not found</h1>
+    <p>The page you requested does not exist or may have moved.</p>
+    <p>
+        <a href="{{ site.baseurl }}/">Home</a> ·
+        <a href="{{ site.baseurl }}/downloads">Downloads</a> ·
+        <a href="{{ site.baseurl }}/contact">Contact</a>
+    </p>
+</div>

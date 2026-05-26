@@ -1,8 +1,18 @@
 ---
 title: Portal Master
+description: SQL teleporter NPC for 3.3.5a with 130+ blizzlike faction-aware teleports for TrinityCore and MaNGOS.
 
 images:
     - /images/portalmaster/rsWoWScrnShot_031315_153231.jpg
+    - /images/portalmaster/PM_10.jpg
+    - /images/portalmaster/PM_11.jpg
+    - /images/portalmaster/PM_12.jpg
+    - /images/portalmaster/PM_13.jpg
+    - /images/portalmaster/PM_14.jpg
+    - /images/portalmaster/PM_15.jpg
+    - /images/portalmaster/PM_16.jpg
+    - /images/portalmaster/PM_17.jpg
+    - /images/PM_ironforge.png
     - /images/portalmaster/rsWoWScrnShot_031315_153546.jpg
     - /images/portalmaster/rsWoWScrnShot_031315_153638.jpg
     - /images/portalmaster/rsWoWScrnShot_031315_153718.jpg
@@ -18,10 +28,6 @@ images:
 videos:
     - https://www.youtube.com/embed/SOKq1EAmV-k?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" class="download button" href="downloads/Trinity_Portal_Master.sql" onClick="ga('send', 'event', 'Download', 'click', 'Portal Master TrinityCore');">TrinityCore</a>
-    - <a target="_blank" class="download button" href="downloads/Trinity_Portal_Master_Option.sql" onClick="ga('send', 'event', 'Download', 'click', 'Portal Master TrinityCore Option');">TrinityCore Option</a>
-    - <a target="_blank" class="download button" href="downloads/MaNGOS_Portal_Master.sql" onClick="ga('send', 'event', 'Download', 'click', 'Portal Master MaNGOS');">MaNGOS</a>
 ---
 
 Portal Master is a teleporter NPC for 3.3.5a.  

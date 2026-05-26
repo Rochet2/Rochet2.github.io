@@ -1,7 +1,9 @@
 ---
 title: Dress NPCs
+description: Preview NPC equipment and models on yourself before applying the look, for multiple TrinityCore branches.
 
 images:
+    - /images/Druid-All-Tiers-of-Armor.png
     - /images/dressnpcs/rs5sD3W2i.jpg
     - /images/dressnpcs/rsAFJC3xL.jpg
     - /images/dressnpcs/rsWoWScrnShot_031115_220229.jpg
@@ -32,11 +34,6 @@ images:
 videos:
     - https://www.youtube.com/embed/tZe8rJsdkmg?list=PL5CF7437D71BB0795
 
-downloads:
-    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs_3.3.5/src/server/scripts/Custom/DressNPCs/" class="download button" onClick="ga('send', 'event', 'Download', 'click', 'Dress NPCs TrinityCore 3.3.5');">TrinityCore 3.3.5</a>
-    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs_6.x/src/server/scripts/Custom/DressNPCs/" class="download button" onClick="ga('send', 'event', 'Download', 'click', 'Dress NPCs TrinityCore 6.x');">TrinityCore 6.x</a>
-    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs_7.x/src/server/scripts/Custom/DressNPCs/" class="download button" onClick="ga('send', 'event', 'Download', 'click', 'Dress NPCs TrinityCore 7.x');">TrinityCore 7.x</a>
-    - <a target="_blank" href="https://github.com/Rochet2/TrinityCore/blob/dressnpcs_master/src/server/scripts/Custom/DressNPCs/" class="download button" onClick="ga('send', 'event', 'Download', 'click', 'Dress NPCs TrinityCore master');">TrinityCore master (8.x)</a>
 ---
 
 Dress NPCs is a C++ core modification which allows you to equip armor items on NPCs **without using any client side patches or DBC editing**.  

@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RochetCode - coding and scripting">
-    <meta name=viewport content="width=device-width, initial-scale=1" />
-    <meta name="Robots" content="ALL" />
-    <meta name="Author" content="Rochet2" />
-    <meta name="Keywords" content="{% for post in site.posts %}{{ post.title }}, {% endfor %}mangos, cmangos, trinity, arcemu, download, project code,
-                          projectcode, world of warcraft, warcraft, private server, c++, sql, java, javascript, html, php, teleport,
-                          smartai, project-code, emuproject, emulator, gossip, telenpc, project, zzl, org, Rochet2, github, ac-web, emudevs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Rochet2" />
 
-    <title>{{ page.title }} | RochetCode</title>
+    {% assign site_root = site.url | append: site.baseurl %}
+    {% assign canonical_url = site_root | append: page.url %}
+    {% assign page_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160, "" %}
+    {% assign og_image = page.image %}
+    {% if og_image == nil and page.images.size > 0 %}
+        {% assign og_image = page.images.first %}
+    {% endif %}
+    {% if og_image == nil and page.title != 'Home' and page.hide_header != true %}
+        {% assign og_image = '/images/icon_' | append: page.title | append: '.png' %}
+    {% endif %}
+    {% if og_image == nil %}
+        {% assign og_image = '/images/Rochet2_100.png' %}
+    {% endif %}
+    {% assign og_image_url = site_root | append: og_image %}
+    {% if page.date %}
+        {% assign og_type = 'article' %}
+    {% else %}
+        {% assign og_type = 'website' %}
+    {% endif %}
+
+    <meta name="description" content="{{ page_description | xml_escape }}" />
+    <meta property="og:site_name" content="{{ site.title | xml_escape }}" />
+    <meta property="og:title" content="{{ page.title | append: ' | ' | append: site.title | xml_escape }}" />
+    <meta property="og:description" content="{{ page_description | xml_escape }}" />
+    <meta property="og:url" content="{{ canonical_url | xml_escape }}" />
+    <meta property="og:type" content="{{ og_type }}" />
+    <meta property="og:image" content="{{ og_image_url | xml_escape }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title | append: ' | ' | append: site.title | xml_escape }}" />
+    <meta name="twitter:description" content="{{ page_description | xml_escape }}" />
+    <meta name="twitter:image" content="{{ og_image_url | xml_escape }}" />
+
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | xml_escape }} RSS feed" href="{{ site_root }}/feed.xml" />
+    <link rel="canonical" href="{{ canonical_url | xml_escape }}" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css">
-    <!--[if lt IE 7]>
-        <style media="screen" type="text/css">
-            #container {
-                height:100%;
-            }
-        </style>
-    <![endif]-->
-
-    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-rs.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/gist-embed.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/github-files.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/marked.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/js/js.js"></script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-17459395-5', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-    <script>
-        $("a").click(function() {
-            ga('send', 'event', 'url', 'click', $(this)[0].outerHTML);
-        });
-    </script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
         <!-- HEADER -->
         <div id="topnav">
             <!-- Note that having these in one line removes spaces between the blocks -->
-            <div><a href="{{ site.baseurl }}/" class="valign" onClick="ga('send', 'event', 'Topnav', 'Home', '{{ page.url }}');"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign" onClick="ga('send', 'event', 'Topnav', 'Downloads', '{{ page.url }}');"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign" onClick="ga('send', 'event', 'Topnav', 'Contact', '{{ page.url }}');"><span>Contact</span></a><a target="_blank" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42" class="valign" onClick="ga('send', 'event', 'Topnav', 'Feedback', '{{ page.url }}');"><div style="position: absolute;line-height: initial;margin-top: 30px;font-size: small;margin-left: 100px;color: orange;">new</div><span>Feedback</span></a></div>
+            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" rel="noopener noreferrer" href="https://github.com/Rochet2/Issues/issues/new" class="valign"><span>Feedback</span></a></div>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -62,28 +62,60 @@
             <section id="main_content">
 
                 {% if page.images %}
-                    <ul id="images" class="rslides">
-                    {% for imagepath in page.images %}
-                        <li><img src="{{ site.baseurl }}{{ imagepath }}"></li>
-                    {% endfor %}
-                    </ul>
+                    <div class="gallery-carousel" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
+                        <ul class="gallery-slides">
+                        {% for imagepath in page.images %}
+                            {% assign image_base = imagepath | split: '.' | first %}
+                            {% assign webp_path = image_base | append: '.webp' %}
+                            <li class="gallery-slide">
+                                <picture>
+                                    <source srcset="{{ site.baseurl }}{{ webp_path }}" type="image/webp">
+                                    <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title | xml_escape }} screenshot" loading="lazy">
+                                </picture>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <script src="{{ site.baseurl }}/js/gallery.js" defer></script>
                 {% endif %}
 
-                {% if page.title != 'Home' %}
-                    <div style="margin: 30px 20px;">
-                        <img src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" style="float: left; margin: 0 20px 0 0;">
-                        <h1 style="line-height: 80px; margin: 0px;" id="title">{{ page.title }}</h1>
+                {% assign project = site.data.projects[page.title] %}
+
+                {% if page.title != 'Home' and page.hide_header != true %}
+                    <div class="project-header">
+                        <img class="project-header-icon" src="{{ site.baseurl }}/images/icon_{{ page.title }}.png" height="80" width="80" alt="{{ page.title | xml_escape }} icon">
+                        <div class="project-header-text">
+                            <h1 class="project-header-title" id="title">{{ page.title }}</h1>
+                            {% if project.status or project.updated or project.tags %}
+                            <div class="project-meta">
+                                {% if project.status %}<span class="project-status project-status-{{ project.status }}">{{ project.status }}</span>{% endif %}
+                                {% if project.updated %}<span class="project-updated">Updated {{ project.updated }}</span>{% endif %}
+                                {% if project.tags %}
+                                    {% for tag in project.tags %}
+                                        <span class="project-tag">{{ tag }}</span>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                 {% endif %}
 
-                <div id="description">
+                <div id="description" class="markdown-body">
                 {{ content }}
                 </div>
 
-                {% if page.downloads %}
+                {% if project.downloads %}
                     <h3 id="downloads">Downloads</h3>
-                    {% for download in page.downloads %}
-                        {{ download }}
+                    {% for download in project.downloads %}
+                        {% assign download_url = download.url %}
+                        {% unless download_url contains '://' %}
+                            {% assign download_url = site.baseurl | append: download_url %}
+                            {% if download.version %}
+                                {% assign download_url = download_url | append: '?v=' | append: download.version %}
+                            {% endif %}
+                        {% endunless %}
+                        <a target="_blank" rel="noopener noreferrer" class="download button" href="{{ download_url }}">{{ download.label }}</a>
                     {% endfor %}
                 {% endif %}
 
@@ -93,36 +125,9 @@
 
                 {% if page.videos %}
                     {% for videopath in page.videos %}
-                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     {% endfor %}
                 {% endif %}
-
-                <script>
-                    $(function() {
-                        $(".rslides").responsiveSlides({
-                            //auto: false,              // Boolean: Animate automatically, true or false
-                            //speed: 500,               // Integer: Speed of the transition, in milliseconds
-                            //timeout: 4000,            // Integer: Time between slide transitions, in milliseconds
-                            //pager: true,              // Boolean: Show pager, true or false
-                            //nav: true,                // Boolean: Show navigation, true or false
-                            random: true,               // Boolean: Randomize the order of the slides, true or false
-                            //pause: true,              // Boolean: Pause on hover, true or false
-                            //pauseControls: true,      // Boolean: Pause when hovering controls, true or false
-                            //prevText: "Previous",     // String: Text for the "previous" button
-                            //nextText: "Next",         // String: Text for the "next" button
-                            //maxwidth: "",             // Integer: Max-width of the slideshow, in pixels
-                            //navContainer: "",         // Selector: Where controls should be appended to, default is after the 'ul'
-                            //manualControls: "",       // Selector: Declare custom pager navigation
-                            //namespace: "rslides",     // String: Change the default namespace used
-                            //before: function(){},     // Function: Before callback
-                            //after: function(){}       // Function: After callback
-                        });
-                    });
-                </script>
-
-                <script>
-                    EmbedGists();
-                </script>
             </section>
         </div>
 
@@ -131,6 +136,8 @@
             <footer>
                 <div class="valign">
                     <span>&copy;{{ site.time | date: '%Y' }} <a href="https://github.com/Rochet2">Rochet2</a> - Since 6.7.2010</span>
+                    <span> · </span>
+                    <a href="{{ site.url }}{{ site.baseurl }}/feed.xml">RSS</a>
                 </div>
             </footer>
         </div>

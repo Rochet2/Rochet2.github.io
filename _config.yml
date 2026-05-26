@@ -1,5 +1,9 @@
 permalink: none # Clean permalinks like https://rochet2.github.io/Issues/Reforging.html
 baseurl: "" # Root folder path of the site from site root
+url: "https://rochet2.github.io"
+title: RochetCode
+description: Downloads and documentation for Rochet2's World of Warcraft emulator mods and tools.
+lang: en
 
 defaults:
   -
