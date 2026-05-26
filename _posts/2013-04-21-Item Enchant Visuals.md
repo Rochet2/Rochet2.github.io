@@ -4,6 +4,7 @@ description: Add random enchant visuals to looted weapons on TrinityCore or thro
 
 images:
     - /images/ItemEncahtns.jpg
+gallery_aspect: 600 / 272
 
 ---
 

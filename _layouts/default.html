@@ -62,7 +62,8 @@
             <section id="main_content">
 
                 {% if page.images %}
-                    <div class="gallery-carousel" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
+                    {% assign gallery_aspect = page.gallery_aspect | default: '850 / 451' %}
+                    <div class="gallery-carousel" style="--gallery-aspect: {{ gallery_aspect }};" role="region" aria-label="{{ page.title | xml_escape }} screenshots">
                         <ul class="gallery-slides">
                         {% for imagepath in page.images %}
                             {% assign image_base = imagepath | split: '.' | first %}
