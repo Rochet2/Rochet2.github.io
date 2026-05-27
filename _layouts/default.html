@@ -44,7 +44,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | xml_escape }} RSS feed" href="{{ site_root }}/feed.xml" />
     <link rel="canonical" href="{{ canonical_url | xml_escape }}" />
 
-    {% assign assets_version = site.data.assets.assets_version | default: 'dev' %}
+    {% assign assets_version = site.data.assets.assets_version | default: site.github.build_revision | default: 'dev' %}
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css?v={{ assets_version }}" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css?v={{ assets_version }}">
 </head>

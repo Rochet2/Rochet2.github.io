@@ -97,9 +97,13 @@ CI runs `python script/generate_webp.py --check` to ensure WebP copies are prese
 
 ### CSS/JS cache busting
 
-CI runs `python script/asset_version.py` before each Jekyll build. It hashes `css/style.css`, `css/github_markdown.css`, and `js/gallery.js`, then writes `_data/assets.yml`. Layout templates append `?v=` that hash to stylesheet and script URLs so browsers fetch new copies when those files change.
+`_data/assets.yml` stores a content hash for `css/style.css`, `css/github_markdown.css`, and `js/gallery.js`. Layout templates append it as `?v=` on stylesheet and script URLs. The file must be in the repo because GitHub Pages runs its own Jekyll build.
 
-For a local Jekyll preview, run the same script first:
+On pull requests, CI runs `script/asset_version.py` and commits an updated `_data/assets.yml` to the PR branch when CSS or JS changed, so the hash is ready before you merge.
+
+Pushes to `master` run `script/asset_version.py --check` instead (the merged PR should already include the updated file).
+
+To update locally:
 
 ```bash
 python script/asset_version.py
