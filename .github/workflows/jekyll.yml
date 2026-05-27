@@ -11,7 +11,41 @@ permissions:
   contents: read
 
 jobs:
+  update-asset-version:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Update asset version
+        run: python script/asset_version.py
+
+      - name: Commit asset version if changed
+        run: |
+          if git diff --quiet -- _data/assets.yml; then
+            echo "Asset version already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/assets.yml
+          git commit -m "Update asset version hash for CSS/JS changes."
+          git push
+
   build:
+    needs: update-asset-version
+    if: always() && (needs.update-asset-version.result == 'success' || needs.update-asset-version.result == 'skipped')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,6 +65,7 @@ jobs:
         run: python script/generate_webp.py --check
 
       - name: Check asset version
+        if: github.event_name != 'pull_request'
         run: python script/asset_version.py --check
 
       - name: Setup Pages
