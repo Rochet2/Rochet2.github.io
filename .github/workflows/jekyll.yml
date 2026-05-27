@@ -30,8 +30,8 @@ jobs:
       - name: Check WebP derivatives
         run: python script/generate_webp.py --check
 
-      - name: Generate asset version
-        run: python script/asset_version.py
+      - name: Check asset version
+        run: python script/asset_version.py --check
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
