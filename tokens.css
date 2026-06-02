@@ -1,0 +1,55 @@
+/* Hallmark · Nightforge design tokens · genre: atmospheric · tone: playful
+ * paper-band: dark · display-style: geometric-sans · accent-hue: warm (gold) */
+:root {
+  /* Surfaces — near-black, faint cool tint */
+  --color-paper:         oklch(15% 0.014 264);
+  --color-paper-2:       oklch(19% 0.016 264);
+  --color-paper-3:       oklch(24% 0.018 264);
+
+  /* Ink */
+  --color-ink:           oklch(96% 0.005 264);
+  --color-ink-2:         oklch(75% 0.012 264);
+  --color-ink-3:         oklch(60% 0.012 264);
+
+  /* Rules / borders */
+  --color-rule:          oklch(31% 0.014 264);
+
+  /* Accent — WoW gold (warm) + arcane-violet secondary */
+  --color-accent:        oklch(80% 0.13 80);
+  --color-accent-strong: oklch(85% 0.15 84);
+  --color-accent-ink:    oklch(22% 0.05 80);
+  --color-accent-soft:   oklch(80% 0.13 80 / 0.12);
+  --color-violet:        oklch(73% 0.12 300);
+
+  --color-focus:         oklch(85% 0.14 85);
+
+  /* Type */
+  --font-display: "Space Grotesk", system-ui, "Segoe UI", sans-serif;
+  --font-body:    "Inter", system-ui, "Segoe UI", sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+  /* 4-pt spacing scale */
+  --space-3xs: 0.25rem; --space-2xs: 0.5rem; --space-xs: 0.75rem;
+  --space-sm:  1rem;    --space-md:  1.5rem; --space-lg: 2rem;
+  --space-xl:  3rem;    --space-2xl: 4.5rem; --space-3xl: 7rem;
+
+  /* Type scale */
+  --text-xs: 0.75rem;  --text-sm: 0.8125rem; --text-md: 1.0625rem;
+  --text-lg: 1.3rem;   --text-xl: 1.7rem;    --text-2xl: 2.3rem;
+  --text-display: clamp(2.6rem, 5.5vw + 1rem, 5rem);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur:         240ms;
+
+  /* Radii */
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --radius-tag:  6px;
+  --radius-input: 10px;
+
+  /* Layout */
+  --maxw: 1120px;
+  --measure: 72ch;
+}

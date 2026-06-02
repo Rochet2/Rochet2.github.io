@@ -10,8 +10,8 @@ import sys
 from pathlib import Path
 
 ASSET_FILES = (
+    Path("tokens.css"),
     Path("css/style.css"),
-    Path("css/github_markdown.css"),
     Path("js/gallery.js"),
 )
 OUTPUT = Path("_data/assets.yml")
