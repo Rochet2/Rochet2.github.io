@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2026-06-02",
+    "scope": "app",
+    "genre": "atmospheric",
+    "macrostructure": "Catalogue + Marquee Hero",
+    "theme": "Nightforge (custom dark)",
+    "theme_axes": "dark / geometric-sans / warm-gold",
+    "enrichment": "Tier-A CSS radial blooms",
+    "nav": "N5 floating pill",
+    "footer": "Ft5 statement",
+    "vibe": "playful WoW-modding code catalogue, dark gaming heritage",
+    "brief": "RochetCode \u2014 full Jekyll site redesign (home, downloads hub, project posts, contact, 404)"
+  }
+]

@@ -97,7 +97,7 @@ CI runs `python script/generate_webp.py --check` to ensure WebP copies are prese
 
 ### CSS/JS cache busting
 
-`_data/assets.yml` stores a content hash for `css/style.css`, `css/github_markdown.css`, and `js/gallery.js`. Layout templates append it as `?v=` on stylesheet and script URLs. The file must be in the repo because GitHub Pages runs its own Jekyll build.
+`_data/assets.yml` stores a content hash for `tokens.css`, `css/style.css`, and `js/gallery.js`. Layout templates append it as `?v=` on stylesheet and script URLs. The file must be in the repo because GitHub Pages runs its own Jekyll build.
 
 On pull requests, CI runs `script/asset_version.py` and commits an updated `_data/assets.yml` to the PR branch when CSS or JS changed, so the hash is ready before you merge.
 

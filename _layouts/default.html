@@ -44,8 +44,12 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | xml_escape }} RSS feed" href="{{ site_root }}/feed.xml" />
     <link rel="canonical" href="{{ canonical_url | xml_escape }}" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     {% assign assets_version = site.data.assets.assets_version | default: site.github.build_revision | default: 'dev' %}
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/github_markdown.css?v={{ assets_version }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/tokens.css?v={{ assets_version }}" media="screen" />
     <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css?v={{ assets_version }}">
 </head>
 
@@ -53,10 +57,17 @@
     <div id="container">
 
         <!-- HEADER -->
-        <div id="topnav">
-            <!-- Note that having these in one line removes spaces between the blocks -->
-            <div><a href="{{ site.baseurl }}/" class="valign"><span><img alt="Logo" src="{{ site.baseurl }}/images/Rochet2_100.png" width="75"></span></a><a href="{{ site.baseurl }}/downloads" class="valign"><span>Downloads</span></a></div><div><a href="{{ site.baseurl }}/contact" class="valign"><span>Contact</span></a><a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42" class="valign"><span>Feedback</span></a></div>
-        </div>
+        <nav id="topnav" aria-label="Primary">
+            <div class="nav-pill">
+                <a href="{{ site.baseurl }}/" class="nav-brand"><img alt="" src="{{ site.baseurl }}/images/Rochet2_100.png" width="30" height="30"><span>RochetCode</span></a>
+                <div class="nav-links">
+                    <a href="{{ site.baseurl }}/downloads">Downloads</a>
+                    <a href="{{ site.baseurl }}/contact">Contact</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42">Feedback</a>
+                    <a class="nav-cta" target="_blank" rel="noopener noreferrer" href="https://github.com/Rochet2">GitHub</a>
+                </div>
+            </div>
+        </nav>
 
         <!-- MAIN CONTENT -->
         <div id="content">
@@ -104,6 +115,7 @@
 
                 {% if project.downloads %}
                     <h3 id="downloads">Downloads</h3>
+                    <div class="download-row">
                     {% for download in project.downloads %}
                         {% assign download_url = download.url %}
                         {% unless download_url contains '://' %}
@@ -114,6 +126,7 @@
                         {% endunless %}
                         <a target="_blank" rel="noopener noreferrer" class="download button" href="{{ download_url }}">{{ download.label }}</a>
                     {% endfor %}
+                    </div>
                 {% endif %}
 
                 {% if page.videos %}
@@ -131,10 +144,15 @@
         <!-- FOOTER  -->
         <div id="footer">
             <footer>
-                <div class="valign">
-                    <span>&copy;{{ site.time | date: '%Y' }} <a href="https://github.com/Rochet2">Rochet2</a> - Since 6.7.2010</span>
-                    <span> · </span>
+                <p class="footer-statement">Built for your realm. <em>Free, forever.</em></p>
+                <div class="footer-meta">
+                    <span>&copy;{{ site.time | date: '%Y' }} <a href="https://github.com/Rochet2">Rochet2</a> — since 6.7.2010</span>
+                    <span class="footer-dot">·</span>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Rochet2">GitHub</a>
+                    <span class="footer-dot">·</span>
                     <a href="{{ site.url }}{{ site.baseurl }}/feed.xml">RSS</a>
+                    <span class="footer-dot">·</span>
+                    <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42">Feedback</a>
                 </div>
             </footer>
         </div>

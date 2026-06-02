@@ -3,15 +3,29 @@ title: Downloads
 description: Browse Rochet2 emulator mods and tools, including Eluna, Transmogrification, and Portal Master.
 ---
 
-<p>Click a project below to read more about it and download it</p>
+<div class="section-head">
+    <h2>The catalogue</h2>
+    <span class="section-meta">{{ site.posts | size }} projects · TrinityCore · MaNGOS · Eluna</span>
+</div>
 
 <div id="project-grid" class="project-grid">
     {% for post in site.posts %}
+        {% assign project = site.data.projects[post.title] %}
         <a href="{{ site.baseurl }}{{ post.url }}" class="blocklink">
-            <div class="projectlogo">
-                <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="80" alt="{{ post.title | xml_escape }} icon">
+            <div class="blocklink-top">
+                <div class="projectlogo">
+                    <img src="{{ site.baseurl }}/images/icon_{{ post.title }}.png" height="48" width="48" alt="" loading="lazy">
+                </div>
+                <span class="projecttitle blocklink-title">{{ post.title }}</span>
             </div>
-            <div class="projecttitle"><span>{{ post.title }}</span></div>
+            {% if post.description %}
+                <p class="blocklink-blurb">{{ post.description | strip_html | truncate: 130 }}</p>
+            {% endif %}
+            {% if project.tags %}
+                <div class="tags">
+                    {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+                </div>
+            {% endif %}
         </a>
     {% endfor %}
 </div>
