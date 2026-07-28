@@ -2,7 +2,6 @@
 <html lang="{{ site.lang | default: 'en' }}">
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="author" content="Rochet2" />
@@ -63,7 +62,7 @@
                 <div class="nav-links">
                     <a href="{{ site.baseurl }}/downloads">Downloads</a>
                     <a href="{{ site.baseurl }}/contact">Contact</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42">Feedback</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScuJh7y99Qel6Cz8qbbbRQfGJC8Zse52kohrbPXkjaWBAhKQg/viewform?c=0&w=1">Feedback</a>
                     <a class="nav-cta" target="_blank" rel="noopener noreferrer" href="https://github.com/Rochet2">GitHub</a>
                 </div>
             </div>
@@ -135,7 +134,7 @@
 
                 {% if page.videos %}
                     {% for videopath in page.videos %}
-                        <iframe width="640" height="360" src="{{ videopath }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                        <iframe width="640" height="360" src="{{ videopath }}" title="{{ page.title | xml_escape }} video{% unless forloop.first %} {{ forloop.index }}{% endunless %}" frameborder="0" allowfullscreen loading="lazy"></iframe>
                     {% endfor %}
                 {% endif %}
             </section>
@@ -152,7 +151,7 @@
                     <span class="footer-dot">·</span>
                     <a href="{{ site.url }}{{ site.baseurl }}/feed.xml">RSS</a>
                     <span class="footer-dot">·</span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/forms/qF1EJuyYJB7m2PO42">Feedback</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLScuJh7y99Qel6Cz8qbbbRQfGJC8Zse52kohrbPXkjaWBAhKQg/viewform?c=0&w=1">Feedback</a>
                 </div>
             </footer>
         </div>

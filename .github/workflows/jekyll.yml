@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - site-cleanup
   pull_request:
 
 permissions:
@@ -77,6 +76,6 @@ jobs:
       - name: Verify build output
         run: |
           test -d _site
-          test -f _site/search.json
           test -f _site/sitemap.xml
           test -f _site/feed.xml
+          test -f _site/robots.txt

@@ -74,7 +74,7 @@ CI runs `script/validate_site.py` before building. It checks:
 - every project has an `images/icon_{title}.png` file
 - site source files do not use plain `http://` links
 
-After the Jekyll build, CI verifies `_site/search.json`, `_site/sitemap.xml`, and `_site/feed.xml` exist.
+After the Jekyll build, CI verifies `_site/sitemap.xml`, `_site/feed.xml`, and `_site/robots.txt` exist.
 
 ### WebP gallery images
 

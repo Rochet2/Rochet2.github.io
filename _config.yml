@@ -1,4 +1,4 @@
-permalink: none # Clean permalinks like https://rochet2.github.io/Issues/Reforging.html
+permalink: none # URLs use the post title slug, e.g. /Reforging.html
 baseurl: "" # Root folder path of the site from site root
 url: "https://rochet2.github.io"
 title: RochetCode
