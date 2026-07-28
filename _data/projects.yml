@@ -1,6 +1,6 @@
 # Project metadata and download buttons. Keys must match post titles exactly.
 # downloads: label + url; use version on /downloads/ files and bump when the file changes.
-# tags: optional search keywords.
+# tags: optional chips on project cards.
 "Portal Master":
   tags: [sql, trinity, mangos, npc, teleport]
   downloads:
@@ -51,6 +51,7 @@ GOMove:
       url: https://github.com/Rochet2/TrinityCore/blob/gomove_master/src/server/scripts/Custom/GOMove/
 
 Eluna:
+  tags: [lua, eluna, mangos, cmangos, trinity]
   downloads:
     - label: Installation guide
       url: https://github.com/ElunaLuaEngine/Eluna/blob/master/docs/INSTALL.md
